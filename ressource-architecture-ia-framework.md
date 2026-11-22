@@ -1,0 +1,485 @@
+---
+layout: page
+title: "Framework d’architecture d’entreprise pour l’IA"
+permalink: /ressources/architecture-ia-framework/
+render_with_liquid: false
+---
+
+<p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
+<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
+<p class="source-filename">Source : AI_Enterprise_Architecture_Framework_Guide_v1-1.docx</p>
+<div class="source-document">
+<p>AI ENTERPRISE<br>
+ARCHITECTURE FRAMEWORK</p>
+<p>Guide méthodologique d&#x27;architecture d&#x27;entreprise IA<br>
+Fondé sur TOGAF ADM, ArchiMate et C4 Model</p>
+<div class="table-scroll"><table><tr><td><p>Positionnement<br>
+Référentiel proposé pour concevoir, documenter, gouverner et faire évoluer les systèmes d&#x27;information intégrant l&#x27;intelligence artificielle. Il s&#x27;agit d&#x27;une adaptation méthodologique proposée, et non d&#x27;une publication officielle ou d&#x27;une certification de The Open Group.</p></td></tr></table></div>
+<p>Version 1.0  •  8 novembre 2026  •  Langue : français</p>
+<h2>Sommaire</h2>
+<p>1. Objet, périmètre et principes directeurs</p>
+<p>2. Fondamentaux de l&#x27;architecture d&#x27;entreprise IA</p>
+<p>3. Stratégie IA et Business Architecture</p>
+<p>4. Métamodèle d&#x27;architecture IA</p>
+<p>5. Architecture Data &amp; AI</p>
+<p>6. Architecture applicative IA et Agentic AI</p>
+<p>7. Architecture technologique et plateformes</p>
+<p>8. Sécurité, gouvernance, risques et conformité</p>
+<p>9. Adaptation de TOGAF ADM aux projets IA</p>
+<p>10. Modélisation ArchiMate et C4</p>
+<p>11. Architectures de référence et cas pratiques</p>
+<p>12. Livrables, gouvernance opérationnelle et roadmap</p>
+<p>Annexes : modèles réutilisables, glossaire et références</p>
+<h2>Synthèse exécutive</h2>
+<p>L&#x27;intelligence artificielle ne doit pas être traitée comme une simple technologie ajoutée au portefeuille applicatif. Elle introduit des actifs, des cycles de vie, des risques et des dépendances spécifiques : données d&#x27;entraînement et de contexte, modèles, prompts, embeddings, bases vectorielles, agents, outils, évaluations, garde-fous et mécanismes de supervision.</p>
+<p>Le AI Enterprise Architecture Framework (AI-EAF) fournit un cadre cohérent pour relier la stratégie métier aux capacités IA, aux données, aux applications, aux modèles et aux plateformes techniques. Il s&#x27;appuie sur la logique de TOGAF ADM pour organiser la transformation, sur ArchiMate pour représenter les relations d&#x27;entreprise et sur C4 pour décrire les structures logicielles à différents niveaux de zoom.</p>
+<div class="table-scroll"><table><tr><td><p>Idée centrale<br>
+TOGAF organise la démarche et la gouvernance de l&#x27;architecture d&#x27;entreprise ; ArchiMate exprime les relations entre capacités, processus, données, services et technologies ; C4 décrit concrètement les frontières, conteneurs et composants logiciels. Les trois approches sont complémentaires.</p></td></tr></table></div>
+<h3>Décisions structurantes proposées</h3>
+<p class="source-list-item">Traiter l&#x27;IA comme une capacité d&#x27;entreprise, pas seulement comme un portefeuille de modèles.</p>
+<p class="source-list-item">Créer un catalogue gouverné des cas d&#x27;usage IA et une cartographie des capacités métier concernées.</p>
+<p class="source-list-item">Séparer clairement les responsabilités Data, AI/ML, Application, Platform, Security et Business.</p>
+<p class="source-list-item">Industrialiser le cycle de vie des modèles et des applications IA (MLOps, LLMOps, AIOps selon les besoins).</p>
+<p class="source-list-item">Mettre en place une gouvernance fondée sur le risque, la traçabilité, l&#x27;évaluation et la supervision humaine.</p>
+<p class="source-list-item">Réutiliser des building blocks et architectures de référence plutôt que multiplier les solutions isolées.</p>
+<h2>1. Objet, périmètre et principes directeurs</h2>
+<h3>1.1 Objectifs</h3>
+<p>Le référentiel vise à aider une organisation à passer d&#x27;expérimentations IA locales à un système de capacités IA cohérent, sécurisé, mesurable et industrialisable.</p>
+<p class="source-list-item">Aligner les investissements IA sur les objectifs stratégiques et les résultats métier.</p>
+<p class="source-list-item">Définir les architectures de référence et les standards technologiques.</p>
+<p class="source-list-item">Maîtriser les données, les modèles, les prompts, les agents et leurs dépendances.</p>
+<p class="source-list-item">Rendre les solutions observables, évaluables, explicables lorsque nécessaire et réversibles.</p>
+<p class="source-list-item">Organiser les décisions d&#x27;architecture et les contrôles de conformité.</p>
+<p class="source-list-item">Accélérer les projets grâce à des patterns et composants réutilisables.</p>
+<h3>1.2 Périmètre</h3>
+<div class="table-scroll"><table><tr><td><p>Inclus</p></td><td><p>Hors périmètre / traité par d&#x27;autres disciplines</p></td></tr><tr><td><p>IA prédictive et descriptive : ML, scoring, classification, prévision, détection d&#x27;anomalies</p></td><td><p>Définition détaillée des politiques métier indépendamment de l&#x27;IA</p></td></tr><tr><td><p>IA générative : LLM, RAG, génération multimodale, assistants</p></td><td><p>Recherche fondamentale et conception mathématique de nouveaux modèles</p></td></tr><tr><td><p>IA agentique : agents, orchestration, outils, mémoire, délégation</p></td><td><p>Gestion exhaustive des postes utilisateurs et du support bureautique</p></td></tr><tr><td><p>Données, pipelines, feature stores, vector stores, model registry</p></td><td><p>Remplacement des politiques globales de cybersécurité ou de gestion des données</p></td></tr><tr><td><p>Plateformes, intégration, APIs, observabilité, exploitation</p></td><td><p>Choix contractuels ou achats, qui restent soumis aux processus de sourcing</p></td></tr></table></div>
+<h3>1.3 Principes directeurs d&#x27;architecture IA</h3>
+<div class="table-scroll"><table><tr><td><p>ID</p></td><td><p>Principe</p></td><td><p>Conséquence vérifiable</p></td></tr><tr><td><p>AI-01</p></td><td><p>Business first</p></td><td><p>Chaque solution IA est rattachée à un objectif et à un indicateur métier.</p></td></tr><tr><td><p>AI-02</p></td><td><p>Data governance by design</p></td><td><p>La provenance, la qualité, les droits et la rétention des données sont connus.</p></td></tr><tr><td><p>AI-03</p></td><td><p>Model-agnostic where feasible</p></td><td><p>Les modèles sont accessibles via des interfaces et contrats standardisés lorsque cela est pertinent.</p></td></tr><tr><td><p>AI-04</p></td><td><p>Human accountability</p></td><td><p>Une responsabilité humaine est définie pour les décisions à impact.</p></td></tr><tr><td><p>AI-05</p></td><td><p>Secure by design</p></td><td><p>Identité, autorisation, chiffrement, filtrage et journalisation sont intégrés dès la conception.</p></td></tr><tr><td><p>AI-06</p></td><td><p>Observable and evaluable</p></td><td><p>Qualité, coût, latence, dérive, sécurité et utilité sont mesurés.</p></td></tr><tr><td><p>AI-07</p></td><td><p>Reusable building blocks</p></td><td><p>Les patterns, composants et plateformes communs sont privilégiés.</p></td></tr><tr><td><p>AI-08</p></td><td><p>Lifecycle management</p></td><td><p>Données, modèles, prompts, agents et configurations sont versionnés et gouvernés.</p></td></tr><tr><td><p>AI-09</p></td><td><p>Proportionate autonomy</p></td><td><p>Le niveau d&#x27;autonomie d&#x27;un agent est limité par le risque et les contrôles.</p></td></tr><tr><td><p>AI-10</p></td><td><p>Exit and portability</p></td><td><p>Les dépendances fournisseurs et les possibilités de migration sont documentées.</p></td></tr></table></div>
+<h3>1.4 Typologie des solutions</h3>
+<div class="table-scroll"><table><tr><td><p>Famille</p></td><td><p>Exemples</p></td><td><p>Questions architecturales dominantes</p></td></tr><tr><td><p>Analytique / BI augmentée</p></td><td><p>Prévision de ventes, segmentation, détection</p></td><td><p>Qualité des données, biais, explicabilité, performance</p></td></tr><tr><td><p>Machine Learning</p></td><td><p>Scoring, classification, recommandation</p></td><td><p>Feature engineering, entraînement, registry, drift</p></td></tr><tr><td><p>IA générative</p></td><td><p>Résumé, extraction, rédaction, Q&amp;A</p></td><td><p>Sélection LLM, prompts, grounding, évaluation</p></td></tr><tr><td><p>RAG</p></td><td><p>Recherche dans les corpus internes</p></td><td><p>Ingestion, chunking, embeddings, ACL, citations</p></td></tr><tr><td><p>Agentic AI</p></td><td><p>Assistant exécutant un processus multi-étapes</p></td><td><p>Outils autorisés, planification, mémoire, limites d&#x27;action</p></td></tr><tr><td><p>IA multimodale</p></td><td><p>Analyse image, audio, vidéo, documents</p></td><td><p>Formats, taille, confidentialité, coût, latence</p></td></tr></table></div>
+<h2>2. Fondamentaux de l&#x27;architecture d&#x27;entreprise IA</h2>
+<h3>2.1 De l&#x27;architecture SI à l&#x27;architecture IA</h3>
+<p>Une architecture IA relie un besoin métier à un ensemble de capacités techniques et organisationnelles. Elle doit expliciter la chaîne de valeur complète : données sources, préparation, modèle, orchestration, service exposé, interaction utilisateur, supervision et mesure du résultat.</p>
+<p>OBJECTIF METIER</p>
+<p>|</p>
+<p>v</p>
+<p>BUSINESS CAPABILITY  --&gt;  AI USE CASE  --&gt;  OUTCOME / KPI</p>
+<p>|</p>
+<p>v</p>
+<p>DATA ASSETS --&gt; DATA PIPELINES --&gt; MODEL / LLM --&gt; AI SERVICE</p>
+<p>|          |</p>
+<p>v          v</p>
+<p>EVALUATION   APPLICATION</p>
+<p>|          |</p>
+<p>+----+-----+</p>
+<p>v</p>
+<p>GOVERNANCE / SECURITY / OPS</p>
+<h3>2.2 Les composants d&#x27;une solution IA</h3>
+<div class="table-scroll"><table><tr><td><p>Composant</p></td><td><p>Rôle</p></td><td><p>Exemples / points d&#x27;attention</p></td></tr><tr><td><p>Data source</p></td><td><p>Source d&#x27;information</p></td><td><p>ERP, CRM, GED, capteurs, bases relationnelles, événements</p></td></tr><tr><td><p>Data pipeline</p></td><td><p>Ingestion, transformation et contrôle</p></td><td><p>ETL/ELT, streaming, qualité, lineage</p></td></tr><tr><td><p>Dataset / corpus</p></td><td><p>Données exploitées par le modèle ou le RAG</p></td><td><p>Droits, classification, fraîcheur, version</p></td></tr><tr><td><p>Feature Store</p></td><td><p>Gestion des variables ML</p></td><td><p>Cohérence offline/online, réutilisation</p></td></tr><tr><td><p>Model / LLM</p></td><td><p>Moteur d&#x27;inférence</p></td><td><p>Modèle propriétaire, open weights, modèle spécialisé</p></td></tr><tr><td><p>Prompt / template</p></td><td><p>Instruction structurée pour un LLM</p></td><td><p>Version, tests, paramètres, sécurité</p></td></tr><tr><td><p>Embedding model</p></td><td><p>Projection sémantique des contenus</p></td><td><p>Dimension, version, compatibilité</p></td></tr><tr><td><p>Vector store</p></td><td><p>Index de recherche vectorielle</p></td><td><p>Filtrage, ACL, mise à jour, haute disponibilité</p></td></tr><tr><td><p>Orchestrator / Agent</p></td><td><p>Coordination des étapes et outils</p></td><td><p>LangGraph, workflows, règles d&#x27;arrêt</p></td></tr><tr><td><p>Tool / API</p></td><td><p>Action ou capacité appelée par l&#x27;agent</p></td><td><p>Contrat, authentification, autorisation, idempotence</p></td></tr><tr><td><p>AI Gateway</p></td><td><p>Point de contrôle d&#x27;accès aux modèles</p></td><td><p>Routage, quotas, logs, politiques, coût</p></td></tr><tr><td><p>Evaluation &amp; monitoring</p></td><td><p>Mesure de la qualité et du risque</p></td><td><p>Jeux de tests, métriques, alertes, revues humaines</p></td></tr></table></div>
+<h3>2.3 IA classique, générative et agentique</h3>
+<div class="table-scroll"><table><tr><td><p>Dimension</p></td><td><p>ML classique</p></td><td><p>IA générative</p></td><td><p>IA agentique</p></td></tr><tr><td><p>Finalité</p></td><td><p>Prédire / classer / optimiser</p></td><td><p>Générer ou transformer du contenu</p></td><td><p>Atteindre un objectif via plusieurs étapes et outils</p></td></tr><tr><td><p>Entrées</p></td><td><p>Variables structurées ou signaux</p></td><td><p>Texte, image, audio, contexte</p></td><td><p>Objectif, contexte, état, outils disponibles</p></td></tr><tr><td><p>Sortie</p></td><td><p>Score, classe, valeur</p></td><td><p>Texte, code, image, structure</p></td><td><p>Décision de prochaine étape, action ou résultat</p></td></tr><tr><td><p>Contrôle</p></td><td><p>Pipeline et seuils</p></td><td><p>Prompt, filtres, validation</p></td><td><p>Orchestration, permissions, limites et supervision</p></td></tr><tr><td><p>Risques</p></td><td><p>Biais, dérive, erreurs de prédiction</p></td><td><p>Hallucination, fuite, injection de prompt</p></td><td><p>Actions non voulues, escalade, boucle, délégation abusive</p></td></tr></table></div>
+<div class="table-scroll"><table><tr><td><p>Distinction essentielle<br>
+Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devient agentique lorsqu&#x27;il choisit ou planifie des étapes, utilise des outils, maintient un état ou adapte son comportement pour atteindre un objectif, dans des limites définies.</p></td></tr></table></div>
+<h2>3. Stratégie IA et Business Architecture</h2>
+<h3>3.1 Partir des résultats métier</h3>
+<p>Le portefeuille IA doit être construit à partir de problèmes métier, et non à partir de la disponibilité d&#x27;une technologie. Chaque cas d&#x27;usage doit expliciter le processus concerné, les utilisateurs, la valeur attendue, les données nécessaires, le niveau de risque, les coûts et les conditions d&#x27;industrialisation.</p>
+<h3>3.2 Fiche de qualification d&#x27;un AI Use Case</h3>
+<div class="table-scroll"><table><tr><td><p>Rubrique</p></td><td><p>Contenu attendu</p></td></tr><tr><td><p>Identité</p></td><td><p>Nom, sponsor, propriétaire métier, domaine, version, statut</p></td></tr><tr><td><p>Problème</p></td><td><p>Situation actuelle, irritants, population concernée, processus</p></td></tr><tr><td><p>Résultat attendu</p></td><td><p>Bénéfice mesurable, KPI de référence et cible</p></td></tr><tr><td><p>Approche IA</p></td><td><p>ML, GenAI, RAG, agent, vision, audio ou combinaison</p></td></tr><tr><td><p>Données</p></td><td><p>Sources, sensibilité, qualité, droits, localisation, rétention</p></td></tr><tr><td><p>Décision / action</p></td><td><p>Recommandation, génération, décision assistée ou action automatisée</p></td></tr><tr><td><p>Risque</p></td><td><p>Impact potentiel, personnes concernées, sécurité, conformité</p></td></tr><tr><td><p>Exploitation</p></td><td><p>SLO, volumétrie, latence, coût, support, continuité</p></td></tr><tr><td><p>Validation</p></td><td><p>Métriques métier, tests techniques, validation humaine, critères go/no-go</p></td></tr></table></div>
+<h3>3.3 AI Capability Map</h3>
+<div class="table-scroll"><table><tr><td><p>Capacité métier</p></td><td><p>Capacité IA associée</p></td><td><p>Exemples de services</p></td></tr><tr><td><p>Relation client</p></td><td><p>Compréhension et assistance augmentées</p></td><td><p>Classification de demandes, assistant conseiller, résumé d&#x27;interaction</p></td></tr><tr><td><p>Finance / contrôle</p></td><td><p>Analyse et détection augmentées</p></td><td><p>Détection d&#x27;anomalies, prévision, extraction de factures</p></td></tr><tr><td><p>Ressources humaines</p></td><td><p>Traitement documentaire assisté</p></td><td><p>Recherche dans procédures, aide à la rédaction sous contrôle</p></td></tr><tr><td><p>Opérations</p></td><td><p>Optimisation et anticipation</p></td><td><p>Maintenance prédictive, prévision de charge</p></td></tr><tr><td><p>Juridique / conformité</p></td><td><p>Recherche et synthèse contrôlées</p></td><td><p>RAG documentaire, veille, extraction de clauses</p></td></tr></table></div>
+<h3>3.4 Priorisation du portefeuille</h3>
+<p>Évaluer chaque cas d&#x27;usage selon la valeur, la faisabilité, le risque, la disponibilité des données et le coût total. Une matrice de priorisation ne doit pas masquer les critères éliminatoires : absence de base légale, données non autorisées, risques non maîtrisés ou absence de propriétaire.</p>
+<div class="table-scroll"><table><tr><td><p>Critère</p></td><td><p>Question</p></td><td><p>Échelle indicative</p></td></tr><tr><td><p>Valeur métier</p></td><td><p>Le gain est-il significatif et mesurable ?</p></td><td><p>1 à 5</p></td></tr><tr><td><p>Faisabilité data</p></td><td><p>Les données sont-elles accessibles et exploitables ?</p></td><td><p>1 à 5</p></td></tr><tr><td><p>Faisabilité technique</p></td><td><p>Les performances sont-elles atteignables ?</p></td><td><p>1 à 5</p></td></tr><tr><td><p>Adoption</p></td><td><p>Les utilisateurs peuvent-ils intégrer la solution ?</p></td><td><p>1 à 5</p></td></tr><tr><td><p>Risque</p></td><td><p>Le risque résiduel est-il acceptable ?</p></td><td><p>Faible / moyen / élevé</p></td></tr><tr><td><p>Coût complet</p></td><td><p>Le coût d&#x27;inférence, d&#x27;exploitation et de contrôle est-il soutenable ?</p></td><td><p>Budget estimé</p></td></tr></table></div>
+<h3>3.5 Exemple : assistant documentaire interne</h3>
+<p>Objectif : permettre aux collaborateurs de rechercher des réponses dans un corpus documentaire interne, avec sources citées et contrôle des habilitations.</p>
+<p class="source-list-item">Capability métier : accéder à une information fiable et à jour.</p>
+<p class="source-list-item">AI Use Case : assistant de recherche documentaire avec RAG.</p>
+<p class="source-list-item">Valeur : réduction du temps de recherche et amélioration de la cohérence des réponses.</p>
+<p class="source-list-item">KPI : taux de réponses correctement sourcées, temps moyen de recherche, taux d&#x27;escalade, satisfaction.</p>
+<p class="source-list-item">Limite : l&#x27;assistant ne prend pas de décision RH, juridique ou financière ; il fournit une aide à la recherche.</p>
+<h2>4. Métamodèle d&#x27;architecture IA</h2>
+<h3>4.1 Finalité du métamodèle</h3>
+<p>Le métamodèle définit les objets d&#x27;architecture à inventorier et les relations à tracer. Il sert de socle aux modèles ArchiMate, au référentiel d&#x27;architecture, à la gouvernance des projets et à la traçabilité entre besoin métier et composants techniques.</p>
+<h3>4.2 Entités proposées</h3>
+<div class="table-scroll"><table><tr><td><p>Entité</p></td><td><p>Définition</p></td><td><p>Attributs clés</p></td></tr><tr><td><p>AI Strategy</p></td><td><p>Orientation stratégique IA</p></td><td><p>objectifs, principes, horizon, sponsor</p></td></tr><tr><td><p>AI Capability</p></td><td><p>Capacité organisationnelle à concevoir ou exploiter l&#x27;IA</p></td><td><p>maturité, propriétaire, niveau cible</p></td></tr><tr><td><p>AI Use Case</p></td><td><p>Cas d&#x27;usage métier mobilisant l&#x27;IA</p></td><td><p>valeur, risque, statut, KPI</p></td></tr><tr><td><p>AI Product</p></td><td><p>Produit ou service IA maintenu dans la durée</p></td><td><p>owner, utilisateurs, SLA, version</p></td></tr><tr><td><p>Data Asset</p></td><td><p>Donnée ou corpus exploité</p></td><td><p>source, classification, qualité, lineage, droits</p></td></tr><tr><td><p>Dataset</p></td><td><p>Ensemble de données préparé et versionné</p></td><td><p>schéma, période, provenance, qualité</p></td></tr><tr><td><p>Feature</p></td><td><p>Variable utilisée par un modèle ML</p></td><td><p>définition, calcul, fraîcheur</p></td></tr><tr><td><p>AI Model</p></td><td><p>Modèle entraîné ou modèle de fondation</p></td><td><p>famille, version, fournisseur, licence, métriques</p></td></tr><tr><td><p>Prompt Template</p></td><td><p>Instruction versionnée adressée à un modèle</p></td><td><p>version, variables, tests, propriétaire</p></td></tr><tr><td><p>Embedding Model</p></td><td><p>Modèle produisant des vecteurs</p></td><td><p>version, dimension, langue, compatibilité</p></td></tr><tr><td><p>Vector Store</p></td><td><p>Stockage et index de vecteurs</p></td><td><p>moteur, index, ACL, rétention</p></td></tr><tr><td><p>RAG Pipeline</p></td><td><p>Chaîne d&#x27;indexation et de récupération augmentée</p></td><td><p>étapes, corpus, stratégies de retrieval</p></td></tr><tr><td><p>AI Agent</p></td><td><p>Composant poursuivant un objectif avec état et outils</p></td><td><p>rôle, permissions, limites, mémoire</p></td></tr><tr><td><p>Tool</p></td><td><p>Fonction ou API qu&#x27;un agent peut appeler</p></td><td><p>contrat, scopes, propriétaire, risque</p></td></tr><tr><td><p>AI Service</p></td><td><p>Capacité IA exposée par API ou interface</p></td><td><p>contrat, version, SLO, consommateur</p></td></tr><tr><td><p>Evaluation Suite</p></td><td><p>Tests et jeux de référence</p></td><td><p>dataset, critères, seuils, résultats</p></td></tr><tr><td><p>AI Risk</p></td><td><p>Risque associé à un usage, modèle ou système</p></td><td><p>impact, probabilité, contrôle, résiduel</p></td></tr><tr><td><p>AI Control</p></td><td><p>Mesure technique ou organisationnelle</p></td><td><p>objectif, responsable, preuve, fréquence</p></td></tr></table></div>
+<h3>4.3 Relations principales</h3>
+<p>AI STRATEGY</p>
+<p>| guides</p>
+<p>v</p>
+<p>AI CAPABILITY ---- supports ----&gt; BUSINESS CAPABILITY</p>
+<p>| enables</p>
+<p>v</p>
+<p>AI USE CASE ---- realized by ----&gt; AI PRODUCT</p>
+<p>| consumes                         | exposes</p>
+<p>v                                  v</p>
+<p>DATA ASSET --&gt; DATASET          AI SERVICE --&gt; APPLICATION</p>
+<p>|                  ^</p>
+<p>v                  |</p>
+<p>AI MODEL --------------+</p>
+<p>|</p>
+<p>+----------+-----------+</p>
+<p>|                      |</p>
+<p>EVALUATION SUITE        MODEL REGISTRY</p>
+<p>AI AGENT -- uses --&gt; TOOL/API -- accesses --&gt; BUSINESS SYSTEM</p>
+<p>AI AGENT -- invokes --&gt; LLM / AI MODEL</p>
+<p>RAG PIPELINE -- retrieves from --&gt; VECTOR STORE</p>
+<p>RAG PIPELINE -- grounded by --&gt; DATA ASSET / DOCUMENT CORPUS</p>
+<p>AI RISK -- mitigated by --&gt; AI CONTROL</p>
+<h3>4.4 Règles de modélisation</h3>
+<p class="source-list-item">Chaque AI Use Case possède un propriétaire métier et un responsable de solution.</p>
+<p class="source-list-item">Chaque modèle en production possède un identifiant, une version, une provenance et un statut.</p>
+<p class="source-list-item">Chaque dataset ou corpus possède une classification, une source et des règles de conservation.</p>
+<p class="source-list-item">Chaque agent possède une liste explicite de tools autorisés et des permissions minimales.</p>
+<p class="source-list-item">Chaque AI Service documente son contrat, ses consommateurs, ses SLO et ses limites.</p>
+<p class="source-list-item">Chaque risque significatif est relié à un ou plusieurs contrôles et à une preuve vérifiable.</p>
+<h3>4.5 Mapping vers ArchiMate</h3>
+<div class="table-scroll"><table><tr><td><p>Concept du métamodèle IA</p></td><td><p>Éléments ArchiMate possibles</p></td><td><p>Remarque</p></td></tr><tr><td><p>AI Strategy</p></td><td><p>Goal, Outcome, Requirement, Principle, Course of Action</p></td><td><p>Utiliser Motivation pour le pourquoi.</p></td></tr><tr><td><p>AI Capability</p></td><td><p>Capability</p></td><td><p>Peut spécialiser le catalogue de capacités d&#x27;entreprise.</p></td></tr><tr><td><p>AI Use Case</p></td><td><p>Business Process, Business Service, Application Service selon le niveau</p></td><td><p>Un use case n&#x27;est pas un élément ArchiMate standard unique.</p></td></tr><tr><td><p>AI Product</p></td><td><p>Product, Business Service, Application Component</p></td><td><p>Choisir selon la nature et le point de vue.</p></td></tr><tr><td><p>Data Asset</p></td><td><p>Data Object, Business Object</p></td><td><p>Distinguer sens métier et représentation applicative.</p></td></tr><tr><td><p>AI Model</p></td><td><p>Application Component ou Technology Object selon l&#x27;abstraction</p></td><td><p>Documenter les métadonnées du modèle dans le référentiel.</p></td></tr><tr><td><p>AI Agent</p></td><td><p>Application Component / Application Function</p></td><td><p>Représenter ses comportements et interactions.</p></td></tr><tr><td><p>Tool/API</p></td><td><p>Application Service, Application Interface</p></td><td><p>Montrer le contrat et les consommateurs.</p></td></tr><tr><td><p>AI Platform</p></td><td><p>Node, System Software, Technology Service</p></td><td><p>Décrire l&#x27;environnement d&#x27;exécution.</p></td></tr><tr><td><p>AI Risk / Control</p></td><td><p>Assessment, Constraint, Requirement, Principle</p></td><td><p>Compléter par un registre de risques dédié.</p></td></tr></table></div>
+<h2>5. Architecture Data &amp; AI</h2>
+<h3>5.1 Chaîne de valeur des données IA</h3>
+<p>Sources -&gt; Ingestion -&gt; Landing / Raw -&gt; Quality &amp; Governance</p>
+<p>|</p>
+<p>v</p>
+<p>Curated / Semantic Layer</p>
+<p>|             |</p>
+<p>v             v</p>
+<p>ML Features    Document Corpus</p>
+<p>|             |</p>
+<p>v             v</p>
+<p>Feature Store  Chunking + Metadata</p>
+<p>|             |</p>
+<p>v             v</p>
+<p>ML Training    Embeddings</p>
+<p>|             |</p>
+<p>v             v</p>
+<p>Model Registry Vector Index</p>
+<p>|             |</p>
+<p>+------&gt; Inference / Retrieval</p>
+<h3>5.2 Architecture des données pour le ML</h3>
+<p class="source-list-item">Définir les sources, les contrats de données et les règles de qualité.</p>
+<p class="source-list-item">Assurer la reproductibilité des datasets d&#x27;entraînement et de validation.</p>
+<p class="source-list-item">Contrôler les fuites de données entre entraînement et test.</p>
+<p class="source-list-item">Documenter les features, leur définition métier, leur calcul et leur fraîcheur.</p>
+<p class="source-list-item">Assurer la cohérence entre features offline et online lorsque les prédictions sont temps réel.</p>
+<p class="source-list-item">Tracer les versions des données, du code, des paramètres et du modèle.</p>
+<h3>5.3 Architecture RAG</h3>
+<p>PHASE D&#x27;INGESTION</p>
+<p>Documents -&gt; Extract -&gt; Clean -&gt; Chunk -&gt; Metadata / ACL</p>
+<p>|</p>
+<p>v</p>
+<p>Embedding Model</p>
+<p>|</p>
+<p>v</p>
+<p>Vector Store</p>
+<p>PHASE DE REQUETE</p>
+<p>User Query -&gt; Identity / ACL -&gt; Query Embedding -&gt; Retrieval</p>
+<p>|</p>
+<p>v</p>
+<p>Reranking / Context Assembly</p>
+<p>|</p>
+<p>v</p>
+<p>LLM + Prompt</p>
+<p>|</p>
+<p>v</p>
+<p>Answer + Citations + Guardrails</p>
+<p>Décisions d&#x27;architecture à documenter : stratégie de chunking, modèle d&#x27;embedding, dimension vectorielle, recherche hybride, filtres de métadonnées, reranking, seuil de pertinence, gestion des documents supprimés, synchronisation des droits et stratégie de citation.</p>
+<h3>5.4 Gouvernance des données pour RAG</h3>
+<p class="source-list-item">Appliquer les droits d&#x27;accès au moment de la récupération, pas uniquement lors de l&#x27;indexation.</p>
+<p class="source-list-item">Empêcher qu&#x27;un utilisateur obtienne un extrait d&#x27;un document qu&#x27;il ne peut pas consulter.</p>
+<p class="source-list-item">Conserver la provenance, la version, la date et l&#x27;identifiant du document source.</p>
+<p class="source-list-item">Retirer ou réindexer les contenus supprimés ou dont les droits ont changé.</p>
+<p class="source-list-item">Évaluer la fraîcheur, la couverture et la pertinence du corpus.</p>
+<p class="source-list-item">Ne pas considérer les documents récupérés comme des instructions fiables : ils sont des données non fiables.</p>
+<h3>5.5 Architecture de données et cycle de vie</h3>
+<div class="table-scroll"><table><tr><td><p>Étape</p></td><td><p>Contrôles attendus</p></td></tr><tr><td><p>Collecte</p></td><td><p>Base légale, droits, finalité, minimisation, sécurité du transfert</p></td></tr><tr><td><p>Préparation</p></td><td><p>Qualité, déduplication, normalisation, détection de données sensibles</p></td></tr><tr><td><p>Enrichissement</p></td><td><p>Traçabilité des transformations et provenance</p></td></tr><tr><td><p>Stockage</p></td><td><p>Classification, chiffrement, accès, rétention, localisation</p></td></tr><tr><td><p>Consommation</p></td><td><p>Contrôle d&#x27;accès, minimisation, journalisation, contrat de données</p></td></tr><tr><td><p>Archivage / suppression</p></td><td><p>Durées de conservation, propagation de suppression, preuve</p></td></tr></table></div>
+<h2>6. Architecture applicative IA et Agentic AI</h2>
+<h3>6.1 Patterns applicatifs</h3>
+<div class="table-scroll"><table><tr><td><p>Pattern</p></td><td><p>Description</p></td><td><p>À privilégier lorsque</p></td></tr><tr><td><p>LLM direct</p></td><td><p>Application appelle un LLM via API</p></td><td><p>Tâche simple, faible orchestration, contexte limité</p></td></tr><tr><td><p>Prompt chain</p></td><td><p>Plusieurs prompts / transformations séquentiels</p></td><td><p>Pipeline déterministe et testable</p></td></tr><tr><td><p>RAG</p></td><td><p>Récupération de connaissances avant génération</p></td><td><p>Réponses fondées sur corpus métier évolutif</p></td></tr><tr><td><p>Tool calling</p></td><td><p>Le modèle choisit parmi des fonctions définies</p></td><td><p>Accès contrôlé à des données ou actions externes</p></td></tr><tr><td><p>Workflow agentique</p></td><td><p>Orchestration d&#x27;étapes, état et conditions</p></td><td><p>Processus complexe mais encadré</p></td></tr><tr><td><p>Multi-agent</p></td><td><p>Agents spécialisés coopèrent</p></td><td><p>Besoin réel de séparation de rôles ; complexité justifiée</p></td></tr><tr><td><p>Human-in-the-loop</p></td><td><p>Validation humaine avant action ou décision</p></td><td><p>Impact élevé, ambiguïté ou action irréversible</p></td></tr></table></div>
+<h3>6.2 Architecture de référence d&#x27;un agent</h3>
+<p>User / Business Application</p>
+<p>|</p>
+<p>v</p>
+<p>API Gateway / Identity / Policy Enforcement</p>
+<p>|</p>
+<p>v</p>
+<p>Agent Orchestrator (state, planning, routing, stop rules)</p>
+<p>|             |               |</p>
+<p>v             v               v</p>
+<p>LLM Gateway    Memory         Tool Registry</p>
+<p>|             |               |</p>
+<p>v             v               v</p>
+<p>Model         Session Store   Approved APIs / Systems</p>
+<p>|</p>
+<p>v</p>
+<p>Authorization / Audit</p>
+<p>Cross-cutting: evaluation, tracing, guardrails, cost limits, human approval</p>
+<h3>6.3 Agent, workflow et orchestrateur</h3>
+<p>Un workflow classique suit un enchaînement prédéfini. Un agent peut sélectionner une action ou un outil en fonction du contexte et de l&#x27;état courant. Une architecture robuste utilise souvent une orchestration hybride : étapes déterministes pour les opérations critiques, raisonnement du modèle pour les tâches ouvertes, et points de contrôle explicites.</p>
+<div class="table-scroll"><table><tr><td><p>Question</p></td><td><p>Décision d&#x27;architecture</p></td></tr><tr><td><p>L&#x27;agent peut-il agir ?</p></td><td><p>Définir une liste blanche d&#x27;outils et des permissions minimales.</p></td></tr><tr><td><p>L&#x27;action est-elle réversible ?</p></td><td><p>Exiger confirmation humaine pour les actions irréversibles ou sensibles.</p></td></tr><tr><td><p>Comment éviter les boucles ?</p></td><td><p>Définir nombre maximal d&#x27;étapes, timeout, budget tokens et conditions d&#x27;arrêt.</p></td></tr><tr><td><p>Comment gérer l&#x27;état ?</p></td><td><p>Séparer état de session, mémoire métier et historique auditable.</p></td></tr><tr><td><p>Comment gérer les erreurs ?</p></td><td><p>Retries bornés, idempotence, circuit breaker, fallback et escalade.</p></td></tr><tr><td><p>Comment vérifier la qualité ?</p></td><td><p>Tests de scénarios, trajectoires, outils appelés, résultats et refus.</p></td></tr></table></div>
+<h3>6.4 Exemple LangGraph</h3>
+<p>Exemple conceptuel d&#x27;un assistant de traitement de demande. Le graphe orchestre des étapes contrôlées ; l&#x27;utilisation de LangGraph est un choix d&#x27;implémentation possible, pas une obligation du framework.</p>
+<p>START</p>
+<p>|</p>
+<p>v</p>
+<p>Classify request</p>
+<p>|</p>
+<p>+---- simple question ----&gt; Retrieve knowledge</p>
+<p>|                              |</p>
+<p>|                              v</p>
+<p>|                         Draft answer</p>
+<p>|                              |</p>
+<p>+---- action request ----&gt; Check policy</p>
+<p>|</p>
+<p>+------+------</p>
+<p>|             |</p>
+<p>not allowed    approval needed</p>
+<p>|             |</p>
+<p>Refuse      Human approval</p>
+<p>|</p>
+<p>v</p>
+<p>Execute tool</p>
+<p>|</p>
+<p>v</p>
+<p>Verify outcome</p>
+<p>|</p>
+<p>v</p>
+<p>END</p>
+<h3>6.5 Contrats d&#x27;API IA</h3>
+<p class="source-list-item">Définir schéma d&#x27;entrée et de sortie, erreurs, version et limites de taille.</p>
+<p class="source-list-item">Indiquer si la réponse est probabiliste et quelles garanties ne sont pas fournies.</p>
+<p class="source-list-item">Documenter latence cible, quotas, coût, disponibilité et politique de retry.</p>
+<p class="source-list-item">Retourner des métadonnées utiles : model_id, version, sources, correlation_id, evaluation status si pertinent.</p>
+<p class="source-list-item">Ne jamais exposer les secrets ou détails internes du fournisseur dans les réponses.</p>
+<h2>7. Architecture technologique et plateformes</h2>
+<h3>7.1 Vue logique de plateforme</h3>
+<p>Consumers / Channels</p>
+<p>|</p>
+<p>API Management / AI Gateway</p>
+<p>|</p>
+<p>AI Application Runtime</p>
+<p>|        |         |</p>
+<p>RAG     Agent      ML Inference</p>
+<p>|        |         |</p>
+<p>Vector  Tool APIs  Model Serving</p>
+<p>Store     |          |</p>
+<p>|       +----------+</p>
+<p>v                  v</p>
+<p>Data Platform     Model Registry</p>
+<p>|                |</p>
+<p>+------ MLOps / LLMOps ------+</p>
+<p>|</p>
+<p>Identity / Secrets / Network / Observability / FinOps</p>
+<h3>7.2 Capacités de plateforme</h3>
+<div class="table-scroll"><table><tr><td><p>Domaine</p></td><td><p>Capacités attendues</p></td></tr><tr><td><p>Model access</p></td><td><p>Catalogue de modèles, routage, versionnement, quotas, fallback</p></td></tr><tr><td><p>Model development</p></td><td><p>Environnements, notebooks, entraînement, expérimentation, registry</p></td></tr><tr><td><p>Data platform</p></td><td><p>Ingestion, lakehouse, gouvernance, catalogage, qualité, lineage</p></td></tr><tr><td><p>RAG services</p></td><td><p>Parsing, chunking, embedding, indexation, retrieval, reranking</p></td></tr><tr><td><p>Agent runtime</p></td><td><p>Orchestration, state store, tool registry, sandbox, policy enforcement</p></td></tr><tr><td><p>Security</p></td><td><p>IAM, secrets, chiffrement, réseau privé, DLP, audit</p></td></tr><tr><td><p>Observability</p></td><td><p>Logs, traces, métriques, qualité, latence, coût, dérive</p></td></tr><tr><td><p>Delivery</p></td><td><p>CI/CD, tests, scans, validation, promotion et rollback</p></td></tr><tr><td><p>FinOps</p></td><td><p>Budgets, coûts par produit, quotas, optimisation modèles et tokens</p></td></tr></table></div>
+<h3>7.3 Choix technologiques : critères plutôt que catalogue</h3>
+<p>Le framework ne prescrit pas un fournisseur unique. Azure AI Foundry, Azure Machine Learning, AWS Bedrock, SageMaker, Google Vertex AI, plateformes open source ou solutions internes peuvent être évalués à partir d&#x27;un même ensemble de critères.</p>
+<p class="source-list-item">Adéquation aux cas d&#x27;usage et aux modèles requis.</p>
+<p class="source-list-item">Région d&#x27;hébergement, résidence des données et exigences contractuelles.</p>
+<p class="source-list-item">Gestion des identités, des réseaux, des clés et des secrets.</p>
+<p class="source-list-item">Portabilité des modèles, formats, APIs et données.</p>
+<p class="source-list-item">Capacités d&#x27;évaluation, observabilité et gouvernance.</p>
+<p class="source-list-item">Coût total : entraînement, inférence, stockage, transfert, exploitation et contrôle.</p>
+<p class="source-list-item">Disponibilité, montée en charge, quotas, reprise et continuité.</p>
+<p class="source-list-item">Compétences internes, support et maturité de l&#x27;écosystème.</p>
+<h3>7.4 MLOps et LLMOps</h3>
+<div class="table-scroll"><table><tr><td><p>Pratique</p></td><td><p>ML / MLOps</p></td><td><p>GenAI / LLMOps</p></td></tr><tr><td><p>Versionnement</p></td><td><p>Code, données, features, paramètres, modèle</p></td><td><p>Prompts, modèles, corpus, embeddings, outils, graphes</p></td></tr><tr><td><p>Tests</p></td><td><p>Performance, robustesse, biais, dérive</p></td><td><p>Groundedness, pertinence, hallucination, sécurité, injection</p></td></tr><tr><td><p>Déploiement</p></td><td><p>Batch, temps réel, edge</p></td><td><p>API, streaming, orchestration, agents</p></td></tr><tr><td><p>Monitoring</p></td><td><p>Drift, précision, latence, disponibilité</p></td><td><p>Qualité réponse, coût tokens, latence, refus, traces d&#x27;outils</p></td></tr><tr><td><p>Rollback</p></td><td><p>Retour à modèle précédent</p></td><td><p>Retour à modèle, prompt, corpus ou configuration précédente</p></td></tr></table></div>
+<h2>8. Sécurité, gouvernance, risques et conformité</h2>
+<h3>8.1 Gouvernance à plusieurs niveaux</h3>
+<div class="table-scroll"><table><tr><td><p>Instance</p></td><td><p>Responsabilités</p></td></tr><tr><td><p>AI Steering Committee</p></td><td><p>Priorités, appétence au risque, arbitrages, financement</p></td></tr><tr><td><p>Architecture Board</p></td><td><p>Principes, standards, dérogations, cohérence SI</p></td></tr><tr><td><p>AI Risk / Compliance Committee</p></td><td><p>Qualification des risques, exigences réglementaires, contrôles</p></td></tr><tr><td><p>Data Governance</p></td><td><p>Propriété, qualité, accès, conservation et provenance des données</p></td></tr><tr><td><p>AI Product Owner</p></td><td><p>Valeur, périmètre, utilisateurs, qualité métier et cycle de vie</p></td></tr><tr><td><p>Model Owner</p></td><td><p>Version, performances, documentation, validation et surveillance</p></td></tr><tr><td><p>Platform Owner</p></td><td><p>Disponibilité, sécurité, capacité, coûts et exploitation</p></td></tr></table></div>
+<h3>8.2 Cycle de gestion des risques</h3>
+<p>Contextualiser l&#x27;usage</p>
+<p>|</p>
+<p>v</p>
+<p>Identifier les risques (données, modèle, usage, sécurité, tiers)</p>
+<p>|</p>
+<p>v</p>
+<p>Analyser impact / vraisemblance / personnes concernées</p>
+<p>|</p>
+<p>v</p>
+<p>Choisir les contrôles et le niveau de supervision</p>
+<p>|</p>
+<p>v</p>
+<p>Tester et documenter le risque résiduel</p>
+<p>|</p>
+<p>v</p>
+<p>Autoriser / restreindre / refuser</p>
+<p>|</p>
+<p>v</p>
+<p>Surveiller, réévaluer et gérer les incidents</p>
+<h3>8.3 Catalogue de risques IA</h3>
+<div class="table-scroll"><table><tr><td><p>Risque</p></td><td><p>Exemple</p></td><td><p>Contrôles possibles</p></td></tr><tr><td><p>Données non autorisées</p></td><td><p>Données personnelles envoyées à un service externe</p></td><td><p>Classification, minimisation, DLP, contrats, filtrage</p></td></tr><tr><td><p>Biais</p></td><td><p>Résultat défavorable à un groupe</p></td><td><p>Tests de biais, analyse d&#x27;impact, revue humaine</p></td></tr><tr><td><p>Hallucination</p></td><td><p>Réponse inventée présentée comme factuelle</p></td><td><p>RAG, citations, seuils, abstention, validation</p></td></tr><tr><td><p>Prompt injection</p></td><td><p>Document ou utilisateur tente de détourner le modèle</p></td><td><p>Séparation instructions/données, filtrage, sandbox, tests</p></td></tr><tr><td><p>Exfiltration</p></td><td><p>L&#x27;agent extrait des données via un outil</p></td><td><p>Least privilege, scopes, DLP, contrôle de sortie</p></td></tr><tr><td><p>Action non autorisée</p></td><td><p>L&#x27;agent modifie un dossier sans approbation</p></td><td><p>Allowlist, validation humaine, idempotence, audit</p></td></tr><tr><td><p>Dérive</p></td><td><p>Dégradation de performance dans le temps</p></td><td><p>Monitoring, réévaluation, réentraînement ou changement de modèle</p></td></tr><tr><td><p>Dépendance fournisseur</p></td><td><p>Arrêt ou changement d&#x27;API / modèle</p></td><td><p>Abstraction, stratégie de sortie, tests de portabilité</p></td></tr><tr><td><p>Coût incontrôlé</p></td><td><p>Boucles agentiques ou prompts trop longs</p></td><td><p>Budgets, quotas, limites d&#x27;étapes, alertes</p></td></tr><tr><td><p>Indisponibilité</p></td><td><p>Service LLM ou plateforme indisponible</p></td><td><p>Fallback, cache, circuit breaker, mode dégradé</p></td></tr></table></div>
+<h3>8.4 Sécurité spécifique aux agents</h3>
+<p class="source-list-item">Identité distincte par agent ou workload ; éviter les identifiants partagés.</p>
+<p class="source-list-item">Permissions minimales, limitées dans le temps et au contexte.</p>
+<p class="source-list-item">Tools enregistrés, approuvés, typés et soumis à contrôle d&#x27;accès.</p>
+<p class="source-list-item">Validation humaine pour les paiements, suppressions, communications externes ou décisions à fort impact.</p>
+<p class="source-list-item">Sandbox pour l&#x27;exécution de code et les contenus non fiables.</p>
+<p class="source-list-item">Traçabilité des décisions, appels d&#x27;outils, entrées/sorties pertinentes et approbations.</p>
+<p class="source-list-item">Limites de budget, durée, nombre d&#x27;itérations et taille des données manipulées.</p>
+<h3>8.5 Référentiels de gouvernance à articuler</h3>
+<p class="source-list-item">NIST AI Risk Management Framework : approche de gestion des risques IA.</p>
+<p class="source-list-item">ISO/IEC 42001 : système de management de l&#x27;intelligence artificielle.</p>
+<p class="source-list-item">ISO/IEC 23894 : lignes directrices de gestion des risques IA.</p>
+<p class="source-list-item">Réglementation européenne sur l&#x27;IA (AI Act) : obligations à déterminer selon le rôle, le système et sa qualification.</p>
+<p class="source-list-item">RGPD et règles de protection des données : finalité, base légale, minimisation, droits, sécurité et transferts.</p>
+<div class="table-scroll"><table><tr><td><p>Prudence réglementaire<br>
+La qualification réglementaire d&#x27;un système dépend du cas d&#x27;usage, du contexte, du rôle de l&#x27;organisation et des textes applicables. Le présent guide ne remplace pas une analyse juridique ni une analyse d&#x27;impact formelle.</p></td></tr></table></div>
+<h2>9. Adaptation de TOGAF ADM aux projets IA</h2>
+<p>Le cycle ADM reste le fil conducteur. L&#x27;adaptation consiste à ajouter des questions, contrôles et livrables propres à l&#x27;IA, sans créer une méthode parallèle qui ferait doublon avec les processus existants.</p>
+<div class="table-scroll"><table><tr><td><p>Phase ADM</p></td><td><p>Travaux IA complémentaires</p></td><td><p>Livrables recommandés</p></td></tr><tr><td><p>Preliminary</p></td><td><p>Maturité IA, principes, gouvernance, capacités et standards</p></td><td><p>AI Architecture Principles, mandat, modèle de gouvernance</p></td></tr><tr><td><p>A – Architecture Vision</p></td><td><p>Vision IA, parties prenantes, valeur, risques de haut niveau</p></td><td><p>AI Vision, concept cible, business case, stakeholder map</p></td></tr><tr><td><p>B – Business Architecture</p></td><td><p>Capacités métier, processus, rôles, impacts humains</p></td><td><p>AI Capability Map, processus cible, operating model</p></td></tr><tr><td><p>C – Data Architecture</p></td><td><p>Sources, qualité, lineage, corpus, droits et cycle de vie</p></td><td><p>Data/AI Data Architecture, data contracts, corpus map</p></td></tr><tr><td><p>C – Application Architecture</p></td><td><p>Produits IA, agents, RAG, APIs, systèmes consommateurs</p></td><td><p>AI Application Portfolio, interactions, contrats</p></td></tr><tr><td><p>D – Technology Architecture</p></td><td><p>Plateforme, modèles, GPU, réseau, sécurité, observabilité</p></td><td><p>AI Technology Reference Architecture, standards</p></td></tr><tr><td><p>E – Opportunities &amp; Solutions</p></td><td><p>Work packages, solutions candidates, dépendances et risques</p></td><td><p>Solution Building Blocks, architecture options</p></td></tr><tr><td><p>F – Migration Planning</p></td><td><p>Priorisation, trajectoires, capacités à construire</p></td><td><p>AI Roadmap, Transition Architectures, business case</p></td></tr><tr><td><p>G – Implementation Governance</p></td><td><p>Revues, conformité, tests, preuves et dérogations</p></td><td><p>Architecture Compliance Assessment, décisions</p></td></tr><tr><td><p>H – Architecture Change Management</p></td><td><p>Surveillance, évolution des modèles, coûts, risques et usages</p></td><td><p>Change Request, Model Change Assessment, mise à jour repository</p></td></tr></table></div>
+<h3>9.1 Phase Preliminary : préparer l&#x27;entreprise</h3>
+<p class="source-list-item">Évaluer la maturité des données, de l&#x27;architecture, de la sécurité et de l&#x27;exploitation.</p>
+<p class="source-list-item">Définir le périmètre de gouvernance IA et les instances de décision.</p>
+<p class="source-list-item">Établir les principes IA et les standards de modélisation.</p>
+<p class="source-list-item">Créer les premières taxonomies : use cases, modèles, agents, données et risques.</p>
+<p class="source-list-item">Définir les critères d&#x27;entrée et de sortie des revues d&#x27;architecture.</p>
+<h3>9.2 Phase A : vision d&#x27;architecture</h3>
+<p>La vision doit expliciter le problème métier, la valeur attendue, les parties prenantes, les contraintes, les options de solution et les risques majeurs. Elle ne doit pas imposer prématurément un modèle ou un fournisseur.</p>
+<h3>9.3 Phases B et C : métier, données et applications</h3>
+<p>La phase B décrit les changements de capacités, processus, rôles et contrôles humains. La phase C décrit les données et applications nécessaires, notamment les corpus RAG, les modèles, les services IA et les intégrations avec le SI.</p>
+<h3>9.4 Phase D : technologie</h3>
+<p>La phase D compare les options d&#x27;hébergement et d&#x27;exécution : service managé, plateforme cloud, modèle auto-hébergé, GPU, Kubernetes, réseau privé, stockage vectoriel et outils d&#x27;observabilité.</p>
+<h3>9.5 Phases E et F : solutions et migration</h3>
+<p>Décomposer la cible en Solution Building Blocks et Transition Architectures. Prioriser les fondations communes : identité, AI Gateway, catalogue de modèles, pipeline d&#x27;évaluation, observabilité et gouvernance des données.</p>
+<h3>9.6 Phases G et H : contrôle et évolution</h3>
+<p>La conformité ne s&#x27;arrête pas à la mise en production. Tout changement de modèle, de prompt, de corpus, de tool, de fournisseur ou de niveau d&#x27;autonomie peut modifier le risque et doit déclencher une évaluation proportionnée.</p>
+<h3>9.7 Gates de décision</h3>
+<div class="table-scroll"><table><tr><td><p>Gate</p></td><td><p>Question de décision</p></td><td><p>Preuve minimale</p></td></tr><tr><td><p>G0 – Intake</p></td><td><p>Le besoin est-il légitime et sponsorisé ?</p></td><td><p>Fiche use case, owner, objectif</p></td></tr><tr><td><p>G1 – Qualification</p></td><td><p>Les données et risques sont-ils suffisamment connus ?</p></td><td><p>Data assessment, risque initial, option IA</p></td></tr><tr><td><p>G2 – Architecture</p></td><td><p>La solution est-elle cohérente et sécurisée ?</p></td><td><p>Vues ArchiMate/C4, ADR, contrôles</p></td></tr><tr><td><p>G3 – Préproduction</p></td><td><p>La qualité et la sécurité sont-elles démontrées ?</p></td><td><p>Résultats d&#x27;évaluation, tests, plan de reprise</p></td></tr><tr><td><p>G4 – Production</p></td><td><p>Le service est-il exploitable et gouverné ?</p></td><td><p>SLO, runbook, ownership, monitoring</p></td></tr><tr><td><p>G5 – Revue continue</p></td><td><p>Les performances et risques restent-ils acceptables ?</p></td><td><p>KPI, incidents, drift, coûts, réévaluation</p></td></tr></table></div>
+<h2>10. Modélisation ArchiMate et C4</h2>
+<h3>10.1 Quand utiliser ArchiMate ?</h3>
+<p>ArchiMate est adapté à la représentation des motivations, capacités métier, processus, services, applications, données et technologies à l&#x27;échelle de l&#x27;entreprise. Il permet de montrer pourquoi une solution existe, quelles capacités elle soutient, quels services elle expose et sur quelles plateformes elle repose.</p>
+<h3>10.2 Vues ArchiMate recommandées</h3>
+<div class="table-scroll"><table><tr><td><p>Vue</p></td><td><p>Question traitée</p></td><td><p>Éléments principaux</p></td></tr><tr><td><p>Motivation</p></td><td><p>Pourquoi investir dans l&#x27;IA ?</p></td><td><p>Stakeholder, Driver, Goal, Outcome, Requirement, Constraint</p></td></tr><tr><td><p>Capability</p></td><td><p>Quelles capacités métier sont augmentées ?</p></td><td><p>Capability, Value Stream, Resource</p></td></tr><tr><td><p>Business Process</p></td><td><p>Comment le processus change-t-il ?</p></td><td><p>Business Actor, Role, Process, Service, Event</p></td></tr><tr><td><p>Information Structure</p></td><td><p>Quelles informations sont consommées ?</p></td><td><p>Business Object, Data Object, Representation</p></td></tr><tr><td><p>Application Cooperation</p></td><td><p>Comment les applications collaborent-elles ?</p></td><td><p>Application Component, Interface, Service, Data Object</p></td></tr><tr><td><p>Technology</p></td><td><p>Où et comment s&#x27;exécute la solution ?</p></td><td><p>Node, System Software, Technology Service, Artifact</p></td></tr><tr><td><p>Implementation &amp; Migration</p></td><td><p>Comment atteindre la cible ?</p></td><td><p>Work Package, Deliverable, Plateau, Gap</p></td></tr><tr><td><p>Risk &amp; Compliance</p></td><td><p>Quels contrôles répondent aux risques ?</p></td><td><p>Assessment, Requirement, Constraint, Principle</p></td></tr></table></div>
+<h3>10.3 Exemple de vue ArchiMate – assistant RAG</h3>
+<p>[Driver] Réduire le temps de recherche documentaire</p>
+<p>| influences</p>
+<p>[Goal] Réponse fiable et traçable</p>
+<p>| realized by</p>
+<p>[Capability] Knowledge Management augmenté</p>
+<p>| served by</p>
+<p>[Business Service] Assistance documentaire</p>
+<p>| realized by</p>
+<p>[Application Service] RAG Query Service</p>
+<p>| served by</p>
+<p>[Application Component] Assistant UI / RAG Orchestrator</p>
+<p>| accesses</p>
+<p>[Data Object] Corpus documentaire + métadonnées ACL</p>
+<p>| stored in</p>
+<p>[Technology Service] Vector Search Platform</p>
+<p>| deployed on</p>
+<p>[Node] Cloud AI Platform / Kubernetes</p>
+<p>Ce schéma est une vue logique simplifiée. Dans un modèle ArchiMate formel, les relations exactes (realization, serving, access, assignment, deployment, influence) doivent être choisies selon la sémantique des éléments et la version du langage utilisée.</p>
+<h3>10.4 Quand utiliser C4 ?</h3>
+<p>C4 complète ArchiMate en décrivant la structure logicielle d&#x27;une solution. Il est particulièrement utile pour aligner architectes, développeurs, équipes plateforme et sécurité.</p>
+<div class="table-scroll"><table><tr><td><p>Niveau C4</p></td><td><p>Usage pour l&#x27;IA</p></td><td><p>Exemple</p></td></tr><tr><td><p>L1 – System Context</p></td><td><p>Acteurs, système IA, systèmes externes</p></td><td><p>Collaborateur, Assistant IA, GED, IAM</p></td></tr><tr><td><p>L2 – Container</p></td><td><p>Applications et services déployables</p></td><td><p>Frontend, API, orchestrateur, vector DB, LLM Gateway</p></td></tr><tr><td><p>L3 – Component</p></td><td><p>Composants internes d&#x27;un conteneur</p></td><td><p>Retriever, reranker, prompt builder, policy checker</p></td></tr><tr><td><p>L4 – Code</p></td><td><p>Détails d&#x27;implémentation utiles</p></td><td><p>Classes, modules, interfaces ; optionnel</p></td></tr></table></div>
+<h3>10.5 Exemple C4 – L2 conteneurs RAG</h3>
+<p>+-------------------+          +------------------+</p>
+<p>| Collaborateur     |---------&gt;| Web / Teams UI    |</p>
+<p>+-------------------+          +--------+---------+</p>
+<p>| HTTPS</p>
+<p>v</p>
+<p>+---------+----------+</p>
+<p>| RAG API / Backend  |</p>
+<p>+---+------------+---+</p>
+<p>|            |</p>
+<p>v            v</p>
+<p>+--------+--+   +-----+----------+</p>
+<p>| Retriever |   | LLM Gateway    |</p>
+<p>+-----+-----+   +-----+----------+</p>
+<p>|               |</p>
+<p>v               v</p>
+<p>+-----+------+   +----+---------+</p>
+<p>| Vector DB  |   | Foundation   |</p>
+<p>+------------+   | Model        |</p>
+<p>+--------------+</p>
+<p>+------------------+</p>
+<p>| Document Ingest  |----&gt; Object Storage / Index</p>
+<p>+------------------+</p>
+<p>Identity, ACL, Audit, Tracing, Evaluation (cross-cutting)</p>
+<h3>10.6 Règles de cohérence ArchiMate / C4</h3>
+<p class="source-list-item">ArchiMate décrit l&#x27;entreprise et les relations entre domaines ; C4 détaille une solution logicielle.</p>
+<p class="source-list-item">Les noms des systèmes, services et conteneurs doivent être cohérents entre les vues.</p>
+<p class="source-list-item">Un Application Component ArchiMate peut correspondre à un système ou un conteneur C4 selon le niveau de granularité.</p>
+<p class="source-list-item">Les vues doivent porter un objectif, un public cible, un périmètre et une date de validité.</p>
+<p class="source-list-item">Ne pas chercher à représenter tous les détails dans un seul diagramme : produire plusieurs vues complémentaires.</p>
+<h2>11. Architectures de référence et cas pratiques</h2>
+<h3>11.1 Référence A – RAG d&#x27;entreprise</h3>
+<p>Cas : assistant interne qui répond à des questions à partir d&#x27;un corpus de procédures et documents. Les réponses doivent être accompagnées de références et respecter les habilitations.</p>
+<div class="table-scroll"><table><tr><td><p>Zone</p></td><td><p>Composants</p></td><td><p>Décisions / contrôles</p></td></tr><tr><td><p>Canal</p></td><td><p>Portail ou Teams</p></td><td><p>SSO, contexte utilisateur, expérience et feedback</p></td></tr><tr><td><p>API</p></td><td><p>Backend RAG</p></td><td><p>Validation entrée, rate limit, correlation ID</p></td></tr><tr><td><p>Retrieval</p></td><td><p>Hybrid search, reranker, vector store</p></td><td><p>ACL, seuil, top-k, fraîcheur, suppression</p></td></tr><tr><td><p>Generation</p></td><td><p>LLM Gateway, prompt template</p></td><td><p>Modèle autorisé, prompt versionné, filtrage</p></td></tr><tr><td><p>Knowledge</p></td><td><p>Ingestion, parsing, chunking</p></td><td><p>Provenance, métadonnées, déduplication</p></td></tr><tr><td><p>Governance</p></td><td><p>Evaluation, tracing, audit</p></td><td><p>Groundedness, citation, sécurité, coût</p></td></tr></table></div>
+<h3>11.2 Référence B – Agent métier</h3>
+<p>Cas : agent qui qualifie une demande, consulte des systèmes et prépare une proposition de réponse. L&#x27;agent ne réalise pas d&#x27;action sensible sans validation.</p>
+<p>User -&gt; Agent API -&gt; Policy / Identity</p>
+<p>|</p>
+<p>v</p>
+<p>Orchestrator</p>
+<p>/       \</p>
+<p>v         v</p>
+<p>Knowledge   CRM Read Tool</p>
+<p>\         /</p>
+<p>v       v</p>
+<p>Draft recommendation</p>
+<p>|</p>
+<p>v</p>
+<p>Human approval</p>
+<p>|</p>
+<p>v</p>
+<p>CRM Write Tool</p>
+<p>|</p>
+<p>v</p>
+<p>Audit / Verify</p>
+<h3>11.3 Référence C – ML prédictif</h3>
+<p>Cas : prédire un risque de retard ou une demande future à partir de données historiques. Le modèle alimente une aide à la décision ; les utilisateurs conservent la responsabilité de l&#x27;action.</p>
+<p class="source-list-item">Pipeline d&#x27;ingestion et de préparation versionné.</p>
+<p class="source-list-item">Feature Store ou couche de features documentée.</p>
+<p class="source-list-item">Entraînement reproductible, tests, validation métier et registre de modèle.</p>
+<p class="source-list-item">Service d&#x27;inférence avec seuils et gestion des valeurs manquantes.</p>
+<p class="source-list-item">Monitoring de la performance, de la dérive et des biais.</p>
+<p class="source-list-item">Processus de réentraînement et rollback documenté.</p>
+<h3>11.4 Référence D – Plateforme GenAI mutualisée</h3>
+<p>La plateforme mutualisée fournit des services communs aux produits IA : accès aux modèles, sécurité, quotas, évaluation, observabilité, catalogues, gestion des prompts et outils approuvés. Les produits restent responsables de leur valeur métier, de leurs données et de leurs contrôles spécifiques.</p>
+<h3>11.5 Exemple fil rouge : traitement intelligent de factures</h3>
+<div class="table-scroll"><table><tr><td><p>Étape</p></td><td><p>Description</p></td><td><p>Contrôle</p></td></tr><tr><td><p>1. Réception</p></td><td><p>Facture reçue par GED ou canal sécurisé</p></td><td><p>Authenticité, antivirus, classification</p></td></tr><tr><td><p>2. Extraction</p></td><td><p>OCR / modèle multimodal extrait les champs</p></td><td><p>Score de confiance, schéma, validation</p></td></tr><tr><td><p>3. Enrichissement</p></td><td><p>Rapprochement fournisseur / commande</p></td><td><p>Contrôle métier et accès ERP</p></td></tr><tr><td><p>4. Détection</p></td><td><p>ML signale incohérences ou anomalies</p></td><td><p>Seuils, explication, suivi faux positifs</p></td></tr><tr><td><p>5. Proposition</p></td><td><p>GenAI explique les écarts et prépare une synthèse</p></td><td><p>Sources, format structuré, filtrage</p></td></tr><tr><td><p>6. Validation</p></td><td><p>Collaborateur valide ou corrige</p></td><td><p>Human-in-the-loop, séparation des tâches</p></td></tr><tr><td><p>7. Action</p></td><td><p>Mise à jour ERP après validation</p></td><td><p>API sécurisée, idempotence, audit</p></td></tr><tr><td><p>8. Amélioration</p></td><td><p>Feedback alimente l&#x27;évaluation</p></td><td><p>Gouvernance des données et réentraînement contrôlé</p></td></tr></table></div>
+<h2>12. Livrables, gouvernance opérationnelle et roadmap</h2>
+<h3>12.1 Catalogue des livrables</h3>
+<div class="table-scroll"><table><tr><td><p>Livrable</p></td><td><p>Contenu minimal</p></td><td><p>Responsable principal</p></td></tr><tr><td><p>AI Architecture Principles</p></td><td><p>Principes, justification, conséquences, contrôles</p></td><td><p>Enterprise Architect</p></td></tr><tr><td><p>AI Capability Map</p></td><td><p>Capacités métier et IA, maturité, propriétaires</p></td><td><p>Business / Enterprise Architect</p></td></tr><tr><td><p>AI Use Case Canvas</p></td><td><p>Problème, valeur, données, risque, KPI, owner</p></td><td><p>Product Owner</p></td></tr><tr><td><p>AI System Context</p></td><td><p>Acteurs, systèmes externes, frontières</p></td><td><p>Solution Architect</p></td></tr><tr><td><p>AI Reference Architecture</p></td><td><p>Couches, services, patterns et standards</p></td><td><p>Domain / Solution Architect</p></td></tr><tr><td><p>AI Metamodel</p></td><td><p>Entités, attributs, relations, règles</p></td><td><p>Enterprise Architect</p></td></tr><tr><td><p>Data &amp; Model Cards</p></td><td><p>Données et modèles, limites, provenance, évaluation</p></td><td><p>Data / Model Owner</p></td></tr><tr><td><p>AI Risk Assessment</p></td><td><p>Risques, contrôles, risque résiduel, preuves</p></td><td><p>Risk / Compliance</p></td></tr><tr><td><p>ArchiMate Views</p></td><td><p>Motivation, capacités, processus, applications, technologies</p></td><td><p>Architecte</p></td></tr><tr><td><p>C4 Diagrams</p></td><td><p>Context, containers, components</p></td><td><p>Solution Architect</p></td></tr><tr><td><p>Architecture Decision Records</p></td><td><p>Contexte, options, décision, conséquences</p></td><td><p>Architecte / équipe</p></td></tr><tr><td><p>AI Evaluation Report</p></td><td><p>Jeux de tests, métriques, résultats, seuils</p></td><td><p>AI / QA Lead</p></td></tr><tr><td><p>AI Operations Runbook</p></td><td><p>SLO, alertes, incidents, rollback, contacts</p></td><td><p>Platform / Operations</p></td></tr><tr><td><p>AI Roadmap</p></td><td><p>Work packages, dépendances, transitions, jalons</p></td><td><p>Architecture / Portfolio</p></td></tr></table></div>
+<h3>12.2 Modèle d&#x27;Architecture Decision Record (ADR)</h3>
+<div class="table-scroll"><table><tr><td><p>Champ</p></td><td><p>Description</p></td></tr><tr><td><p>ADR ID / titre</p></td><td><p>Identifiant unique et décision résumée</p></td></tr><tr><td><p>Statut / date</p></td><td><p>Proposée, acceptée, remplacée, rejetée</p></td></tr><tr><td><p>Contexte</p></td><td><p>Problème, contraintes, exigences et hypothèses</p></td></tr><tr><td><p>Options</p></td><td><p>Alternatives évaluées et critères</p></td></tr><tr><td><p>Décision</p></td><td><p>Option retenue et justification</p></td></tr><tr><td><p>Conséquences</p></td><td><p>Bénéfices, coûts, risques et dette</p></td></tr><tr><td><p>Contrôles</p></td><td><p>Sécurité, données, exploitation, conformité</p></td></tr><tr><td><p>Révision</p></td><td><p>Événement ou date déclenchant une réévaluation</p></td></tr></table></div>
+<h3>12.3 Indicateurs de pilotage</h3>
+<div class="table-scroll"><table><tr><td><p>Dimension</p></td><td><p>Indicateurs possibles</p></td></tr><tr><td><p>Valeur métier</p></td><td><p>Temps gagné, taux d&#x27;automatisation, qualité de service, satisfaction</p></td></tr><tr><td><p>Qualité IA</p></td><td><p>Exactitude, groundedness, pertinence, taux de refus, taux de correction humaine</p></td></tr><tr><td><p>Sécurité</p></td><td><p>Incidents, tentatives d&#x27;injection, violations d&#x27;accès, exfiltration évitée</p></td></tr><tr><td><p>Fiabilité</p></td><td><p>Disponibilité, latence p95, taux d&#x27;erreur, succès des outils</p></td></tr><tr><td><p>Coûts</p></td><td><p>Coût par transaction, coût par utilisateur, tokens, coût GPU</p></td></tr><tr><td><p>Adoption</p></td><td><p>Utilisateurs actifs, rétention, taux d&#x27;usage utile</p></td></tr><tr><td><p>Gouvernance</p></td><td><p>Couverture des fiches, modèles inventoriés, revues réalisées, dérogations ouvertes</p></td></tr></table></div>
+<h3>12.4 Roadmap de mise en place en 90 jours</h3>
+<div class="table-scroll"><table><tr><td><p>Période</p></td><td><p>Objectif</p></td><td><p>Actions et résultats</p></td></tr><tr><td><p>Jours 1–15</p></td><td><p>Cadrage</p></td><td><p>Sponsor, périmètre, parties prenantes, inventaire initial, principes</p></td></tr><tr><td><p>Jours 16–30</p></td><td><p>Fondations</p></td><td><p>AI capability map, use case canvas, taxonomie, gouvernance, modèle de risques</p></td></tr><tr><td><p>Jours 31–45</p></td><td><p>Architecture cible</p></td><td><p>Métamodèle, vues ArchiMate, patterns RAG/agent/ML, critères plateforme</p></td></tr><tr><td><p>Jours 46–60</p></td><td><p>Industrialisation</p></td><td><p>C4 de la solution pilote, ADR, pipeline d&#x27;évaluation, sécurité, observabilité</p></td></tr><tr><td><p>Jours 61–75</p></td><td><p>Pilote contrôlé</p></td><td><p>Tests métier et techniques, évaluation, validation des contrôles, runbook</p></td></tr><tr><td><p>Jours 76–90</p></td><td><p>Passage à l&#x27;échelle</p></td><td><p>Retour d&#x27;expérience, roadmap, catalogue de building blocks, comité d&#x27;architecture</p></td></tr></table></div>
+<h3>12.5 Modèle opératoire cible</h3>
+<p>Le modèle opératoire doit éviter que l&#x27;architecture soit seule responsable de la qualité IA. Le métier porte la finalité et la valeur ; Data porte les données ; AI/ML porte les modèles et évaluations ; IT/Platform porte l&#x27;exécution ; Security/Privacy/Risk porte les contrôles relevant de ses mandats ; l&#x27;architecture garantit la cohérence et l&#x27;alignement.</p>
+<div class="table-scroll"><table><tr><td><p>Rôle</p></td><td><p>Responsabilité</p></td></tr><tr><td><p>Business Owner</p></td><td><p>Finalité, valeur, arbitrage métier et acceptation du risque métier</p></td></tr><tr><td><p>AI Product Owner</p></td><td><p>Backlog, expérience, adoption, KPI et cycle de vie produit</p></td></tr><tr><td><p>Enterprise Architect</p></td><td><p>Cohérence, capacités, principes, roadmap et gouvernance</p></td></tr><tr><td><p>Solution Architect</p></td><td><p>Conception de bout en bout, intégration, NFR, ADR et vues</p></td></tr><tr><td><p>Data Owner / Steward</p></td><td><p>Qualité, définition, droits, classification et lineage</p></td></tr><tr><td><p>ML / AI Engineer</p></td><td><p>Modèles, prompts, pipelines, évaluation et expérimentation</p></td></tr><tr><td><p>Platform Engineer</p></td><td><p>Runtime, CI/CD, observabilité, disponibilité et coûts</p></td></tr><tr><td><p>Security / Privacy / Risk</p></td><td><p>Exigences, analyses, contrôles et avis spécialisés</p></td></tr><tr><td><p>Operations</p></td><td><p>Support, incident, changement, capacité et continuité</p></td></tr></table></div>
+<h2>Annexe A – Canevas AI Use Case</h2>
+<div class="table-scroll"><table><tr><td><p>Champ</p></td><td><p>À renseigner</p></td></tr><tr><td><p>Nom / ID</p></td><td></td></tr><tr><td><p>Sponsor / Business Owner</p></td><td></td></tr><tr><td><p>Problème métier</p></td><td></td></tr><tr><td><p>Processus et utilisateurs concernés</p></td><td></td></tr><tr><td><p>Capability métier soutenue</p></td><td></td></tr><tr><td><p>Résultat / KPI cible</p></td><td></td></tr><tr><td><p>Approche IA envisagée</p></td><td></td></tr><tr><td><p>Données / sources / classification</p></td><td></td></tr><tr><td><p>Modèle / fournisseur / hébergement envisagé</p></td><td></td></tr><tr><td><p>Actions possibles et niveau d&#x27;autonomie</p></td><td></td></tr><tr><td><p>Risques initiaux et contrôles</p></td><td></td></tr><tr><td><p>SLO / coût / volumétrie</p></td><td></td></tr><tr><td><p>Critères de validation / Go-No Go</p></td><td></td></tr></table></div>
+<h2>Annexe B – Checklist de revue d&#x27;architecture IA</h2>
+<p>☐  Le cas d&#x27;usage est relié à un objectif et à une capacité métier.</p>
+<p>☐  Le propriétaire métier et le responsable technique sont nommés.</p>
+<p>☐  Les données et corpus sont inventoriés, classifiés et autorisés.</p>
+<p>☐  Les modèles, prompts, embeddings et outils sont versionnés.</p>
+<p>☐  Les droits d&#x27;accès sont appliqués jusqu&#x27;au niveau des documents et des actions.</p>
+<p>☐  Les appels d&#x27;outils sont limités, authentifiés et journalisés.</p>
+<p>☐  Les actions à impact sont soumises à une validation adaptée.</p>
+<p>☐  Les tests évaluent qualité, robustesse, sécurité et cas limites.</p>
+<p>☐  Les limites, incertitudes et conditions de refus sont documentées.</p>
+<p>☐  Les coûts, quotas, latences et conditions d&#x27;arrêt sont définis.</p>
+<p>☐  Les métriques et alertes de production sont opérationnelles.</p>
+<p>☐  Le rollback et le mode dégradé sont documentés.</p>
+<p>☐  Les risques résiduels et dérogations sont approuvés.</p>
+<p>☐  Les vues ArchiMate et C4 sont cohérentes et à jour.</p>
+<h2>Annexe C – Glossaire</h2>
+<div class="table-scroll"><table><tr><td><p>Terme</p></td><td><p>Définition synthétique</p></td></tr><tr><td><p>AI Gateway</p></td><td><p>Point d&#x27;entrée contrôlé pour les appels aux modèles IA.</p></td></tr><tr><td><p>Agent</p></td><td><p>Composant qui poursuit un objectif et peut sélectionner des étapes ou outils selon un état et des règles.</p></td></tr><tr><td><p>Embedding</p></td><td><p>Représentation vectorielle d&#x27;un contenu dans un espace sémantique.</p></td></tr><tr><td><p>Feature Store</p></td><td><p>Référentiel de variables réutilisables pour les modèles ML.</p></td></tr><tr><td><p>Groundedness</p></td><td><p>Mesure dans laquelle une réponse est étayée par les sources ou le contexte fourni.</p></td></tr><tr><td><p>LLMOps</p></td><td><p>Pratiques d&#x27;industrialisation, de déploiement, d&#x27;évaluation et d&#x27;exploitation des applications LLM.</p></td></tr><tr><td><p>MLOps</p></td><td><p>Pratiques d&#x27;industrialisation du cycle de vie des modèles de machine learning.</p></td></tr><tr><td><p>Prompt injection</p></td><td><p>Tentative de détourner le comportement d&#x27;un modèle via des instructions malveillantes dans l&#x27;entrée ou le contexte.</p></td></tr><tr><td><p>RAG</p></td><td><p>Retrieval-Augmented Generation : génération augmentée par la récupération de contenus externes.</p></td></tr><tr><td><p>Vector Database</p></td><td><p>Base permettant de stocker et rechercher des vecteurs selon leur proximité.</p></td></tr><tr><td><p>Model Card</p></td><td><p>Documentation structurée d&#x27;un modèle, de ses usages, limites et évaluations.</p></td></tr><tr><td><p>Human-in-the-loop</p></td><td><p>Intervention humaine dans une étape de contrôle, validation ou décision.</p></td></tr></table></div>
+<h2>Annexe D – Références à consulter</h2>
+<p>Les références suivantes complètent ce guide. Vérifier systématiquement les versions et textes applicables au moment du projet.</p>
+<p class="source-list-item">The Open Group – TOGAF Standard, 10th Edition : https://www.opengroup.org/togaf</p>
+<p class="source-list-item">The Open Group – ArchiMate : https://www.opengroup.org/archimate-forum/archimate-overview</p>
+<p class="source-list-item">NIST AI Risk Management Framework : https://www.nist.gov/itl/ai-risk-management-framework</p>
+<p class="source-list-item">ISO/IEC 42001 – Artificial intelligence management system : https://www.iso.org/standard/81230.html</p>
+<p class="source-list-item">ISO/IEC 23894 – Artificial intelligence — Guidance on risk management : https://www.iso.org/</p>
+<p class="source-list-item">European Commission – AI Act : https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</p>
+<p class="source-list-item">C4 Model : https://c4model.com/</p>
+<p class="source-list-item">OWASP Top 10 for LLM Applications : https://owasp.org/www-project-top-10-for-large-language-model-applications/</p>
+<h2>Conclusion</h2>
+<p>Le AI Enterprise Architecture Framework propose une manière structurée de faire entrer l&#x27;intelligence artificielle dans l&#x27;architecture d&#x27;entreprise. Sa valeur ne réside pas dans l&#x27;accumulation de technologies, mais dans la traçabilité entre stratégie, capacités, cas d&#x27;usage, données, modèles, applications, plateformes, risques et résultats.</p>
+<p>Pour démarrer, il est recommandé de sélectionner un cas d&#x27;usage concret, de produire sa fiche de qualification, de modéliser sa vue Motivation/Capability en ArchiMate, puis son contexte et ses conteneurs en C4. Ce pilote permettra de tester le métamodèle, les contrôles et les livrables avant de généraliser le référentiel.</p>
+</div>
