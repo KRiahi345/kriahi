@@ -117,6 +117,10 @@ Le choix dépend du SLA de fraîcheur, du volume, de la tolérance aux doublons,
 **À retenir :** une architecture Data relie ingestion, stockage, traitement, orchestration, gouvernance, sécurité et usages ; elle ne se résume pas au choix de Spark ou d’un Data Lake.
 
 
-<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
-<figure class="resource-figure"><img src="/assets/images/resources/data-engineering-stack.jpg" alt="Couches d’une stack de data engineering, de l’ingestion à la gouvernance." loading="lazy"><figcaption>Couches d’une stack de data engineering, de l’ingestion à la gouvernance.</figcaption></figure>
-</section>
+## Visuels de la bibliothèque
+
+<div class="category-gallery">
+<a class="category-visual" href="/ressources/architecture-ia-framework/"><img src="/assets/images/resources/data-engineering-stack.jpg" alt="Couches d’une stack de data engineering" loading="lazy"><span>Stack de data engineering</span></a>
+<a class="category-visual" href="/ressources/agents-ia-rag-graphrag/"><img src="/assets/images/resources/rag-retrieval-generation.jpg" alt="Étapes du pipeline RAG" loading="lazy"><span>Pipeline RAG et données documentaires</span></a>
+<a class="category-visual" href="/ressources/agents-ia-rag-graphrag/"><img src="/assets/images/resources/embedding-vector-space.jpg" alt="Espace vectoriel des embeddings" loading="lazy"><span>Embeddings et recherche vectorielle</span></a>
+</div>

@@ -98,3 +98,12 @@ Exemple de trajectoire : (1) principes, référentiels et gouvernance ; (2) mode
 - Revues, dérogations et amélioration continue organisées ?
 
 **À retenir :** TOGAF structure la démarche et le contenu ; ArchiMate peut représenter les éléments et leurs relations. Le framework organise le travail, les modèles rendent l’architecture lisible et partageable.
+
+## Visuels de la bibliothèque
+
+<div class="category-gallery">
+<a class="category-visual" href="/ressources/guide-togaf-adm-techniques/"><img src="/assets/images/resources/togaf-adm-cycle.jpg" alt="Cycle TOGAF ADM" loading="lazy"><span>Le cycle TOGAF ADM</span></a>
+<a class="category-visual" href="/ressources/guide-togaf-adm-techniques/"><img src="/assets/images/resources/archimate-phase-a-vision.png" alt="Cartographie ArchiMate de la vision d’architecture" loading="lazy"><span>Vision d’architecture et ArchiMate</span></a>
+<a class="category-visual" href="/ressources/synthese-matrices-togaf/"><img src="/assets/images/resources/capability-to-application-matrix.jpg" alt="Matrice entre capacités métier et applications" loading="lazy"><span>Relier capacités et applications</span></a>
+<a class="category-visual" href="/ressources/guide-togaf-adm-techniques/"><img src="/assets/images/resources/archimate-layered-structure.png" alt="Couches métier, applicative et technologique en ArchiMate" loading="lazy"><span>Les couches ArchiMate</span></a>
+</div>

@@ -112,3 +112,14 @@ Une architecture agentique ajoute la planification et l’appel d’outils. Les 
 Versionner données, modèles, prompts et index ; évaluer hors ligne ; tester les non-régressions ; déployer progressivement ; surveiller latence, erreurs, coût et qualité ; détecter les dérives ; gérer secrets, accès et journaux ; contrôler réentraînement et réindexation.
 
 **À retenir :** une solution IA en entreprise est un système complet. Le modèle n’est qu’un composant parmi les données, pipelines, orchestration, sécurité, serving, évaluation et exploitation.
+
+## Visuels de la bibliothèque
+
+<div class="category-gallery">
+<a class="category-visual" href="/ressources/architecture-ia-framework/"><img src="/assets/images/resources/enterprise-ai-reference-architecture.jpg" alt="Architecture de référence IA en entreprise" loading="lazy"><span>Architecture IA de référence</span></a>
+<a class="category-visual" href="/ressources/agents-ia-rag-graphrag/"><img src="/assets/images/resources/multi-agent-rag-graphrag-platform.png" alt="Plateforme multi-agents avec RAG et GraphRAG" loading="lazy"><span>Plateforme multi-agents, RAG et GraphRAG</span></a>
+<a class="category-visual" href="/ressources/architecture-agentique-complete/"><img src="/assets/images/resources/agent-gateway-orchestration.png" alt="Orchestration agentique avec LangGraph, LiteLLM et vLLM" loading="lazy"><span>Orchestration agentique et gateways</span></a>
+<a class="category-visual" href="/ressources/architecture-c4-agent-credit/"><img src="/assets/images/resources/ai-agent-guardrails.jpg" alt="Garde-fous pour les agents IA" loading="lazy"><span>Sécurité et garde-fous des agents</span></a>
+<a class="category-visual" href="/ressources/architecture-agentique-complete/"><img src="/assets/images/resources/open-source-llmops-stack.jpg" alt="Stack open source pour le LLMOps" loading="lazy"><span>LLMOps et exploitation</span></a>
+<a class="category-visual" href="/ressources/architecture-ia-framework/"><img src="/assets/images/resources/ai-layers-overview.jpg" alt="Couches d’une architecture d’intelligence artificielle" loading="lazy"><span>Couches d’une architecture IA</span></a>
+</div>
