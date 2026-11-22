@@ -106,11 +106,3 @@ Docker package les services. Kubernetes peut orchestrer leur exécution, leur mi
 
 **À retenir :** réussir une architecture microservices consiste moins à multiplier les services qu’à définir de bonnes frontières métier, des contrats stables, une cohérence distribuée maîtrisée et une exploitation fiable.
 
-## Visuels de la bibliothèque
-
-<div class="category-gallery">
-<a class="category-visual" href="/ressources/togaf-building-blocks-banque/"><img src="/assets/images/resources/ddd-enterprise-architecture.jpg" alt="Domain-Driven Design, sous-domaines et bounded contexts" loading="lazy"><span>DDD et bounded contexts</span></a>
-<a class="category-visual" href="/ressources/togaf-building-blocks-banque/"><img src="/assets/images/resources/domain-classification-matrix.jpg" alt="Matrice des domaines cœur, support et génériques" loading="lazy"><span>Classer les domaines métier</span></a>
-<a class="category-visual" href="/ressources/synthese-matrices-togaf/"><img src="/assets/images/resources/archimate-business-functions.png" alt="Relations entre processus métier et composants applicatifs" loading="lazy"><span>Relier fonctions métier et applications</span></a>
-<a class="category-visual" href="/ressources/synthese-matrices-togaf/"><img src="/assets/images/resources/business-capability-realization.jpg" alt="Réalisation de capacités métier par des services et applications" loading="lazy"><span>Capacités et réalisation applicative</span></a>
-</div>

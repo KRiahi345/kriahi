@@ -6,6 +6,7 @@ subtitle: Structurer la transformation du SI, du besoin métier à la trajectoir
 level: Débutant à intermédiaire
 duration: 15 min
 ---
+<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/" aria-current="page">Architecture d’entreprise</a><a href="/architecture-entreprise/archimate/">ArchiMate</a></div>
 # 1. À quoi sert l’architecture d’entreprise ?
 
 L’architecture d’entreprise (*Enterprise Architecture*, EA) donne une représentation cohérente de l’organisation, de ses capacités métier, de ses processus, de ses données, de ses applications et de ses technologies. Elle relie la stratégie aux transformations du système d’information.
@@ -98,6 +99,12 @@ Exemple de trajectoire : (1) principes, référentiels et gouvernance ; (2) mode
 - Revues, dérogations et amélioration continue organisées ?
 
 **À retenir :** TOGAF structure la démarche et le contenu ; ArchiMate peut représenter les éléments et leurs relations. Le framework organise le travail, les modèles rendent l’architecture lisible et partageable.
+
+## Sous-onglet ArchiMate
+
+ArchiMate aide à représenter les relations entre stratégie, métier, applications et technologies. La page dédiée présente ses couches et des exemples de modèles.
+
+<p><a class="text-link" href="/architecture-entreprise/archimate/">Ouvrir le sous-onglet ArchiMate →</a></p>
 
 ## Visuels de la bibliothèque
 

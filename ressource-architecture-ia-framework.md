@@ -485,9 +485,6 @@ La qualification réglementaire d&#x27;un système dépend du cas d&#x27;usage, 
 
 <section class="resource-illustrations"><h2>Schémas et illustrations</h2>
 <figure class="resource-figure"><img src="/assets/images/resources/finetuning-or-rag.jpg" alt="Repères de choix entre fine-tuning et RAG." loading="lazy"><figcaption>Repères de choix entre fine-tuning et RAG.</figcaption></figure>
-<figure class="resource-figure"><img src="/assets/images/resources/enterprise-architecture-domains.png" alt="Cartographie des domaines et composants d’une architecture d’entreprise." loading="lazy"><figcaption>Cartographie des domaines et composants d’une architecture d’entreprise.</figcaption></figure>
-<figure class="resource-figure"><img src="/assets/images/resources/enterprise-ai-reference-architecture.jpg" alt="Architecture de référence IA couvrant agents, RAG, modèles, gouvernance et opérations." loading="lazy"><figcaption>Architecture de référence IA couvrant agents, RAG, modèles, gouvernance et opérations.</figcaption></figure>
-<figure class="resource-figure"><img src="/assets/images/resources/llm-architecture-patterns.jpg" alt="Panorama de patterns d’architecture pour les applications LLM." loading="lazy"><figcaption>Panorama de patterns d’architecture pour les applications LLM.</figcaption></figure>
 <figure class="resource-figure"><img src="/assets/images/resources/ai-layers-overview.jpg" alt="Couches d’une architecture d’intelligence artificielle." loading="lazy"><figcaption>Couches d’une architecture d’intelligence artificielle.</figcaption></figure>
 <figure class="resource-figure"><img src="/assets/images/resources/ai-architecture-layers.jpg" alt="Couches d’une plateforme IA, des données et modèles aux applications." loading="lazy"><figcaption>Couches d’une plateforme IA, des données et modèles aux applications.</figcaption></figure>
 </section>

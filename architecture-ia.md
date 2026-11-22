@@ -116,7 +116,6 @@ Versionner données, modèles, prompts et index ; évaluer hors ligne ; tester l
 ## Visuels de la bibliothèque
 
 <div class="category-gallery">
-<a class="category-visual" href="/ressources/architecture-ia-framework/"><img src="/assets/images/resources/enterprise-ai-reference-architecture.jpg" alt="Architecture de référence IA en entreprise" loading="lazy"><span>Architecture IA de référence</span></a>
 <a class="category-visual" href="/ressources/agents-ia-rag-graphrag/"><img src="/assets/images/resources/multi-agent-rag-graphrag-platform.png" alt="Plateforme multi-agents avec RAG et GraphRAG" loading="lazy"><span>Plateforme multi-agents, RAG et GraphRAG</span></a>
 <a class="category-visual" href="/ressources/architecture-agentique-complete/"><img src="/assets/images/resources/agent-gateway-orchestration.png" alt="Orchestration agentique avec LangGraph, LiteLLM et vLLM" loading="lazy"><span>Orchestration agentique et gateways</span></a>
 <a class="category-visual" href="/ressources/architecture-c4-agent-credit/"><img src="/assets/images/resources/ai-agent-guardrails.jpg" alt="Garde-fous pour les agents IA" loading="lazy"><span>Sécurité et garde-fous des agents</span></a>

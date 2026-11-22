@@ -141,3 +141,9 @@ Conséquences :
 ```
 
 **À retenir :** un bon architecte ne cherche pas à utiliser tous les patterns. Il identifie le problème, compare les options, explicite les compromis et choisit la solution la plus simple qui répond aux exigences.
+
+## Patterns d’architecture pour les applications LLM
+
+Ce panorama rassemble des patterns courants pour structurer une application LLM et ses échanges avec les données et les services. Il complète les patterns d’intégration et de résilience présentés dans cette page.
+
+<figure class="resource-figure"><img src="/assets/images/resources/llm-architecture-patterns.jpg" alt="Panorama de patterns d’architecture pour les applications LLM" loading="lazy"><figcaption>Panorama de patterns d’architecture pour les applications LLM.</figcaption></figure>
