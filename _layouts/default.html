@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'fr' }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">{% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+<a class="brand" href="{{ '/' | relative_url }}">Kheireddine <span>Riahi</span></a>
+<nav aria-label="Navigation principale">
+<a href="{{ '/' | relative_url }}">Accueil</a>
+<a href="{{ '/architecture-entreprise/' | relative_url }}">Architecture d'entreprise</a>
+<a href="{{ '/architecture-microservices/' | relative_url }}">Architecture microservice</a>
+<a href="{{ '/architecture-data/' | relative_url }}">Architecture data</a>
+<a href="{{ '/architecture-ia/' | relative_url }}">Architecture IA</a>
+<a href="{{ '/autres-patterns/' | relative_url }}">Autres Patterns</a>
+</nav></div></header>
+<main class="container">{{ content }}</main>
+<footer class="site-footer"><div class="container footer-inner">
+<span>© {{ 'now' | date: "%Y" }} Kheireddine Riahi · kriahi.pro</span>
+<span>Architecture d’entreprise · Software · Data · AI</span>
+</div></footer></body></html>

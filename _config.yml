@@ -1,0 +1,27 @@
+title: "Kheireddine Riahi"
+description: "Architecture d’entreprise, microservices, data et intelligence artificielle — tutoriels de Kheireddine Riahi."
+url: "https://kriahi.pro"
+baseurl: ""
+lang: fr
+timezone: Europe/Paris
+markdown: kramdown
+permalink: /blog/:categories/:title/
+author:
+  name: "Kheireddine Riahi"
+  bio: "Architecte Solutions · Architecture SI · Data & IA"
+  email: ""
+  github: ""
+  linkedin: ""
+  website: "https://kriahi.pro"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+header_pages:
+  - architecture-entreprise.md
+  - architecture-microservices.md
+  - architecture-data.md
+  - architecture-ia.md
+  - autres-patterns.md
+  - about.md
+  - archives.md
