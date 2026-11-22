@@ -52,4 +52,12 @@ et détection d’anomalies</p>
 <h2>3. Synthèse : quel algorithme pour quel objectif ?</h2>
 <div class="table-scroll"><table><tr><td><p>Objectif</p></td><td><p>Méthodes illustrées</p></td><td><p>À retenir</p></td></tr><tr><td><p>Regrouper des observations</p></td><td><p>K-Means, DBSCAN, clustering hiérarchique</p></td><td><p>Former des groupes selon la similarité ou la densité.</p></td></tr><tr><td><p>Comprendre la structure des groupes</p></td><td><p>Dendrogramme, UMAP, t-SNE</p></td><td><p>Visualiser les proximités et les regroupements.</p></td></tr><tr><td><p>Réduire le nombre de dimensions</p></td><td><p>PCA, UMAP, t-SNE</p></td><td><p>Projeter des données complexes pour faciliter l’analyse.</p></td></tr><tr><td><p>Détecter des observations atypiques</p></td><td><p>LOF, Isolation Forest, Autoencoder</p></td><td><p>Repérer les points qui s’écartent du comportement habituel.</p></td></tr></table></div>
 <p>Attention : une anomalie statistique n’est pas automatiquement une innovation. Dans une veille technologique, les résultats des algorithmes doivent être examinés par un expert afin de distinguer les signaux réellement prometteurs des faux positifs.</p>
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/ml-dendrogram.jpg" alt="Dendrogramme de clustering hiérarchique." loading="lazy"><figcaption>Dendrogramme de clustering hiérarchique.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/ml-kmeans-four-clusters.jpg" alt="Exemple de regroupement K-Means en quatre clusters." loading="lazy"><figcaption>Exemple de regroupement K-Means en quatre clusters.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/ml-kmeans-outliers.jpg" alt="Exemple de clustering avec observations isolées et centroïdes." loading="lazy"><figcaption>Exemple de clustering avec observations isolées et centroïdes.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/ml-kmeans-labels.jpg" alt="Visualisation des groupes et de leurs étiquettes K-Means." loading="lazy"><figcaption>Visualisation des groupes et de leurs étiquettes K-Means.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/machine-learning-overview.jpg" alt="Synthèse illustrée des familles et usages du Machine Learning." loading="lazy"><figcaption>Synthèse illustrée des familles et usages du Machine Learning.</figcaption></figure>
+</section>
 </div>

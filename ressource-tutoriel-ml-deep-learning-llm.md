@@ -193,4 +193,9 @@ Réponse : RAG récupère du contexte externe ; Fine-Tuning adapte les poids.</p
 <p>6. Quel algorithme minimise la somme des distances aux centroïdes ?<br>
 Réponse : K-Means</p>
 <p>Conseil : maîtriser les distances pour le clustering, les probabilités pour la classification, les gradients pour les réseaux de neurones et l’attention pour les Transformers.</p>
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/llm-finetuning-lora.jpg" alt="Schéma comparant le fine-tuning complet, LoRA et QLoRA." loading="lazy"><figcaption>Schéma comparant le fine-tuning complet, LoRA et QLoRA.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/deep-learning-formulas.jpg" alt="Formules de référence en deep learning : neurone, activations, perte, rétropropagation et descente de gradient." loading="lazy"><figcaption>Formules de référence en deep learning : neurone, activations, perte, rétropropagation et descente de gradient.</figcaption></figure>
+</section>
 </div>

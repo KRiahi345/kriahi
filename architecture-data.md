@@ -115,3 +115,8 @@ Pour un reporting quotidien, un pipeline batch avec Lakehouse et moteur SQL peut
 Le choix dépend du SLA de fraîcheur, du volume, de la tolérance aux doublons, du coût, de la complexité opérationnelle et des compétences.
 
 **À retenir :** une architecture Data relie ingestion, stockage, traitement, orchestration, gouvernance, sécurité et usages ; elle ne se résume pas au choix de Spark ou d’un Data Lake.
+
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/data-engineering-stack.jpg" alt="Couches d’une stack de data engineering, de l’ingestion à la gouvernance." loading="lazy"><figcaption>Couches d’une stack de data engineering, de l’ingestion à la gouvernance.</figcaption></figure>
+</section>

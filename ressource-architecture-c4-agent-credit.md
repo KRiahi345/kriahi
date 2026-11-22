@@ -241,4 +241,8 @@ curl http://localhost:8080/actuator/health</p>
 <h2>Conclusion</h2>
 <p>La session a fait évoluer la discussion d’une découverte de l’IA agentique vers une architecture applicative concrète : une plateforme de crédit où les services métier restent maîtrisés par des API déterministes, tandis que LangGraph orchestre des agents spécialisés, MCP donne un accès contrôlé aux outils, Kafka assure les échanges asynchrones et RAG apporte le contexte documentaire.</p>
 <p>La démarche de mise en œuvre recommandée est incrémentale : stabiliser d’abord l’infrastructure et la Credit API, introduire ensuite Kafka, puis LangGraph et MCP, ajouter le RAG et enfin industrialiser l’ensemble sur Kubernetes avec sécurité, tests, observabilité et gouvernance.</p>
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/ai-agent-guardrails.jpg" alt="Garde-fous pour agents IA : filtrage, liste d’outils autorisés, validation humaine et limites d’exécution." loading="lazy"><figcaption>Garde-fous pour agents IA : filtrage, liste d’outils autorisés, validation humaine et limites d’exécution.</figcaption></figure>
+</section>
 </div>

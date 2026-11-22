@@ -142,4 +142,10 @@ Ne sélectionnez pas une technologie parce qu’elle figure dans une liste. Part
 <div class="table-scroll"><table><tr><td><p>Conclusion<br>
 Une plateforme agentique d’entreprise n’est pas une simple application Python connectée à un LLM. C’est un système distribué qui combine orchestration, modèles, données, outils métier, sécurité, observabilité et exploitation. La valeur de l’architecte consiste à maîtriser les frontières entre ces composants, à choisir les bonnes technologies et à garantir un système explicable, contrôlé, résilient et mesurable.</p></td></tr></table></div>
 <p>Fin du guide</p>
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/rag-retrieval-generation.jpg" alt="Étapes du pipeline Retrieval-Augmented Generation." loading="lazy"><figcaption>Étapes du pipeline Retrieval-Augmented Generation.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/embedding-vector-space.jpg" alt="Représentation de mots proches dans un espace vectoriel d’embeddings." loading="lazy"><figcaption>Représentation de mots proches dans un espace vectoriel d’embeddings.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/multi-agent-rag-graphrag-platform.png" alt="Architecture de référence d’une plateforme multi-agents intégrant RAG, GraphRAG, orchestration, modèles et opérations." loading="lazy"><figcaption>Architecture de référence d’une plateforme multi-agents intégrant RAG, GraphRAG, orchestration, modèles et opérations.</figcaption></figure>
+</section>
 </div>

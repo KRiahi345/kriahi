@@ -192,4 +192,12 @@ Architecture technologique</p></td><td><p>Infrastructure, plateformes, réseaux,
 <p>Visual Paradigm, “A Journey with TOGAF: A Quick Overview” (20 septembre 2023) : https://guides.visual-paradigm.com/a-journey-with-togaf-a-quick-overview/</p>
 <p>Visual Paradigm, “A Comprehensive Guide to ADM Guidelines and Techniques” : https://www.visual-paradigm.com/guide/a-comprehensive-guide-to-adm-guidelines-and-techniques/</p>
 <p>Précision : les articles Visual Paradigm sont des ressources pédagogiques. Les exemples bancaires et les explications complémentaires ont été reformulés pour faciliter la compréhension et la préparation à la certification. Pour une question d’examen ou une interprétation normative, se référer au texte officiel du TOGAF Standard applicable.</p>
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/archimate-layered-structure.png" alt="Structure en couches métier, applicative et technologique du langage ArchiMate." loading="lazy"><figcaption>Structure en couches métier, applicative et technologique du langage ArchiMate.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/archimate-phase-a-vision.png" alt="Cartographie de vision d’architecture d’entreprise pour la phase A de TOGAF ADM." loading="lazy"><figcaption>Cartographie de vision d’architecture d’entreprise pour la phase A de TOGAF ADM.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/togaf-adm-cycle.jpg" alt="Cycle TOGAF ADM et principales phases de transformation." loading="lazy"><figcaption>Cycle TOGAF ADM et principales phases de transformation.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/togaf-adm-iterations.jpg" alt="Boucle itérative des phases TOGAF ADM et gestion des exigences." loading="lazy"><figcaption>Boucle itérative des phases TOGAF ADM et gestion des exigences.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/architecture-principles-overview.jpg" alt="Principes d’architecture illustrés : sécurité, modularité, évolutivité et gouvernance." loading="lazy"><figcaption>Principes d’architecture illustrés : sécurité, modularité, évolutivité et gouvernance.</figcaption></figure>
+</section>
 </div>

@@ -138,4 +138,10 @@ render_with_liquid: false
 <p>Point essentiel : l’ABB exprime le besoin architectural, le SBB décrit la solution qui répond à ce besoin, et la technologie fournit les moyens de l’implémenter.</p>
 <h2>Conclusion</h2>
 <p>La progression des Building Blocks dans l’ADM permet de passer d’une vision abstraite à une architecture détaillée puis à des solutions réalisables. La Phase A identifie les capacités nécessaires ; les Phases B, C et D détaillent respectivement les domaines métier, données, applications et technologies ; la Phase E organise les solutions et les projets permettant de concrétiser l’architecture cible</p>
+
+<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/archimate-business-functions.png" alt="Relations entre acteurs, rôles, processus, services métier et composants applicatifs en ArchiMate." loading="lazy"><figcaption>Relations entre acteurs, rôles, processus, services métier et composants applicatifs en ArchiMate.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/ddd-enterprise-architecture.jpg" alt="Domain-Driven Design pour architectes d’entreprise : domaines, bounded contexts et context map." loading="lazy"><figcaption>Domain-Driven Design pour architectes d’entreprise : domaines, bounded contexts et context map.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/domain-classification-matrix.jpg" alt="Matrice de classification des domaines cœur, support et génériques." loading="lazy"><figcaption>Matrice de classification des domaines cœur, support et génériques.</figcaption></figure>
+</section>
 </div>
