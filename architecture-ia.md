@@ -5,6 +5,8 @@ permalink: /architecture-ia/
 subtitle: De la chaîne Machine Learning aux assistants LLM, RAG et architectures agentiques.
 level: Débutant à intermédiaire
 duration: 20 min
+reduce_intro_by_2px: true
+no_wrap_intro: true
 ---
 # 1. Grandes familles de l'intelligence artificielle
 
