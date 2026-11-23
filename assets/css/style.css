@@ -753,6 +753,11 @@ h3 {
   background: #fff;
 }
 
+.resource-figure.ddd-figure {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .resource-figure figcaption {
   margin: 0.75rem 0.2rem 0.1rem;
   color: var(--muted);
