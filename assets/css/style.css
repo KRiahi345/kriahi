@@ -76,6 +76,10 @@ button:focus-visible {
   --page-width: 1440px;
 }
 
+.container-wide-content {
+  --page-width: 1440px;
+}
+
 /* Header and navigation */
 .site-header {
   position: relative;
@@ -198,6 +202,10 @@ h3 {
   --article-width: 1440px;
 }
 
+.article-wide-content {
+  --article-width: 1440px;
+}
+
 .article-wide-library .library-directory {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -298,6 +306,21 @@ h3 {
 .tutorial-content-compact h3 {
   margin: 1.15em 0 0.4em;
   font-size: clamp(1.08rem, 1.75vw, 1.3rem);
+}
+
+.tutorial-content-headings-minus-2 h1 {
+  font-size: clamp(calc(1.65rem - 2px), calc(3vw - 2px), calc(2.2rem - 2px));
+  white-space: nowrap;
+}
+
+.tutorial-content-headings-minus-2 h2 {
+  font-size: clamp(calc(1.45rem - 2px), calc(2.5vw - 2px), calc(1.9rem - 2px));
+  white-space: nowrap;
+}
+
+.tutorial-content-headings-minus-2 h3 {
+  font-size: clamp(calc(1.15rem - 2px), calc(1.9vw - 2px), calc(1.4rem - 2px));
+  white-space: nowrap;
 }
 
 .tutorial-content h3.adm-overview {
@@ -916,11 +939,6 @@ h3 {
   text-align: left;
 }
 
-.tutorial-content .ddd-context-table th:first-child,
-.tutorial-content .ddd-context-table td:first-child {
-  width: 30%;
-}
-
 .resource-figure figcaption {
   margin: 0.75rem 0.2rem 0.1rem;
   color: var(--muted);
@@ -1068,6 +1086,12 @@ h3 {
 }
 
 @media (max-width: 650px) {
+  .tutorial-content-headings-minus-2 h1,
+  .tutorial-content-headings-minus-2 h2,
+  .tutorial-content-headings-minus-2 h3 {
+    white-space: normal;
+  }
+
   .article-content-compact h2,
   .article-content-compact h3 {
     white-space: normal;

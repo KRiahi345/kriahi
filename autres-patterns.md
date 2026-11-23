@@ -3,6 +3,11 @@ layout: tutorial
 title: Patterns architecturaux
 permalink: /autres-patterns/
 subtitle: Reconnaître les problèmes récurrents et choisir des solutions de conception adaptées au contexte.
+wide_content: true
+reduce_intro_by_2px: true
+no_wrap_intro: true
+compact_content: true
+compact_headings: true
 level: Intermédiaire
 duration: 18 min
 ---
@@ -24,13 +29,14 @@ Exemple pour une plateforme vidéo :
 <div class="table-scroll ddd-context-table">
 <table>
 <caption>Bounded contexts d’une plateforme vidéo</caption>
+<colgroup><col style="width: 50%"><col style="width: 50%"></colgroup>
 <thead><tr><th scope="col">Bounded Context</th><th scope="col">Responsabilité</th></tr></thead>
 <tbody>
-<tr><th scope="row">Catalogue</th><td>Décrire les contenus et leurs métadonnées</td></tr>
-<tr><th scope="row">Abonnement</th><td>Gérer les offres et droits d’accès</td></tr>
-<tr><th scope="row">Identité</th><td>Gérer comptes et authentification</td></tr>
-<tr><th scope="row">Lecture</th><td>Démarrer et suivre une session</td></tr>
-<tr><th scope="row">Facturation</th><td>Produire les éléments de facturation</td></tr>
+<tr><td>Catalogue</td><td>Décrire les contenus et leurs métadonnées</td></tr>
+<tr><td>Abonnement</td><td>Gérer les offres et droits d’accès</td></tr>
+<tr><td>Identité</td><td>Gérer comptes et authentification</td></tr>
+<tr><td>Lecture</td><td>Démarrer et suivre une session</td></tr>
+<tr><td>Facturation</td><td>Produire les éléments de facturation</td></tr>
 </tbody>
 </table>
 </div>
