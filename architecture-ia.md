@@ -8,6 +8,8 @@ duration: 20 min
 ---
 # 1. Grandes familles de l'intelligence artificielle
 
+<figure class="resource-figure"><img src="/assets/images/architecture/familles-intelligence-artificielle.png" alt="Infographie des grandes familles de l’intelligence artificielle : Machine Learning, Deep Learning, IA générative et IA agentique, avec leurs usages et critères de choix" loading="lazy"></figure>
+
 Le **Machine Learning** apprend des relations à partir de données afin de produire des prédictions ou de soutenir une décision. Il couvre notamment la classification, qui attribue une catégorie, la régression, qui estime une valeur, et le clustering, qui regroupe des observations similaires.
 
 Le **Deep Learning** s’appuie sur des réseaux de neurones à plusieurs couches pour apprendre des représentations complexes à partir des données. Les réseaux convolutifs (**CNN**) sont souvent utilisés pour les images, les réseaux récurrents comme les **LSTM** pour les séquences, et les **Transformers** pour le traitement du langage et d’autres tâches séquentielles.
