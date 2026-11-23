@@ -10,21 +10,7 @@ duration: 18 min
 
 L’architecture Data décrit comment les données sont acquises, transportées, stockées, transformées, gouvernées et consommées. Elle sert les métiers, le reporting, l’analytique et les applications opérationnelles.
 
-```text
-Sources (bases, APIs, fichiers, événements)
-                 |
-        Ingestion Batch / Streaming
-                 |
-          Zone Raw / Landing
-                 |
-         Data Lake / Lakehouse
-                 |
-       Transformation et qualité
-                 |
-        Warehouse / Data Marts
-                 |
-      BI · Analytics · Data Science · IA
-```
+<figure class="resource-figure"><img src="/assets/images/architecture/data-lakehouse-reference.png" alt="Architecture Data de référence Data Lakehouse : sources, ingestion batch et streaming, zone raw, stockage, transformation, qualité, warehouse et usages BI, analytics, data science et IA" loading="lazy"></figure>
 
 Catalogue, métadonnées, qualité, sécurité, lineage et observabilité sont des fonctions transverses.
 
