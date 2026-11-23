@@ -3,6 +3,7 @@ layout: page
 title: "Cadre Togaf pour une architecture IA"
 permalink: /ressources/architecture-ia-framework/
 render_with_liquid: false
+compact_document: true
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>

@@ -783,6 +783,47 @@ h3 {
   margin: 0.2em 0;
 }
 
+.article-content-compact p {
+  margin: 0.42em 0;
+  line-height: 1.45;
+}
+
+.article-content-compact h2 {
+  margin: 1.65em 0 0.6em;
+}
+
+.article-content-compact h3 {
+  margin: 1.2em 0 0.45em;
+}
+
+.article-content-compact .table-scroll {
+  margin: 0.8rem 0 1.1rem;
+}
+
+.article-content-compact table {
+  width: max-content;
+  min-width: 100%;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.article-content-compact th,
+.article-content-compact td {
+  padding: 0.55rem 0.7rem;
+  white-space: nowrap;
+}
+
+.article-content-compact td p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.article-content-compact .resource-figure {
+  margin: 1rem auto 1.4rem;
+}
+
 .article-content .source-filename,
 .article-content .library-intro {
   color: var(--muted);
