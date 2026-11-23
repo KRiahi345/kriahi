@@ -8,6 +8,7 @@ render_with_liquid: false
 <p class="eyebrow">MACHINE LEARNING · ALGORITHMES DE BASE</p>
 <p>Cette page rassemble les notions de base du Machine Learning, les formules utiles, des exemples d’algorithmes et les commentaires des 17 visualisations. Les explications sont regroupées par sujet pour éviter les répétitions.</p>
 <div class="source-document">
+<figure class="resource-figure"><img src="/assets/images/resources/ml-families-panorama.png" alt="Panorama des familles de Machine Learning, du domaine de l’intelligence artificielle aux réseaux de neurones et aux LLM" loading="lazy"><figcaption>Panorama des familles du Machine Learning et de leurs relations.</figcaption></figure>
 <h2>1. Repères et familles du Machine Learning</h2>
 <p>Une cartographie générale situe l’intelligence artificielle (IA), le Machine Learning (ML), le Deep Learning (DL), les réseaux de neurones profonds, puis les Transformers et les grands modèles de langage (LLM). Les réseaux de neurones artificiels (ANN) forment une famille de modèles ; ceux qui comportent plusieurs couches cachées relèvent généralement du Deep Learning.</p>
 
