@@ -47,7 +47,7 @@ Un bounded context n’est pas automatiquement égal à un microservice. La fron
 
 Ce schéma résume les concepts clés du Domain-Driven Design : domaines stratégiques, contextes délimités, relations entre contextes et étapes de mise en œuvre dans une architecture d’entreprise.
 
-<figure class="resource-figure ddd-figure"><img src="/assets/images/resources/ddd-domain-driven-design.png" alt="Schéma illustrant le Domain-Driven Design pour architectes d’entreprise : domaines stratégiques, contextes délimités, carte des contextes et étapes d’implémentation." loading="lazy"><figcaption>Domain-Driven Design : domaines stratégiques, bounded contexts, carte des contextes et démarche d’implémentation.</figcaption></figure>
+<figure class="resource-figure ddd-figure"><img src="/assets/images/resources/ddd-domain-driven-design.png" alt="Domain-Driven Design pour architectes d’entreprise : domaines stratégiques, bounded contexts, patterns de carte de contexte et démarche de mise en œuvre." loading="lazy"><figcaption>Domain-Driven Design pour architectes d’entreprise : domaines stratégiques, bounded contexts et cartes de contexte.</figcaption></figure>
 
 # 3. Architecture hexagonale (Ports & Adapters)
 
