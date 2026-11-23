@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Architecture d’entreprise et stack data
+title: Architecture d’Entreprise et stack data
 permalink: /ressources/architecture-entreprise/
 ---
 

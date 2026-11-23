@@ -1,13 +1,13 @@
 ---
 layout: tutorial
-title: Architecture d'entreprise
+title: Architecture d'Entreprise
 permalink: /architecture-entreprise/
 subtitle: Structurer la transformation du SI, du besoin métier à la trajectoire de mise en œuvre.
 level: Débutant à intermédiaire
 duration: 15 min
 reduce_intro_by_2px: true
 ---
-<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/" aria-current="page"><span class="section-tab-number">01</span><span class="section-tab-label"><strong>Architecture d’entreprise</strong><small>TOGAF · ADM · gouvernance</small></span></a><a href="/architecture-entreprise/archimate/"><span class="section-tab-number">02</span><span class="section-tab-label"><strong>ArchiMate</strong><small>Modélisation d’architecture</small></span></a><a href="/architecture-entreprise/togaf-techniques/"><span class="section-tab-number">03</span><span class="section-tab-label"><strong>TOGAF Techniques</strong><small>Exemples et pratiques</small></span></a></div>
+<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/" aria-current="page"><span class="section-tab-number">01</span><span class="section-tab-label"><strong>Architecture d’Entreprise</strong><small>TOGAF · ADM · gouvernance</small></span></a><a href="/architecture-entreprise/archimate/"><span class="section-tab-number">02</span><span class="section-tab-label"><strong>ArchiMate</strong><small>Modélisation d’architecture</small></span></a><a href="/architecture-entreprise/togaf-techniques/"><span class="section-tab-number">03</span><span class="section-tab-label"><strong>TOGAF Techniques</strong><small>Exemples et pratiques</small></span></a></div>
 # 1. C'est quoi une Architecture d'Entreprise EA ?
 
 L’architecture d’entreprise (*Enterprise Architecture*, EA) donne une représentation cohérente de l’organisation, de ses capacités métier, de ses processus, de ses données, de ses applications et de ses technologies. Elle relie la stratégie aux transformations du système d’information.

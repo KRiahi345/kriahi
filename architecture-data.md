@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Architecture data
+title: Architecture Data
 permalink: /architecture-data/
 subtitle: Concevoir une plateforme qui collecte, transforme, gouverne et met à disposition les informations.
 level: Débutant à intermédiaire
