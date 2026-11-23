@@ -12,11 +12,6 @@ layout: default
 </div>
 </div>
 </section>
-<section class="home-library">
-<section class="section-heading"><div><p class="eyebrow">GUIDES ET SYNTHÈSES</p><h2>Bibliothèque d’architecture</h2></div><a class="text-link" href="{{ '/bibliotheque-architecture/' | relative_url }}">Ouvrir la bibliothèque →</a></section>
-<p class="library-intro">Parcourez les guides complets sur l’architecture d’entreprise, TOGAF, l’IA agentique, le RAG, le Machine Learning et les architectures C4.</p>
-{% include library-directory.html %}
-</section>
 <section class="section-heading"><div><p class="eyebrow">EXPLORER</p><h2>Domaines d’architecture</h2></div></section>
 <div class="topic-grid">
 <a class="topic-card" href="{{ '/architecture-entreprise/' | relative_url }}"><span>01 / STRATÉGIE & GOUVERNANCE</span><h3>Architecture d'entreprise</h3><p>TOGAF, ADM, ArchiMate, capacités métier, cartographie et gouvernance.</p><b>Explorer le tutoriel →</b></a>
@@ -25,6 +20,11 @@ layout: default
 <a class="topic-card" href="{{ '/architecture-ia/' | relative_url }}"><span>04 / ARTIFICIAL INTELLIGENCE</span><h3>Architecture IA</h3><p>Machine Learning, Transformers, RAG, Fine-tuning, LoRA et MLOps.</p><b>Explorer le tutoriel →</b></a>
 <a class="topic-card" href="{{ '/autres-patterns/' | relative_url }}"><span>05 / REUSABLE DESIGNS</span><h3>Patterns architecturaux</h3><p>DDD, architecture hexagonale, CQRS, Saga, Circuit Breaker, BFF et orchestration.</p><b>Explorer le tutoriel →</b></a>
 </div>
+<section class="home-library">
+<section class="section-heading"><div><p class="eyebrow">GUIDES ET SYNTHÈSES</p><h2>Bibliothèque d’architecture</h2></div><a class="text-link" href="{{ '/bibliotheque-architecture/' | relative_url }}">Ouvrir la bibliothèque →</a></section>
+<p class="library-intro">Parcourez les guides complets sur l’architecture d’entreprise, TOGAF, l’IA agentique, le RAG, le Machine Learning et les architectures C4.</p>
+{% include library-directory.html %}
+</section>
 <section class="section-heading"><div><p class="eyebrow">LE JOURNAL</p><h2>Dernières publications</h2></div><a class="text-link" href="{{ '/archives/' | relative_url }}">Toutes les publications →</a></section>
 <div class="post-grid">{% for post in site.posts limit:4 %}
 <article class="post-card"><div class="post-meta">{{ post.date | date: "%d %B %Y" }}{% if post.categories.size > 0 %} · {{ post.categories | first }}{% endif %}</div>
