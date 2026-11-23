@@ -6,107 +6,102 @@ subtitle: Décomposer un système en services autonomes sans perdre cohérence m
 level: Intermédiaire
 duration: 18 min
 ---
-# 1. Pourquoi les microservices ?
+# 1. Définition d'une architecture microservices
 
-Une architecture microservices organise une application en services faiblement couplés, alignés autant que possible sur des domaines ou capacités métier. Chaque service porte une responsabilité claire et expose un contrat d’interaction.
+Une architecture microservices est un style d'architecture logicielle qui consiste à décomposer une application en un ensemble de services autonomes, faiblement couplés et organisés autour de capacités métier.
 
-Les bénéfices recherchés sont l’autonomie des équipes, le déploiement indépendant et l’évolution différenciée. Ils ne sont pas automatiques : les microservices introduisent des coûts de réseau, de supervision, de sécurité, de cohérence distribuée et d’exploitation.
+Chaque microservice possède une responsabilité fonctionnelle clairement définie et peut être développé, déployé, maintenu et faire évoluer indépendamment des autres services.
 
-Un monolithe modulaire bien conçu peut être préférable lorsque le domaine est mal connu, l’équipe réduite ou le déploiement indépendant inutile.
+Les microservices communiquent à travers des interfaces contractuelles, notamment des API, ou par l'échange asynchrone d'événements.
 
-# 2. Vue Logique / Technique
+Les principes fondamentaux sont le découpage par domaine métier, la forte cohésion fonctionnelle, le faible couplage, l'autonomie des services et la décentralisation de la gestion des données.
+# 2. Les composants de l'architecture logique
 
-<figure class="resource-figure"><img src="/assets/images/architecture/microservices-architecture-reference.png" alt="Architecture de référence microservices : canaux, API Gateway, services autonomes, Kafka, infrastructure, sécurité, observabilité et patterns clés" loading="lazy"></figure>
+## 2.1. Couche Utilisateurs et Canaux
 
-L’API Gateway centralise certains besoins transverses : routage, authentification, quotas ou observabilité. Elle ne doit pas concentrer toute la logique métier.
+Cette couche représente les différents consommateurs des fonctionnalités du système.
 
-Le **BFF (Backend for Frontend)** adapte les APIs à un canal, par exemple TV ou mobile, lorsque les besoins d’agrégation diffèrent réellement.
+Elle regroupe les applications Web et Mobile utilisées par les clients, les applications internes destinées aux collaborateurs ainsi que les systèmes partenaires qui interagissent avec l'application.
 
-# 3. Les six principes fondamentaux du découpage en microservices
+Son rôle est de permettre aux différents acteurs d'accéder aux capacités métier exposées par le système, sans dépendre de l'organisation interne des microservices.
+## 2.2. Couche d'Accès et d'Exposition
 
-Une architecture microservices cohérente repose sur des services bien délimités, autonomes, orientés métier, résilients, observables et déployés par des processus automatisés.
+Cette couche constitue le point d'entrée logique des services métier.
 
-## 3.1 Cohésion (High Cohesion)
+Elle assure principalement le routage des requêtes vers les services appropriés, le contrôle des accès, l'application des politiques de sécurité et la gestion des interfaces exposées aux consommateurs.
 
-Un microservice doit avoir une responsabilité métier unique et regrouper les fonctionnalités qui participent à cette responsabilité. Il doit faire une seule chose, avec un seul focus, et être découpé selon une raison de changer.
+Elle permet également de masquer la complexité de l'architecture interne et de fournir un accès cohérent aux fonctionnalités du système.
 
-Dans un système bancaire, le **Payment Service** gère l’initiation des paiements, la validation de leurs informations, le suivi de leur statut et les règles métier associées. Il ne devient pas responsable de la gestion des clients, des crédits et des comptes.
+Le composant API Gateway représente un mécanisme courant de mise en œuvre de cette couche.
+## 2.3. Couche Services Métier — Microservices
 
-Bonne pratique : appliquer le principe de responsabilité unique à l’échelle du domaine métier, sans créer des services excessivement petits.
+Cette couche constitue le cœur fonctionnel de l'architecture.
 
-## 3.2 Autonomie (Autonomy)
+Elle regroupe des services autonomes, chacun responsable d'un domaine métier ou d'une capacité fonctionnelle spécifique.
 
-Chaque microservice doit pouvoir évoluer, être remplacé et être déployé indépendamment des autres. Cette autonomie s’appuie sur un faible couplage, des interfaces versionnées et une responsabilité clairement attribuée à une équipe.
+Dans notre exemple bancaire, elle comprend :
 
-Par exemple, le **Payment Service** peut évoluer de Spring Boot 3 vers Spring Boot 4 sans imposer une évolution simultanée au **Customer Service**, à condition de maintenir la compatibilité des contrats. Pour préserver cette autonomie, il faut définir des API contractuelles, versionner les interfaces, éviter les accès directs aux bases des autres services et limiter les appels synchrones en cascade.
+- Service Clients : gestion des informations clients et de leurs profils.
 
-Un service autonome maîtrise son cycle de vie, ses données et ses décisions d’implémentation.
+- Service Comptes : gestion des comptes bancaires et de leurs informations.
 
-## 3.3 Orienté métier (Business-Oriented)
+- Service Paiements : traitement des virements et des opérations de paiement.
 
-Les microservices se découpent selon les domaines et les capacités métier, et non selon les couches techniques. Le **Domain-Driven Design (DDD)** aide à identifier ces domaines et leurs frontières fonctionnelles, appelées *Bounded Contexts*.
+- Service Notifications : gestion des communications et notifications adressées aux clients.
+Chaque service encapsule ses propres règles métier et expose ses fonctionnalités à travers des interfaces définies.
 
-Dans une banque, au lieu de créer un service par type de contrôleur technique, le découpage suit les domaines métier :
+Le découpage s'appuie notamment sur les principes du Domain-Driven Design (DDD) et des Bounded Contexts, afin de garantir une forte cohésion métier et de limiter les dépendances entre services.
+## 2.4. Couche d'Échanges et de Communication
 
-| Domaine métier | Microservice |
-|---|---|
-| Gestion client | Customer Service |
-| Gestion des comptes | Account Service |
-| Paiement | Payment Service |
-| Crédit | Credit Service |
-| Risques | Risk Service |
+Cette couche représente les mécanismes de communication entre les différents microservices.
 
-Le métier doit guider le découpage technique.
+Elle distingue deux modes principaux :
 
-## 3.4 Résilience (Resilience)
+Communication synchrone : un service sollicite directement un autre service et attend sa réponse. Ce mode est adapté aux interactions nécessitant un résultat immédiat.
 
-La défaillance d’un microservice ne doit pas provoquer automatiquement l’indisponibilité de l’ensemble du système. Il faut prévoir le comportement par défaut et les fonctionnalités dégradées, puis surveiller notamment le **MTTR** (*Mean Time To Repair*) et le **MTBF** (*Mean Time Between Failures*).
+Communication asynchrone : un service publie un événement ou transmet un message qui peut être traité ultérieurement par un ou plusieurs services consommateurs.
 
-Si le **Notification Service** devient indisponible pendant un paiement, le paiement peut continuer : l’événement de notification est conservé et traité ultérieurement.
+Cette seconde approche favorise le découplage temporel et fonctionnel entre les services.
 
-| Pattern | Fonction |
-|---|---|
-| Circuit Breaker | Bloquer temporairement les appels vers un service défaillant |
-| Retry | Réessayer une opération en échec |
-| Timeout | Limiter le temps d’attente |
-| Bulkhead | Isoler les ressources |
-| Fallback | Proposer un comportement alternatif |
-| Dead Letter Queue | Isoler les messages non traitables |
+Par exemple, après le traitement d'un paiement, le service Paiements peut publier un événement PaiementEffectué, permettant au service Notifications de déclencher l'envoi d'une confirmation.
+## 2.5. Couche Données
 
-Le **MTTR** mesure le temps moyen de réparation ; le **MTBF** mesure le temps moyen entre deux pannes. L’objectif est de réduire le MTTR et d’augmenter le MTBF.
+Cette couche représente la gestion et la persistance des données métier.
 
-## 3.5 Observabilité (Observability)
+Dans une architecture microservices, le principe fondamental est que chaque service est propriétaire de ses données et en contrôle les accès.
 
-L’observabilité permet de comprendre l’état interne d’un système à partir des données qu’il expose. Dans une architecture distribuée, elle aide à suivre le parcours d’une requête entre les microservices et à identifier les erreurs ou les latences.
+Les autres services ne doivent pas accéder directement à ses structures de stockage internes, mais passer par les interfaces ou les événements qu'il expose.
 
-Ses trois piliers sont les **logs**, qui historisent les événements et les erreurs (par exemple Elasticsearch ou Loki) ; les **métriques**, qui mesurent la performance et la disponibilité (Prometheus ou Grafana) ; et le **tracing distribué**, qui suit une requête entre services (OpenTelemetry ou Jaeger).
+Cette approche favorise l'autonomie des services, réduit les dépendances structurelles et permet de faire évoluer les modèles de données indépendamment.
 
-Par exemple, si un virement prend anormalement quatre secondes, le tracing permet de déterminer quel microservice est responsable de cette latence.
+La séparation logique des données n'impose pas nécessairement une infrastructure de stockage physique distincte pour chaque service.
+## 2.6. Services Transverses
 
-## 3.6 Automatisation (Automation)
+Les services transverses regroupent les capacités communes nécessaires au fonctionnement, à la sécurité et à l'exploitation de l'ensemble de l'architecture.
 
-L’automatisation des activités de développement, de test, de construction et de déploiement rend les livraisons plus fiables et rapides. Elle s’appuie notamment sur l’intégration continue (**CI**) et le déploiement continu (**CD**), ainsi que sur les tests, les conteneurs et les déploiements automatisés.
+Ils couvrent notamment :
 
-Un pipeline CI/CD peut suivre les étapes suivantes :
+- Sécurité et gestion des accès : authentification, autorisation et protection des échanges.
 
-1. **Git Push :** le développeur pousse son code.
-2. **Build :** compilation, par exemple avec Maven.
-3. **Tests :** tests unitaires, d’intégration et de contrats.
-4. **Docker :** construction de l’image conteneur.
-5. **Security Scan :** analyse des vulnérabilités.
-6. **Deployment :** déploiement sur Kubernetes.
-7. **Monitoring :** surveillance après déploiement.
+- Observabilité : collecte et analyse des journaux, métriques et traces pour superviser les services.
 
-Parmi les technologies possibles : GitLab CI ou GitHub Actions, Maven ou Gradle, Docker, Kubernetes, Argo CD et SonarQube.
+- Résilience : gestion des défaillances et limitation de leur propagation.
 
-## 3.7 Synthèse des six principes
+- Gestion des configurations : administration cohérente des paramètres des services.
 
-| Principe | Question fondamentale |
-|---|---|
-| Cohésion | Le service a-t-il une responsabilité claire ? |
-| Autonomie | Peut-il évoluer et être déployé indépendamment ? |
-| Orienté métier | Son découpage respecte-t-il les domaines métier ? |
-| Résilience | Le système résiste-t-il aux défaillances ? |
-| Observabilité | Peut-on comprendre son comportement ? |
-| Automatisation | Peut-on tester et déployer sans intervention manuelle répétitive ? |
+- Gouvernance : définition et contrôle des standards, contrats d'interface et règles d'architecture.
 
+- Gestion du cycle de vie : déploiement, évolution et exploitation des services.
+Ces capacités permettent d'assurer la cohérence globale du système tout en préservant l'autonomie des microservices.
+# 3. Les bénéfices d'une architecture microservices
+
+| Bénéfice | Description |
+| --- | --- |
+| Agilité | Accélération des évolutions grâce à des services indépendants. |
+| Scalabilité | Possibilité de dimensionner les services selon leurs besoins spécifiques. |
+| Résilience | Limitation de la propagation des pannes entre services. |
+| Modularité | Meilleure séparation des responsabilités et simplification de la maintenance. |
+| Autonomie | Responsabilisation des équipes sur le cycle de vie de leurs services. |
+| Évolutivité | Adaptation progressive de l'architecture aux nouveaux besoins métier. |
+
+Ces bénéfices ne sont pas automatiques : ils dépendent de la qualité du découpage métier, des contrats d'interface et de la maîtrise des interactions distribuées.
