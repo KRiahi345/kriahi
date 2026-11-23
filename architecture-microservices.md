@@ -17,6 +17,8 @@ Les microservices communiquent à travers des interfaces contractuelles, notamme
 Les principes fondamentaux sont le découpage par domaine métier, la forte cohésion fonctionnelle, le faible couplage, l'autonomie des services et la décentralisation de la gestion des données.
 # 2. Les composants de l'architecture logique
 
+<figure class="resource-figure"><img src="/assets/images/architecture/microservices-logical-view.png" alt="Vue logique d’une architecture microservices : utilisateurs, API Gateway, services métier, échanges, données et services transverses" loading="lazy"></figure>
+
 ## 2.1. Couche Utilisateurs et Canaux
 
 Cette couche représente les différents consommateurs des fonctionnalités du système.
