@@ -19,12 +19,16 @@ Les vues ArchiMate organisent les éléments selon leur rôle. La couche métier
 <p class="resource-description">Ce diagramme présente les trois couches principales et les relations de réalisation entre les éléments métier, applicatifs et technologiques.</p>
 <figure class="resource-figure"><img src="/assets/images/resources/archimate-layered-structure.png" alt="Structure en couches métier, applicative et technologique d’ArchiMate" loading="lazy"><figcaption>Couches métier, applicative et technologique en ArchiMate.</figcaption></figure>
 
+## Relier la vision aux éléments d’architecture
+
+Une vue de vision clarifie les objectifs, les capacités cibles et les principes avant de détailler les solutions. Les relations entre ces éléments donnent une base aux décisions et à la trajectoire de transformation.
+
+<p class="resource-description">Cet exemple de vision d’architecture illustre les objectifs métier, les capacités, les services applicatifs et les technologies cibles.</p>
+<figure class="resource-figure"><img src="/assets/images/resources/archimate-phase-a-vision.png" alt="Vue ArchiMate de la vision d’architecture d’entreprise" loading="lazy"><figcaption>Exemple de cartographie de vision d’architecture.</figcaption></figure>
+
 ## Décrire une capacité et ses réalisations
 
 Une capacité exprime ce que l’entreprise doit savoir faire. Les processus, services et composants applicatifs peuvent ensuite être reliés à cette capacité afin d’expliquer comment elle est réalisée. Cette vue facilite l’analyse des impacts et des responsabilités.
-
-<p class="resource-description">L’exemple relie une capacité de gestion client à un parcours métier, à des services et aux applications qui les soutiennent.</p>
-<figure class="resource-figure"><img src="/assets/images/resources/archimate-business-functions.png" alt="Relations ArchiMate entre fonctions métier et applications" loading="lazy"><figcaption>Exemple de fonctions métier, processus, services et applications.</figcaption></figure>
 
 <p class="resource-description">Cette vue montre comment une capacité métier peut être planifiée à partir d’une stratégie, puis détaillée en services et processus.</p>
 <figure class="resource-figure"><img src="/assets/images/resources/capability-planning-view.webp" alt="Planification d’une capacité métier" loading="lazy"><figcaption>Exemple de planification des capacités métier.</figcaption></figure>
@@ -32,11 +36,8 @@ Une capacité exprime ce que l’entreprise doit savoir faire. Les processus, se
 <p class="resource-description">La réalisation d’une capacité peut être décrite en reliant les produits, services et comportements métier aux fonctions et composants applicatifs.</p>
 <figure class="resource-figure"><img src="/assets/images/resources/capability-realization-view.webp" alt="Réalisation d’une capacité par des services et composants" loading="lazy"><figcaption>Exemple de réalisation d’une capacité métier.</figcaption></figure>
 
-## Relier la vision aux éléments d’architecture
-
-Une vue de vision clarifie les objectifs, les capacités cibles et les principes avant de détailler les solutions. Les relations entre ces éléments donnent une base aux décisions et à la trajectoire de transformation.
-
-<p class="resource-description">Cet exemple de vision d’architecture illustre les objectifs métier, les capacités, les services applicatifs et les technologies cibles.</p>
-<figure class="resource-figure"><img src="/assets/images/resources/archimate-phase-a-vision.png" alt="Vue ArchiMate de la vision d’architecture d’entreprise" loading="lazy"><figcaption>Exemple de cartographie de vision d’architecture.</figcaption></figure>
+<p class="resource-description"><strong>Architecture métier (Business Architecture) modélisée avec ArchiMate</strong></p>
+<p class="resource-description">Ce diagramme ArchiMate représente une <strong>architecture métier (Business Architecture) d’une compagnie d’assurance</strong>, illustrant l’organisation des acteurs métier, la répartition des fonctions et les flux d’information entre les différentes entités. Il met en évidence les interactions entre les clients, le Front Office, les Back Offices spécialisés (automobile, habitation, voyage et protection juridique), le centre de services partagés et la banque. Chaque entité assure des fonctions spécifiques telles que la gestion des sinistres, la souscription, l’actuariat, la finance ou la relation client. Les relations de type <em>Flow</em> matérialisent les échanges entre ces fonctions. Cette vue, relevant de la <strong>couche métier d’ArchiMate et de la phase B (Business Architecture) de TOGAF ADM</strong>, permet de comprendre l’organisation fonctionnelle de l’entreprise, d’identifier les dépendances et les redondances métier, et de repérer les opportunités de mutualisation et d’optimisation dans le cadre d’une transformation du système d’information.</p>
+<figure class="resource-figure"><img src="/assets/images/resources/archimate-business-functions.png" alt="Architecture métier d’une compagnie d’assurance, modélisée avec ArchiMate : acteurs, fonctions et flux d’information" loading="lazy"><figcaption>Architecture métier (Business Architecture) modélisée avec ArchiMate.</figcaption></figure>
 
 \n
