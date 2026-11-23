@@ -220,7 +220,6 @@ render_with_liquid: false
 <p>Le Function Calling décrit le mécanisme par lequel un modèle produit une demande structurée d&#x27;appel d&#x27;une fonction. MCP définit un protocole d&#x27;interopérabilité permettant à un client IA de découvrir et d&#x27;utiliser des outils ou ressources exposés par un serveur MCP. Une application peut utiliser le Function Calling en interne pour décider d&#x27;appeler un outil MCP ; les deux notions interviennent à des niveaux différents.</p>
 
 <section class="resource-illustrations"><h2>Schémas et illustrations</h2>
-<figure class="resource-figure"><img src="/assets/images/resources/agent-gateway-orchestration.png" alt="Architecture agentique avec API Gateway, AI Gateway, LangGraph, LiteLLM et vLLM." loading="lazy"><figcaption>Architecture agentique avec API Gateway, AI Gateway, LangGraph, LiteLLM et vLLM.</figcaption></figure>
 <figure class="resource-figure"><img src="/assets/images/resources/llmops-reference-stack.png" alt="Stack de référence LLMOps et principaux composants de mise en production." loading="lazy"><figcaption>Stack de référence LLMOps et principaux composants de mise en production.</figcaption></figure>
 <figure class="resource-figure"><img src="/assets/images/resources/open-source-llmops-stack.jpg" alt="Stack open source LLMOps pour l’observabilité, l’évaluation, les garde-fous et le serving." loading="lazy"><figcaption>Stack open source LLMOps pour l’observabilité, l’évaluation, les garde-fous et le serving.</figcaption></figure>
 </section>
