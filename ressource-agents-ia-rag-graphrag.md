@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Comprendre l’IA agentique"
+title: "Architecture technique de référence d'un système IA agentique"
 permalink: /ressources/agents-ia-rag-graphrag/
 render_with_liquid: false
 ---
