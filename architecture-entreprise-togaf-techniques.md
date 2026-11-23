@@ -6,7 +6,7 @@ subtitle: Exemples complémentaires et vues utiles pour l’architecture d’ent
 level: Débutant à intermédiaire
 duration: 12 min
 ---
-<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/">Architecture d’entreprise</a><a href="/architecture-entreprise/archimate/">ArchiMate</a><a href="/architecture-entreprise/togaf-techniques/" aria-current="page">TOGAF Techniques</a></div>
+<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/"><span class="section-tab-number">01</span><span class="section-tab-label"><strong>Architecture d’entreprise</strong><small>TOGAF · ADM · gouvernance</small></span></a><a href="/architecture-entreprise/archimate/"><span class="section-tab-number">02</span><span class="section-tab-label"><strong>ArchiMate</strong><small>Modélisation d’architecture</small></span></a><a href="/architecture-entreprise/togaf-techniques/" aria-current="page"><span class="section-tab-number">03</span><span class="section-tab-label"><strong>TOGAF Techniques</strong><small>Exemples et pratiques</small></span></a></div>
 
 # Exemples complémentaires d’architecture d’entreprise
 
@@ -21,9 +21,6 @@ Les modèles ci-dessous illustrent les domaines et composants d’une architectu
 # Domaines, frontières et applications
 
 Le Domain-Driven Design aide à identifier les sous-domaines et les frontières de modèles. Ces vues complètent les cartes d’architecture en clarifiant le langage métier et les dépendances entre domaines.
-
-<p class="resource-description">Ce visuel distingue les domaines cœur, support et génériques, puis montre comment cette classification éclaire les décisions d’architecture.</p>
-<figure class="resource-figure"><img src="/assets/images/resources/domain-classification-matrix.jpg" alt="Matrice de domaines cœur, support et génériques" loading="lazy"><figcaption>Classification des domaines métier.</figcaption></figure>
 
 <p class="resource-description">L’exemple présente les bounded contexts et les relations entre domaines, utiles pour discuter des responsabilités et des intégrations.</p>
 <figure class="resource-figure"><img src="/assets/images/resources/ddd-enterprise-architecture.jpg" alt="Bounded contexts et relations entre domaines métier" loading="lazy"><figcaption>Domain-Driven Design et context map.</figcaption></figure>
