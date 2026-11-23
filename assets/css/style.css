@@ -757,6 +757,10 @@ h3 {
   background: #fff;
 }
 
+.resource-figure.ai-layers-figure img {
+  max-height: none;
+}
+
 .resource-figure.ddd-figure {
   max-width: none;
   margin-left: 0;

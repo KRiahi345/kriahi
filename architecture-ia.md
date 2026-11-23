@@ -20,7 +20,7 @@ L’**IA agentique** organise l’exécution d’une tâche en plusieurs étapes
 
 Le choix d’un modèle vient après la définition du cas d’usage, de la sortie attendue, de l’erreur acceptable, de la latence, du coût et des risques.
 
-<figure class="resource-figure"><img src="/assets/images/resources/ai-architecture-layers.jpg" alt="Couches d’une plateforme IA, des données et modèles aux applications." loading="lazy"><figcaption>Couches d’une plateforme IA, des données et modèles aux applications.</figcaption></figure>
+<figure class="resource-figure ai-layers-figure"><img src="/assets/images/resources/layers-of-ai.png" alt="Les couches de l’intelligence artificielle, du Machine Learning à l’IA agentique, avec leurs concepts et méthodes." loading="lazy"><figcaption>Couches de l’intelligence artificielle, du Machine Learning à l’IA agentique.</figcaption></figure>
 
 # 2. Cycle de vie Machine Learning
 
