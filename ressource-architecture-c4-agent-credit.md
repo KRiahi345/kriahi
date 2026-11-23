@@ -20,7 +20,6 @@ render_with_liquid: false
 <p class="source-list-item">10. Sécurité, fiabilité et limites de la proposition</p>
 <p class="source-list-item">11. Galerie des images générées pendant la session</p>
 <h2>1. De l’IA générative à l’IA agentique</h2>
-<p>La première question de la session était formulée « Explique-moi l’IA argentique ». Le terme visé a été interprété comme « IA agentique » (Agentic AI).</p>
 <h3>1.1 IA générative</h3>
 <p>Une IA générative produit un contenu à partir d’une instruction et d’un contexte : texte, résumé, code, image ou réponse. Elle répond principalement à une requête, sans nécessairement conduire elle-même une suite d’actions métier.</p>
 <h3>1.2 IA agentique</h3>

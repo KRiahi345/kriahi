@@ -480,8 +480,4 @@ La qualification réglementaire d&#x27;un système dépend du cas d&#x27;usage, 
 <p>Le AI Enterprise Architecture Framework propose une manière structurée de faire entrer l&#x27;intelligence artificielle dans l&#x27;architecture d&#x27;entreprise. Sa valeur ne réside pas dans l&#x27;accumulation de technologies, mais dans la traçabilité entre stratégie, capacités, cas d&#x27;usage, données, modèles, applications, plateformes, risques et résultats.</p>
 <p>Pour démarrer, il est recommandé de sélectionner un cas d&#x27;usage concret, de produire sa fiche de qualification, de modéliser sa vue Motivation/Capability en ArchiMate, puis son contexte et ses conteneurs en C4. Ce pilote permettra de tester le métamodèle, les contrôles et les livrables avant de généraliser le référentiel.</p>
 
-<section class="resource-illustrations"><h2>Schémas et illustrations</h2>
-<figure class="resource-figure"><img src="/assets/images/resources/finetuning-or-rag.jpg" alt="Repères de choix entre fine-tuning et RAG." loading="lazy"><figcaption>Repères de choix entre fine-tuning et RAG.</figcaption></figure>
-<figure class="resource-figure"><img src="/assets/images/resources/ai-layers-overview.jpg" alt="Couches d’une architecture d’intelligence artificielle." loading="lazy"><figcaption>Couches d’une architecture d’intelligence artificielle.</figcaption></figure>
-</section>
 </div>
