@@ -14,27 +14,6 @@ Les bénéfices recherchés sont l’autonomie des équipes, le déploiement ind
 
 Un monolithe modulaire bien conçu peut être préférable lorsque le domaine est mal connu, l’équipe réduite ou le déploiement indépendant inutile.
 
-# 2. Décomposer avec DDD
-
-Le *Domain-Driven Design* structure les services autour du métier plutôt qu’autour des couches techniques.
-
-- **Domain :** domaine métier étudié.
-- **Subdomain :** partie du domaine (core, supporting ou generic).
-- **Bounded Context :** frontière dans laquelle un modèle et un vocabulaire métier ont un sens cohérent.
-- **Ubiquitous Language :** langage partagé entre experts métier et équipe de réalisation.
-
-Exemple pour une plateforme vidéo :
-
-| Bounded Context | Responsabilité |
-|---|---|
-| Catalogue | Décrire les contenus et leurs métadonnées |
-| Abonnement | Gérer les offres et droits d’accès |
-| Identité | Gérer comptes et authentification |
-| Lecture | Démarrer et suivre une session |
-| Facturation | Produire les éléments de facturation |
-
-Un bounded context n’est pas automatiquement égal à un microservice. La frontière technique tient aussi compte des données, transactions, rythmes d’évolution, contraintes de sécurité et responsabilités des équipes.
-
 # 3. Vue logique
 
 ```text

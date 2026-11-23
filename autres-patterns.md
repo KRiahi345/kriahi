@@ -142,6 +142,27 @@ Conséquences :
 
 **À retenir :** un bon architecte ne cherche pas à utiliser tous les patterns. Il identifie le problème, compare les options, explicite les compromis et choisit la solution la plus simple qui répond aux exigences.
 
+## Décomposer avec DDD
+
+Le *Domain-Driven Design* structure les services autour du métier plutôt qu’autour des couches techniques.
+
+- **Domain :** domaine métier étudié.
+- **Subdomain :** partie du domaine (core, supporting ou generic).
+- **Bounded Context :** frontière dans laquelle un modèle et un vocabulaire métier ont un sens cohérent.
+- **Ubiquitous Language :** langage partagé entre experts métier et équipe de réalisation.
+
+Exemple pour une plateforme vidéo :
+
+| Bounded Context | Responsabilité |
+|---|---|
+| Catalogue | Décrire les contenus et leurs métadonnées |
+| Abonnement | Gérer les offres et droits d’accès |
+| Identité | Gérer comptes et authentification |
+| Lecture | Démarrer et suivre une session |
+| Facturation | Produire les éléments de facturation |
+
+Un bounded context n’est pas automatiquement égal à un microservice. La frontière technique tient aussi compte des données, transactions, rythmes d’évolution, contraintes de sécurité et responsabilités des équipes.
+
 ## Patterns d’architecture pour les applications LLM
 
 Ce panorama rassemble des patterns courants pour structurer une application LLM et ses échanges avec les données et les services. Il complète les patterns d’intégration et de résilience présentés dans cette page.
