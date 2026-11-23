@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Architecture C4 d’un agent de crédit"
+title: "Cas pratique : concevoir une plateforme de gestion de crédit avec le modèle C4"
 permalink: /ressources/architecture-c4-agent-credit/
 render_with_liquid: false
 ---
