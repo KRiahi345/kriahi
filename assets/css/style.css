@@ -105,7 +105,7 @@ button:focus-visible {
 
 .brand-logo {
   display: block;
-  width: 238px;
+  width: 210px;
   max-width: 100%;
   max-height: 76px;
   height: auto;
@@ -118,14 +118,14 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 6px;
+  gap: 0;
   color: var(--muted);
-  font-size: 0.83rem;
+  font-size: 0.78rem;
   font-weight: 600;
 }
 
 nav a {
-  padding: 9px 11px;
+  padding: 8px 7px;
   border: 1px solid transparent;
   border-radius: 999px;
   white-space: nowrap;
@@ -875,7 +875,11 @@ h3 {
     gap: 4px;
     overflow-x: auto;
     padding: 0.2rem 0 0.45rem;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
   }
 
   nav a {
@@ -956,9 +960,12 @@ h3 {
     display: contents;
   }
 
-  .hero-text .eyebrow,
-  .hero-text h1 {
+  .hero-text .eyebrow {
     grid-column: 2;
+  }
+
+  .hero-text h1 {
+    grid-column: 1 / -1;
   }
 
   .hero-text .hero-copy,
