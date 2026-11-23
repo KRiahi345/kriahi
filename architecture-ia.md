@@ -16,7 +16,7 @@ Le **Deep Learning** s’appuie sur des réseaux de neurones à plusieurs couche
 
 L’**IA générative** produit de nouveaux contenus, comme du texte, du code ou des images, à partir d’une consigne et du contexte fourni. Les grands modèles de langage (**LLM**) en sont un exemple : ils génèrent du texte et peuvent aussi résumer, reformuler ou répondre à des questions.
 
-L’**IA agentique** organise l’exécution d’une tâche en plusieurs étapes. Un agent peut planifier, utiliser des outils ou des API, examiner leurs résultats et poursuivre jusqu’à l’objectif ; plusieurs agents peuvent aussi coordonner leurs rôles dans un même système. [Pour plus des détails](https://kriahi.pro/ressources/architecture-agentique-complete/).
+L’**IA agentique** organise l’exécution d’une tâche en plusieurs étapes. Un agent peut planifier, utiliser des outils ou des API, examiner leurs résultats et poursuivre jusqu’à l’objectif ; plusieurs agents peuvent aussi coordonner leurs rôles dans un même système. [Pour plus des détails](https://kriahi.pro/ressources/agents-ia-rag-graphrag/).
 
 Le choix d’un modèle vient après la définition du cas d’usage, de la sortie attendue, de l’erreur acceptable, de la latence, du coût et des risques.
 

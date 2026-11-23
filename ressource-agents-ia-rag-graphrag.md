@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Guide des agents IA, du RAG et du GraphRAG"
+title: "Comprendre l’IA agentique"
 permalink: /ressources/agents-ia-rag-graphrag/
 render_with_liquid: false
 ---
