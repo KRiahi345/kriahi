@@ -99,6 +99,8 @@ Ils couvrent notamment :
 Ces capacités permettent d'assurer la cohérence globale du système tout en préservant l'autonomie des microservices.
 # Vue technique
 
+<figure class="resource-figure"><img src="/assets/images/architecture/microservices-technical-view.png" alt="Architecture technique de référence microservices : frontend, API Gateway, IAM, microservices, bases de données, Kafka, conteneurs, Kubernetes et services transverses" loading="lazy"></figure>
+
 ## Les éléments techniques fondamentaux d'une architecture microservices
 
 L'architecture présentée repose sur plusieurs couches techniques complémentaires. Chaque couche remplit un rôle spécifique dans l'exécution, la communication, la sécurisation et l'exploitation des microservices.

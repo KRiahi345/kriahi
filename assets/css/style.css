@@ -250,9 +250,9 @@ h3 {
 }
 
 .tutorial-content-compact p {
-  margin: 0.65em 0;
+  margin: 0.5em 0;
   font-size: 0.96rem;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .article-content h1,
@@ -276,7 +276,7 @@ h3 {
 }
 
 .tutorial-content-compact h2 {
-  margin: 1.8em 0 0.65em;
+  margin: 1.55em 0 0.55em;
   font-size: clamp(1.38rem, 2.35vw, 1.8rem);
 }
 
@@ -288,7 +288,7 @@ h3 {
 }
 
 .tutorial-content-compact h3 {
-  margin: 1.4em 0 0.5em;
+  margin: 1.15em 0 0.4em;
   font-size: clamp(1.08rem, 1.75vw, 1.3rem);
 }
 
@@ -317,9 +317,17 @@ h3 {
 }
 
 .tutorial-content-compact li {
-  margin: 0.25em 0;
+  margin: 0.2em 0;
   font-size: 0.96rem;
-  line-height: 1.5;
+  line-height: 1.45;
+}
+
+.tutorial-content-compact .resource-figure {
+  margin: 1rem auto 1.4rem;
+}
+
+.tutorial-content-compact table {
+  margin: 1rem 0;
 }
 
 .article-content li::marker,
