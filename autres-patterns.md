@@ -31,11 +31,11 @@ Exemple pour une plateforme vidéo :
 
 Un bounded context n’est pas automatiquement égal à un microservice. La frontière technique tient aussi compte des données, transactions, rythmes d’évolution, contraintes de sécurité et responsabilités des équipes.
 
-### Exemple illustratif
+### Schéma illustratif
 
-Ce panorama rassemble des patterns courants pour structurer une application LLM et ses échanges avec les données et les services. Il complète les patterns d’intégration et de résilience présentés dans cette page.
+Ce schéma résume les concepts clés du Domain-Driven Design : domaines stratégiques, contextes délimités, relations entre contextes et étapes de mise en œuvre dans une architecture d’entreprise.
 
-<figure class="resource-figure"><img src="/assets/images/resources/llm-architecture-patterns.jpg" alt="Panorama de patterns d’architecture pour les applications LLM" loading="lazy"><figcaption>Panorama de patterns d’architecture pour les applications LLM.</figcaption></figure>
+<figure class="resource-figure"><img src="/assets/images/resources/ddd-domain-driven-design.png" alt="Schéma illustrant le Domain-Driven Design pour architectes d’entreprise : domaines stratégiques, contextes délimités, carte des contextes et étapes d’implémentation." loading="lazy"><figcaption>Domain-Driven Design : domaines stratégiques, bounded contexts, carte des contextes et démarche d’implémentation.</figcaption></figure>
 
 # 3. Architecture hexagonale (Ports & Adapters)
 
