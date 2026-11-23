@@ -8,6 +8,7 @@ compact_title: true
 
 <div class="source-document">
 <h2>1. Les modèles de réseaux de neurones</h2>
+<figure class="resource-figure"><img src="/assets/images/resources/deep-learning-ann-llm-overview.png" alt="Panorama du Deep Learning, des réseaux de neurones ANN et Transformers aux LLM, avec architectures, fonctions, cas d’usage et métriques." loading="lazy"><figcaption>Panorama des architectures de réseaux de neurones, Transformers et LLM.</figcaption></figure>
 <h3>1.1 CNN</h3>
 <p>Réseau convolutif pour images : convolution, activation, pooling, classification.</p>
 <p>Y(i,j) = ΣₘΣₙ X(i−m,j−n)K(m,n)</p>
