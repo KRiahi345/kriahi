@@ -3,10 +3,11 @@ layout: page
 title: "Deep Learning: ANN et LLM"
 permalink: /ressources/tutoriel-ml-deep-learning-llm/
 render_with_liquid: false
+compact_title: true
 ---
 
 <div class="source-document">
-<h2>1. Architectures de Deep Learning</h2>
+<h2>1. Les modèles de réseaux de neurones</h2>
 <h3>1.1 CNN</h3>
 <p>Réseau convolutif pour images : convolution, activation, pooling, classification.</p>
 <p>Y(i,j) = ΣₘΣₙ X(i−m,j−n)K(m,n)</p>
