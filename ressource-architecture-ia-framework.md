@@ -26,6 +26,7 @@ Référentiel proposé pour concevoir, documenter, gouverner et faire évoluer l
 <p>11. Architectures de référence et cas pratiques</p>
 <p>12. Livrables, gouvernance opérationnelle et roadmap</p>
 <p>Annexes : modèles réutilisables, glossaire et références</p>
+<figure class="resource-figure"><img src="/assets/images/resources/multi-agent-rag-graphrag-platform.png" alt="Architecture de référence d’une plateforme multi-agents intégrant RAG, GraphRAG, orchestration, modèles et opérations." loading="lazy"><figcaption>Architecture de référence d’une plateforme multi-agents intégrant RAG, GraphRAG, orchestration, modèles et opérations.</figcaption></figure>
 <h2>Synthèse exécutive</h2>
 <p>L&#x27;intelligence artificielle ne doit pas être traitée comme une simple technologie ajoutée au portefeuille applicatif. Elle introduit des actifs, des cycles de vie, des risques et des dépendances spécifiques : données d&#x27;entraînement et de contexte, modèles, prompts, embeddings, bases vectorielles, agents, outils, évaluations, garde-fous et mécanismes de supervision.</p>
 <p>Le AI Enterprise Architecture Framework (AI-EAF) fournit un cadre cohérent pour relier la stratégie métier aux capacités IA, aux données, aux applications, aux modèles et aux plateformes techniques. Il s&#x27;appuie sur la logique de TOGAF ADM pour organiser la transformation, sur ArchiMate pour représenter les relations d&#x27;entreprise et sur C4 pour décrire les structures logicielles à différents niveaux de zoom.</p>
