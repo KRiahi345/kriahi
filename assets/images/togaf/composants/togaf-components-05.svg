@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">TOGAF Architecture Repository</title>
+  <desc id="desc">Schéma du référentiel d’architecture : métamodèle, bibliothèque de référence, paysages, exigences, gouvernance, capacité d’architecture et ressources externes.</desc>
+  <defs>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#18324f}
+      .outer{fill:#f7faff;stroke:#315b89;stroke-width:3}
+      .panel{fill:#e8f0fb;stroke:#426b9d;stroke-width:2}
+      .inner{fill:#fff;stroke:#7894b7;stroke-width:1.5}
+      .head{fill:#d3e2f5;stroke:#426b9d;stroke-width:2}
+      .ext{fill:#586878;stroke:#394b5d;stroke-width:2}
+      .exttext{fill:#fff}
+      .title{font-size:25px;font-weight:700}
+      .section{font-size:18px;font-weight:700}
+      .label{font-size:15px}
+      .small{font-size:13px}
+      .arrow{fill:none;stroke:#355f91;stroke-width:2.5;marker-end:url(#arrow)}
+      .dashed{fill:none;stroke:#7894b7;stroke-width:2;stroke-dasharray:7 6;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#355f91"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="930" height="784" rx="18" class="outer"/>
+  <text x="46" y="52" class="title">Enterprise Repository</text>
+  <text x="48" y="84" class="section">Architecture Repository</text>
+
+  <rect x="375" y="102" width="535" height="112" rx="10" class="panel"/>
+  <text x="642" y="128" text-anchor="middle" class="section">Architecture Metamodel</text>
+  <rect x="398" y="145" width="235" height="50" rx="7" class="inner"/>
+  <rect x="650" y="145" width="237" height="50" rx="7" class="inner"/>
+  <text x="515" y="176" text-anchor="middle" class="label">Architecture Method</text>
+  <text x="768" y="176" text-anchor="middle" class="label">Enterprise Metamodel</text>
+
+  <rect x="42" y="118" width="280" height="315" rx="10" class="panel"/>
+  <text x="182" y="148" text-anchor="middle" class="section">Architecture Requirements</text>
+  <text x="182" y="171" text-anchor="middle" class="section">Repository</text>
+  <rect x="65" y="194" width="234" height="62" rx="7" class="inner"/>
+  <rect x="65" y="270" width="234" height="62" rx="7" class="inner"/>
+  <rect x="65" y="346" width="234" height="62" rx="7" class="inner"/>
+  <text x="182" y="232" text-anchor="middle" class="label">Strategic Requirements</text>
+  <text x="182" y="308" text-anchor="middle" class="label">Segment Requirements</text>
+  <text x="182" y="384" text-anchor="middle" class="label">Capability Requirements</text>
+
+  <rect x="346" y="239" width="264" height="242" rx="10" class="panel"/>
+  <text x="478" y="269" text-anchor="middle" class="section">Architecture Landscape</text>
+  <rect x="370" y="287" width="216" height="50" rx="7" class="inner"/>
+  <rect x="370" y="347" width="216" height="50" rx="7" class="inner"/>
+  <rect x="370" y="407" width="216" height="50" rx="7" class="inner"/>
+  <text x="478" y="318" text-anchor="middle" class="label">Strategic Architectures</text>
+  <text x="478" y="378" text-anchor="middle" class="label">Segment Architectures</text>
+  <text x="478" y="438" text-anchor="middle" class="label">Capability Architectures</text>
+
+  <rect x="643" y="239" width="267" height="242" rx="10" class="panel"/>
+  <text x="776" y="269" text-anchor="middle" class="section">Reference Library</text>
+  <rect x="669" y="289" width="215" height="164" rx="7" class="inner"/>
+  <text x="776" y="337" text-anchor="middle" class="label">Organization</text>
+  <text x="776" y="360" text-anchor="middle" class="label">Reference Materials</text>
+  <text x="776" y="405" text-anchor="middle" class="small">Standards · patterns · guidance</text>
+
+  <rect x="42" y="462" width="280" height="281" rx="10" class="panel"/>
+  <text x="182" y="493" text-anchor="middle" class="section">Solutions Landscape</text>
+  <rect x="65" y="513" width="234" height="202" rx="7" class="inner"/>
+  <text x="182" y="590" text-anchor="middle" class="label">Solution Building</text>
+  <text x="182" y="613" text-anchor="middle" class="label">Blocks</text>
+  <text x="182" y="663" text-anchor="middle" class="small">Reusable solution designs</text>
+
+  <rect x="346" y="504" width="564" height="127" rx="10" class="panel"/>
+  <text x="628" y="534" text-anchor="middle" class="section">Governance Repository</text>
+  <rect x="366" y="550" width="165" height="58" rx="6" class="inner"/>
+  <rect x="545" y="550" width="165" height="58" rx="6" class="inner"/>
+  <rect x="724" y="550" width="165" height="58" rx="6" class="inner"/>
+  <text x="448" y="585" text-anchor="middle" class="label">Decision Log</text>
+  <text x="627" y="575" text-anchor="middle" class="small">Compliance</text>
+  <text x="627" y="594" text-anchor="middle" class="small">Assessments</text>
+  <text x="806" y="575" text-anchor="middle" class="small">Capability</text>
+  <text x="806" y="594" text-anchor="middle" class="small">Assessments</text>
+
+  <rect x="346" y="653" width="564" height="90" rx="10" class="panel"/>
+  <text x="628" y="682" text-anchor="middle" class="section">Architecture Capability</text>
+  <rect x="366" y="696" width="165" height="34" rx="6" class="inner"/>
+  <rect x="545" y="696" width="165" height="34" rx="6" class="inner"/>
+  <rect x="724" y="696" width="165" height="34" rx="6" class="inner"/>
+  <text x="448" y="719" text-anchor="middle" class="small">Skills Repository</text>
+  <text x="627" y="719" text-anchor="middle" class="small">Organization Structure</text>
+  <text x="806" y="719" text-anchor="middle" class="small">Architecture Charter</text>
+
+  <rect x="978" y="164" width="204" height="94" rx="10" class="ext"/>
+  <rect x="978" y="329" width="204" height="94" rx="10" class="ext"/>
+  <rect x="978" y="516" width="204" height="152" rx="10" class="ext"/>
+  <text x="1080" y="203" text-anchor="middle" class="label exttext">External Reference</text>
+  <text x="1080" y="226" text-anchor="middle" class="label exttext">Models</text>
+  <text x="1080" y="368" text-anchor="middle" class="label exttext">External Standards</text>
+  <text x="1080" y="563" text-anchor="middle" class="label exttext">Architecture Board</text>
+  <text x="1080" y="600" text-anchor="middle" class="small exttext">Reviews, decisions and</text>
+  <text x="1080" y="621" text-anchor="middle" class="small exttext">architecture direction</text>
+
+  <path d="M322 287H346" class="arrow"/>
+  <path d="M610 359H643" class="arrow"/>
+  <path d="M478 214V239" class="arrow"/>
+  <path d="M478 481V504" class="arrow"/>
+  <path d="M628 631V653" class="arrow"/>
+  <path d="M910 300H978" class="dashed"/>
+  <path d="M910 376H978" class="dashed"/>
+  <path d="M910 575H978" class="arrow"/>
+  <text x="944" y="286" text-anchor="middle" class="small">reuse</text>
+  <text x="944" y="362" text-anchor="middle" class="small">standards</text>
+  <text x="944" y="561" text-anchor="middle" class="small">oversight</text>
+</svg>
