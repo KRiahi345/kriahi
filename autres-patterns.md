@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Autres Patterns
+title: Patterns architecturaux
 permalink: /autres-patterns/
 subtitle: Reconnaître les problèmes récurrents et choisir des solutions de conception adaptées au contexte.
 level: Intermédiaire
@@ -10,19 +10,32 @@ duration: 18 min
 
 Un pattern est une solution réutilisable à un problème d’architecture ou de conception récurrent. Il décrit un contexte, un problème, une solution type, ses conséquences et ses limites. Ce n’est ni un produit à installer ni une recette à appliquer partout.
 
-# 2. Architecture en couches (Layered / N-Tier)
+# 2. DDD: Domain Driven Design
 
-```text
-Présentation / API
-       |
-Couche Application
-       |
-Couche Domaine
-       |
-Infrastructure / Persistance
-```
+Le *Domain-Driven Design* structure les services autour du métier plutôt qu’autour des couches techniques.
 
-Elle sépare les responsabilités et reste simple à comprendre. Le risque apparaît lorsque les dépendances deviennent incontrôlées ou que le domaine dépend directement des détails techniques.
+- **Domain :** domaine métier étudié.
+- **Subdomain :** partie du domaine (core, supporting ou generic).
+- **Bounded Context :** frontière dans laquelle un modèle et un vocabulaire métier ont un sens cohérent.
+- **Ubiquitous Language :** langage partagé entre experts métier et équipe de réalisation.
+
+Exemple pour une plateforme vidéo :
+
+| Bounded Context | Responsabilité |
+|---|---|
+| Catalogue | Décrire les contenus et leurs métadonnées |
+| Abonnement | Gérer les offres et droits d’accès |
+| Identité | Gérer comptes et authentification |
+| Lecture | Démarrer et suivre une session |
+| Facturation | Produire les éléments de facturation |
+
+Un bounded context n’est pas automatiquement égal à un microservice. La frontière technique tient aussi compte des données, transactions, rythmes d’évolution, contraintes de sécurité et responsabilités des équipes.
+
+### Exemple illustratif
+
+Ce panorama rassemble des patterns courants pour structurer une application LLM et ses échanges avec les données et les services. Il complète les patterns d’intégration et de résilience présentés dans cette page.
+
+<figure class="resource-figure"><img src="/assets/images/resources/llm-architecture-patterns.jpg" alt="Panorama de patterns d’architecture pour les applications LLM" loading="lazy"><figcaption>Panorama de patterns d’architecture pour les applications LLM.</figcaption></figure>
 
 # 3. Architecture hexagonale (Ports & Adapters)
 
@@ -142,29 +155,3 @@ Conséquences :
 
 **À retenir :** un bon architecte ne cherche pas à utiliser tous les patterns. Il identifie le problème, compare les options, explicite les compromis et choisit la solution la plus simple qui répond aux exigences.
 
-## Décomposer avec DDD
-
-Le *Domain-Driven Design* structure les services autour du métier plutôt qu’autour des couches techniques.
-
-- **Domain :** domaine métier étudié.
-- **Subdomain :** partie du domaine (core, supporting ou generic).
-- **Bounded Context :** frontière dans laquelle un modèle et un vocabulaire métier ont un sens cohérent.
-- **Ubiquitous Language :** langage partagé entre experts métier et équipe de réalisation.
-
-Exemple pour une plateforme vidéo :
-
-| Bounded Context | Responsabilité |
-|---|---|
-| Catalogue | Décrire les contenus et leurs métadonnées |
-| Abonnement | Gérer les offres et droits d’accès |
-| Identité | Gérer comptes et authentification |
-| Lecture | Démarrer et suivre une session |
-| Facturation | Produire les éléments de facturation |
-
-Un bounded context n’est pas automatiquement égal à un microservice. La frontière technique tient aussi compte des données, transactions, rythmes d’évolution, contraintes de sécurité et responsabilités des équipes.
-
-## Patterns d’architecture pour les applications LLM
-
-Ce panorama rassemble des patterns courants pour structurer une application LLM et ses échanges avec les données et les services. Il complète les patterns d’intégration et de résilience présentés dans cette page.
-
-<figure class="resource-figure"><img src="/assets/images/resources/llm-architecture-patterns.jpg" alt="Panorama de patterns d’architecture pour les applications LLM" loading="lazy"><figcaption>Panorama de patterns d’architecture pour les applications LLM.</figcaption></figure>
