@@ -6,7 +6,7 @@ subtitle: Structurer la transformation du SI, du besoin métier à la trajectoir
 level: Débutant à intermédiaire
 duration: 15 min
 ---
-<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/" aria-current="page">Architecture d’entreprise</a><a href="/architecture-entreprise/archimate/">ArchiMate</a></div>
+<div class="section-tabs" aria-label="Sections de l’architecture d’entreprise"><a href="/architecture-entreprise/" aria-current="page">Architecture d’entreprise</a><a href="/architecture-entreprise/archimate/">ArchiMate</a><a href="/architecture-entreprise/togaf-techniques/">TOGAF Techniques</a></div>
 # 1. À quoi sert l’architecture d’entreprise ?
 
 L’architecture d’entreprise (*Enterprise Architecture*, EA) donne une représentation cohérente de l’organisation, de ses capacités métier, de ses processus, de ses données, de ses applications et de ses technologies. Elle relie la stratégie aux transformations du système d’information.
