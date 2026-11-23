@@ -24,7 +24,7 @@
 <a href="{{ '/autres-patterns/' | relative_url }}">Patterns architecturaux</a>
 <a href="{{ '/bibliotheque-architecture/' | relative_url }}">Bibliothèque</a>
 </nav></div></header>
-<main class="container">{{ content }}</main>
+<main class="container{% if page.wide_resource %} container-wide-resource{% endif %}">{{ content }}</main>
 <footer class="site-footer"><div class="container footer-inner">
 <span>© {{ 'now' | date: "%Y" }} Kheireddine Riahi · kriahi.pro</span>
 <span>Architecture d’entreprise · Software · Data · AI</span>

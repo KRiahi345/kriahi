@@ -72,6 +72,10 @@ button:focus-visible {
   margin-inline: auto;
 }
 
+.container-wide-resource {
+  --page-width: 1440px;
+}
+
 /* Header and navigation */
 .site-header {
   position: relative;
@@ -188,6 +192,10 @@ h3 {
 
 .article-wide-library {
   --article-width: 1280px;
+}
+
+.article-wide-resource {
+  --article-width: 1440px;
 }
 
 .article-wide-library .library-directory {
@@ -790,10 +798,14 @@ h3 {
 
 .article-content-compact h2 {
   margin: 1.65em 0 0.6em;
+  font-size: clamp(calc(1.45rem - 2px), calc(2.5vw - 2px), calc(1.9rem - 2px));
+  white-space: nowrap;
 }
 
 .article-content-compact h3 {
   margin: 1.2em 0 0.45em;
+  font-size: clamp(calc(1.15rem - 2px), calc(1.9vw - 2px), calc(1.4rem - 2px));
+  white-space: nowrap;
 }
 
 .article-content-compact .table-scroll {
@@ -1056,6 +1068,11 @@ h3 {
 }
 
 @media (max-width: 650px) {
+  .article-content-compact h2,
+  .article-content-compact h3 {
+    white-space: normal;
+  }
+
   .article-wide-library .library-category a {
     white-space: normal;
   }

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="article{% if page.wide_library %} article-wide-library{% endif %}">
+<article class="article{% if page.wide_library %} article-wide-library{% endif %}{% if page.wide_resource %} article-wide-resource{% endif %}">
   <p class="eyebrow">KHEIREDDINE RIAHI</p>
   <h1{% if page.compact_title or page.reduce_intro_by_2px or page.no_wrap_intro %} class="{% if page.compact_title %}article-title-compact{% endif %}{% if page.reduce_intro_by_2px %} article-title-minus-2{% endif %}{% if page.no_wrap_intro %} article-title-nowrap{% endif %}"{% endif %}>{{ page.title }}</h1>
   <div class="article-content{% if page.compact_document %} article-content-compact{% endif %}">{{ content }}</div>

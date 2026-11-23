@@ -4,6 +4,9 @@ title: "Cadre Togaf pour une architecture IA"
 permalink: /ressources/architecture-ia-framework/
 render_with_liquid: false
 compact_document: true
+wide_resource: true
+reduce_intro_by_2px: true
+no_wrap_intro: true
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
@@ -12,7 +15,6 @@ compact_document: true
 Fondé sur TOGAF ADM, ArchiMate et C4 Model</p>
 <div class="table-scroll"><table><tr><td><p>Positionnement<br>
 Référentiel proposé pour concevoir, documenter, gouverner et faire évoluer les systèmes d&#x27;information intégrant l&#x27;intelligence artificielle. Il s&#x27;agit d&#x27;une adaptation méthodologique proposée, et non d&#x27;une publication officielle ou d&#x27;une certification de The Open Group.</p></td></tr></table></div>
-<p>Version 1.0  •  8 novembre 2026  •  Langue : français</p>
 <h2>Sommaire</h2>
 <p>1. Objet, périmètre et principes directeurs</p>
 <p>2. Fondamentaux de l&#x27;architecture d&#x27;entreprise IA</p>
