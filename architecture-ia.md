@@ -22,8 +22,6 @@ L’**IA agentique** organise l’exécution d’une tâche en plusieurs étapes
 
 Le choix d’un modèle vient après la définition du cas d’usage, de la sortie attendue, de l’erreur acceptable, de la latence, du coût et des risques.
 
-<figure class="resource-figure ai-layers-figure"><img src="/assets/images/resources/layers-of-ai.png" alt="Les couches de l’intelligence artificielle, du Machine Learning à l’IA agentique, avec leurs concepts et méthodes." loading="lazy"><figcaption>Couches de l’intelligence artificielle, du Machine Learning à l’IA agentique.</figcaption></figure>
-
 ### 2. Architecture IA et Machine Learning
 
 - [Cadre Togaf pour une architecture IA](https://kriahi.pro/ressources/architecture-ia-framework/)
@@ -31,3 +29,9 @@ Le choix d’un modèle vient après la définition du cas d’usage, de la sort
 - [Cas pratique : Architecture C4 d’un agent de crédit](https://kriahi.pro/ressources/architecture-c4-agent-credit/)
 - [Machine Learning : algorithmes de base](https://kriahi.pro/ressources/revision-machine-learning/)
 - [Deep Learning: Réseaux de neurones et LLM](https://kriahi.pro/ressources/tutoriel-ml-deep-learning-llm/)
+
+<figure class="resource-figure"><img src="/assets/images/resources/ai-family-layers.png" alt="Grandes familles de l’intelligence artificielle, du Machine Learning et des réseaux de neurones au Deep Learning, à l’IA générative et agentique." loading="lazy"></figure>
+
+### Des grandes familles de l’IA aux systèmes agentiques
+
+Cette illustration situe les principaux domaines de l’intelligence artificielle, du Machine Learning et des réseaux de neurones jusqu’au Deep Learning, à l’IA générative et aux systèmes agentiques.
