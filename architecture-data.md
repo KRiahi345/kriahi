@@ -103,11 +103,3 @@ Pour un reporting quotidien, un pipeline batch avec Lakehouse et moteur SQL peut
 Le choix dépend du SLA de fraîcheur, du volume, de la tolérance aux doublons, du coût, de la complexité opérationnelle et des compétences.
 
 **À retenir :** une architecture Data relie ingestion, stockage, traitement, orchestration, gouvernance, sécurité et usages ; elle ne se résume pas au choix de Spark ou d’un Data Lake.
-
-
-## Visuels de la bibliothèque
-
-<div class="category-gallery">
-<a class="category-visual" href="/ressources/agents-ia-rag-graphrag/"><img src="/assets/images/resources/rag-retrieval-generation.jpg" alt="Étapes du pipeline RAG" loading="lazy"><span>Pipeline RAG et données documentaires</span></a>
-<a class="category-visual" href="/ressources/agents-ia-rag-graphrag/"><img src="/assets/images/resources/embedding-vector-space.jpg" alt="Espace vectoriel des embeddings" loading="lazy"><span>Embeddings et recherche vectorielle</span></a>
-</div>
