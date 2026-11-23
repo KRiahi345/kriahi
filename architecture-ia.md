@@ -6,14 +6,15 @@ subtitle: De la chaîne Machine Learning aux assistants LLM, RAG et architecture
 level: Débutant à intermédiaire
 duration: 20 min
 ---
-# 1. Grandes familles de solutions IA
+# 1. Grandes familles de l'intelligence artificielle
 
-| Famille | Objectif | Exemples |
-|---|---|---|
-| Machine Learning | Apprendre une relation à partir des données | Classification, régression, clustering |
-| Deep Learning | Apprendre des représentations complexes | ANN, CNN, LSTM, Transformers |
-| IA générative | Produire du texte, du code ou des contenus | LLM |
-| IA agentique | Planifier des étapes et appeler des outils | Agents, systèmes multi-agents |
+Le **Machine Learning** apprend des relations à partir de données afin de produire des prédictions ou de soutenir une décision. Il couvre notamment la classification, qui attribue une catégorie, la régression, qui estime une valeur, et le clustering, qui regroupe des observations similaires.
+
+Le **Deep Learning** s’appuie sur des réseaux de neurones à plusieurs couches pour apprendre des représentations complexes à partir des données. Les réseaux convolutifs (**CNN**) sont souvent utilisés pour les images, les réseaux récurrents comme les **LSTM** pour les séquences, et les **Transformers** pour le traitement du langage et d’autres tâches séquentielles.
+
+L’**IA générative** produit de nouveaux contenus, comme du texte, du code ou des images, à partir d’une consigne et du contexte fourni. Les grands modèles de langage (**LLM**) en sont un exemple : ils génèrent du texte et peuvent aussi résumer, reformuler ou répondre à des questions.
+
+L’**IA agentique** organise l’exécution d’une tâche en plusieurs étapes. Un agent peut planifier, utiliser des outils ou des API, examiner leurs résultats et poursuivre jusqu’à l’objectif ; plusieurs agents peuvent aussi coordonner leurs rôles dans un même système.
 
 Le choix d’un modèle vient après la définition du cas d’usage, de la sortie attendue, de l’erreur acceptable, de la latence, du coût et des risques.
 
