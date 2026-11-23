@@ -23,22 +23,6 @@ L’idée centrale est que TOGAF ne se limite pas à une méthode de conception 
 
 {% include togaf-composants.html %}
 
-Le TOGAF Standard 10 s’articule autour d’un contenu fondamental (*Fundamental Content*) et de guides pratiques (*Series Guides*). Son cœur méthodologique est l’ADM (*Architecture Development Method*). Le framework doit être adapté au contexte : il ne s’agit pas d’appliquer mécaniquement toutes les phases et tous les livrables.
-
-| Phase | Finalité | Question clé |
-|---|---|---|
-| Préliminaire | Installer la capacité et la gouvernance | Comment allons-nous faire de l’architecture ? |
-| A – Architecture Vision | Définir vision, périmètre et parties prenantes | Où voulons-nous aller ? |
-| B – Business Architecture | Décrire capacités, acteurs et processus | Comment le métier doit-il fonctionner ? |
-| C – Information Systems | Décrire Data et Application | Quelles données et applications faut-il ? |
-| D – Technology Architecture | Décrire plateformes et infrastructures | Quelle technologie faut-il ? |
-| E – Opportunities & Solutions | Identifier solutions et lots de transformation | Quelles solutions construire ou acquérir ? |
-| F – Migration Planning | Prioriser les transitions et construire la roadmap | Dans quel ordre les réaliser ? |
-| G – Implementation Governance | Contrôler la conformité des réalisations | Les projets respectent-ils l’architecture ? |
-| H – Architecture Change Management | Surveiller les changements et faire évoluer la cible | Comment adapter l’architecture ? |
-
-Requirements Management est transversal. L’ADM est itératif : une évolution peut conduire à revisiter une phase précédente.
-
 # 3. Exemple fil rouge : moderniser un SI bancaire
 
 Une banque possède plusieurs applications indépendantes pour la gestion client, le crédit, les contrats, la facturation et le reporting. Les données sont dupliquées, les échanges sont fragiles et les délais de traitement sont longs.
