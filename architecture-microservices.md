@@ -16,25 +16,7 @@ Un monolithe modulaire bien conçu peut être préférable lorsque le domaine es
 
 # 3. Vue logique
 
-```text
-Applications Web / Mobile / TV
-             |
-       API Gateway / BFF
-             |
-   +---------+----------+-----------+
-   |                    |           |
-Catalogue           Abonnement   Identité
-Service             Service      Service
-   |                    |           |
-Base Catalogue      Base Abonnement Base Identité
-   |
-   +------ Événements / Kafka ------+
-                    |
-              Facturation
-                Service
-                    |
-             Base Facturation
-```
+<figure class="resource-figure"><img src="/assets/images/architecture/microservices-architecture-reference.png" alt="Architecture de référence microservices : canaux, API Gateway, services autonomes, Kafka, infrastructure, sécurité, observabilité et patterns clés" loading="lazy"></figure>
 
 L’API Gateway centralise certains besoins transverses : routage, authentification, quotas ou observabilité. Elle ne doit pas concentrer toute la logique métier.
 
