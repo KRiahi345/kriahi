@@ -6,13 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Architecture_IA_Agentique_Document_complet_avec_images_utilisateur.docx</p>
 <div class="source-document">
-<p>ARCHITECTURE IA<br>
-AGENTIQUE</p>
-<p>Bonnes pratiques • Cartographie de référence • Stack technologique • Intégration TOGAF</p>
-<p>Document de synthèse de la discussion</p>
 <h2>1. Objectif et principes directeurs</h2>
 <p>Une architecture IA agentique est un système logiciel dans lequel un ou plusieurs agents utilisent des modèles, des connaissances et des outils pour comprendre une demande, planifier des étapes et exécuter des actions dans un périmètre défini. Elle doit être conçue comme une architecture de systèmes distribués, enrichie d&#x27;exigences spécifiques de contrôle, de confiance, de sécurité et de gouvernance.</p>
 <p>Principe fondamental : ne pas rechercher une autonomie illimitée. Accorder à chaque agent uniquement le niveau d&#x27;autonomie nécessaire, avec des mécanismes de contrôle, de traçabilité, de validation et d&#x27;arrêt.</p>

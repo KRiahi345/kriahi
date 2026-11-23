@@ -6,15 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Guide_complet_architecture_agents_IA_RAG_GraphRAG.docx</p>
 <div class="source-document">
-<p>GUIDE COMPLET</p>
-<p>Concevoir une plateforme<br>
-Multi-Agents IA d’entreprise</p>
-<p>36 technologies • LangGraph • LlamaIndex • RAG • GraphRAG • Neo4j • Ollama • vLLM</p>
-<p>Architecture de référence enrichie avec RAG et GraphRAG</p>
-<p>Document pédagogique et guide de conception pour architecte solutions</p>
 <h2>Sommaire</h2>
 <p class="source-list-item">1. Comprendre l’IA agentique</p>
 <p class="source-list-item">2. Les 36 technologies de l’écosystème</p>
