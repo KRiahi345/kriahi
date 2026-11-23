@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 1040" role="img" aria-labelledby="title desc">
+  <title id="title">TOGAF Architecture Content Framework</title>
+  <desc id="desc">Vue des catalogues, matrices, diagrammes centraux et extensions pour les architectures métier, data, applicative et technologique, ainsi que la vision, les exigences et les solutions.</desc>
+  <defs>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#17304c}
+      .bg{fill:#f5f8fc;stroke:#173f69;stroke-width:4}
+      .phase{fill:#173f69}
+      .domain{fill:#244f79}
+      .card{fill:#fff;stroke:#a5b2c1;stroke-width:1.5}
+      .row{fill:#e7edf4;stroke:#a5b2c1;stroke-width:1.5}
+      .head{font-size:19px;font-weight:700;fill:#fff}
+      .subhead{font-size:15px;font-weight:700;fill:#17304c}
+      .item{font-size:13px}
+      .tag{fill:#edf3f9;stroke:#c2cfdb;stroke-width:1}
+      .vision{fill:#dce9f6;stroke:#8aa4bf;stroke-width:1.5}
+      .foot{font-size:13px;font-weight:700;fill:#17304c}
+    </style>
+  </defs>
+  <rect x="8" y="8" width="1284" height="1024" rx="14" class="bg"/>
+
+  <rect x="24" y="24" width="244" height="62" rx="8" class="phase"/>
+  <text x="146" y="51" text-anchor="middle" class="head">Préliminaire</text>
+  <text x="146" y="73" text-anchor="middle" class="item" fill="#fff">Catalogues · principes</text>
+  <rect x="282" y="24" width="994" height="62" rx="8" class="phase"/>
+  <text x="779" y="51" text-anchor="middle" class="head">Architecture Vision</text>
+  <text x="779" y="73" text-anchor="middle" class="item" fill="#fff">Stakeholder Map · Value Chain · Solution Concept</text>
+
+  <g transform="translate(24 108)">
+    <rect width="244" height="56" rx="7" class="vision"/>
+    <text x="122" y="23" text-anchor="middle" class="subhead">Requirements Management</text>
+    <text x="122" y="44" text-anchor="middle" class="item">Requirements Catalog</text>
+  </g>
+  <g transform="translate(282 108)">
+    <rect width="994" height="56" rx="7" class="vision"/>
+    <text x="497" y="23" text-anchor="middle" class="subhead">Vision : cartographier les parties prenantes, la valeur et le concept de solution</text>
+    <text x="497" y="44" text-anchor="middle" class="item">Stakeholder Map Matrix · Value Chain Diagram · Solution Concept Diagram</text>
+  </g>
+
+  <g transform="translate(24 184)">
+    <rect width="244" height="56" rx="7" class="domain"/><text x="122" y="36" text-anchor="middle" class="head">Socle transversal</text>
+    <rect x="258" width="244" height="56" rx="7" class="domain"/><text x="380" y="36" text-anchor="middle" class="head">Business Architecture</text>
+    <rect x="516" width="244" height="56" rx="7" class="domain"/><text x="638" y="36" text-anchor="middle" class="head">Data Architecture</text>
+    <rect x="774" width="244" height="56" rx="7" class="domain"/><text x="896" y="36" text-anchor="middle" class="head">Application Architecture</text>
+    <rect x="1032" width="244" height="56" rx="7" class="domain"/><text x="1154" y="36" text-anchor="middle" class="head">Technology Architecture</text>
+  </g>
+
+  <g transform="translate(24 252)">
+    <rect width="244" height="426" rx="7" class="row"/><text x="122" y="29" text-anchor="middle" class="subhead">Référentiels</text>
+    <rect x="258" width="244" height="426" rx="7" class="row"/><text x="380" y="29" text-anchor="middle" class="subhead">Catalogues</text>
+    <rect x="516" width="244" height="426" rx="7" class="row"/><text x="638" y="29" text-anchor="middle" class="subhead">Catalogues</text>
+    <rect x="774" width="244" height="426" rx="7" class="row"/><text x="896" y="29" text-anchor="middle" class="subhead">Catalogues</text>
+    <rect x="1032" width="244" height="426" rx="7" class="row"/><text x="1154" y="29" text-anchor="middle" class="subhead">Catalogues</text>
+    <g class="item">
+      <text x="16" y="65">Principles Catalog</text><text x="16" y="98">Stakeholders &amp; concerns</text><text x="16" y="131">Standards &amp; policies</text><text x="16" y="164">Architecture repository</text>
+      <text x="274" y="65">Organization / Actor</text><text x="274" y="98">Driver / Goal / Objective</text><text x="274" y="131">Role Catalog</text><text x="274" y="164">Location Catalog</text><text x="274" y="197">Service / Function</text><text x="274" y="230">Process / Event / Control</text><text x="274" y="263">Contract / Measure</text>
+      <text x="532" y="65">Data Entity / Data Component</text><text x="532" y="98">Data structure &amp; ownership</text><text x="532" y="131">Reference data</text>
+      <text x="790" y="65">Application Portfolio</text><text x="790" y="98">Interface Catalog</text><text x="790" y="131">Application services</text>
+      <text x="1048" y="65">Technology Standards</text><text x="1048" y="98">Technology Portfolio</text><text x="1048" y="131">Platforms &amp; infrastructure</text>
+    </g>
+    <path d="M16 286H228 M274 286H486 M532 286H744 M790 286H1002 M1048 286H1260" stroke="#b3c0ce"/>
+    <g class="subhead"><text x="16" y="316">Matrices</text><text x="274" y="316">Matrices</text><text x="532" y="316">Matrices</text><text x="790" y="316">Matrices</text><text x="1048" y="316">Matrices</text></g>
+    <g class="item">
+      <text x="16" y="347">Stakeholder Map</text><text x="16" y="376">Requirements links</text>
+      <text x="274" y="347">Business Interaction</text><text x="274" y="376">Actor / Role</text><text x="274" y="405">Goal / Service</text>
+      <text x="532" y="347">Data Entity / Function</text><text x="532" y="376">System / Data</text>
+      <text x="790" y="347">System / Organization</text><text x="790" y="376">Role / System</text><text x="790" y="405">Application Interaction</text>
+      <text x="1048" y="347">System / Technology</text><text x="1048" y="376">Platform / Environment</text>
+    </g>
+  </g>
+
+  <g transform="translate(24 694)">
+    <rect width="244" height="196" rx="7" class="row"/><text x="122" y="29" text-anchor="middle" class="subhead">Éléments transversaux</text>
+    <rect x="258" width="244" height="196" rx="7" class="row"/><text x="380" y="29" text-anchor="middle" class="subhead">Diagrammes centraux</text>
+    <rect x="516" width="244" height="196" rx="7" class="row"/><text x="638" y="29" text-anchor="middle" class="subhead">Diagrammes centraux</text>
+    <rect x="774" width="244" height="196" rx="7" class="row"/><text x="896" y="29" text-anchor="middle" class="subhead">Diagrammes centraux</text>
+    <rect x="1032" width="244" height="196" rx="7" class="row"/><text x="1154" y="29" text-anchor="middle" class="subhead">Diagrammes centraux</text>
+    <g class="item">
+      <text x="16" y="65">Architecture Roadmap</text><text x="16" y="96">Architecture Definition</text><text x="16" y="127">Requirements Catalog</text><text x="16" y="158">Project Context Diagram</text>
+      <text x="274" y="65">Business Footprint</text><text x="274" y="96">Service / Information</text><text x="274" y="127">Functional Decomposition</text><text x="274" y="158">Product Lifecycle</text>
+      <text x="532" y="65">Class Diagram</text><text x="532" y="96">Data Dissemination</text><text x="532" y="127">Data Security</text><text x="532" y="158">Data Lifecycle</text>
+      <text x="790" y="65">Application Communication</text><text x="790" y="96">Application / User Location</text><text x="790" y="127">System Use-Case</text><text x="790" y="158">Application Migration</text>
+      <text x="1048" y="65">Environments &amp; Locations</text><text x="1048" y="96">Platform Decomposition</text><text x="1048" y="127">Processing Diagram</text><text x="1048" y="158">Network / Hardware</text>
+    </g>
+  </g>
+
+  <g transform="translate(24 906)">
+    <rect width="1240" height="98" rx="8" class="phase"/>
+    <text x="620" y="30" text-anchor="middle" class="head">Opportunities &amp; Solutions</text>
+    <text x="620" y="57" text-anchor="middle" class="item" fill="#fff">Project Context Diagram · Benefits Diagram · Transition Architecture · Solution Building Blocks</text>
+    <text x="620" y="82" text-anchor="middle" class="item" fill="#fff">Le Content Framework organise les catalogues, matrices, diagrammes et livrables produits pendant l’ADM.</text>
+  </g>
+</svg>
