@@ -214,7 +214,9 @@ h3 {
 }
 
 .tutorial-intro-minus-2 .article-lead {
+  max-width: none;
   font-size: clamp(calc(1.08rem - 2px), calc(1.5vw - 2px), calc(1.24rem - 2px));
+  white-space: nowrap;
 }
 
 .article-content {
@@ -980,6 +982,10 @@ h3 {
 }
 
 @media (max-width: 650px) {
+  .tutorial-intro-minus-2 .article-lead {
+    white-space: normal;
+  }
+
   html {
     scroll-padding-top: 90px;
   }
