@@ -21,13 +21,19 @@ Le *Domain-Driven Design* structure les services autour du métier plutôt qu’
 
 Exemple pour une plateforme vidéo :
 
-| Bounded Context | Responsabilité |
-|---|---|
-| Catalogue | Décrire les contenus et leurs métadonnées |
-| Abonnement | Gérer les offres et droits d’accès |
-| Identité | Gérer comptes et authentification |
-| Lecture | Démarrer et suivre une session |
-| Facturation | Produire les éléments de facturation |
+<div class="table-scroll ddd-context-table">
+<table>
+<caption>Bounded contexts d’une plateforme vidéo</caption>
+<thead><tr><th scope="col">Bounded Context</th><th scope="col">Responsabilité</th></tr></thead>
+<tbody>
+<tr><th scope="row">Catalogue</th><td>Décrire les contenus et leurs métadonnées</td></tr>
+<tr><th scope="row">Abonnement</th><td>Gérer les offres et droits d’accès</td></tr>
+<tr><th scope="row">Identité</th><td>Gérer comptes et authentification</td></tr>
+<tr><th scope="row">Lecture</th><td>Démarrer et suivre une session</td></tr>
+<tr><th scope="row">Facturation</th><td>Produire les éléments de facturation</td></tr>
+</tbody>
+</table>
+</div>
 
 Un bounded context n’est pas automatiquement égal à un microservice. La frontière technique tient aussi compte des données, transactions, rythmes d’évolution, contraintes de sécurité et responsabilités des équipes.
 
