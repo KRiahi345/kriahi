@@ -6,11 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE D’ENTREPRISE · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Guide_TOGAF_Building_Blocks_Banque.docx</p>
 <div class="source-document">
-<p>TOGAF : de la vision aux solutions concrètes</p>
-<p>Exemple fil rouge : transformation du système d’information d’une banque vers le Cloud et les microservices</p>
 <h2>Introduction – Comprendre la progression des Building Blocks</h2>
 <p>Pour bien comprendre cette notion dans TOGAF, prenons un exemple concret de transformation du système d’information d’une banque vers une architecture Cloud et microservices.</p>
 <p>L’objectif est de suivre un même besoin métier à travers les différentes phases de l’ADM et de voir comment un Building Block abstrait devient progressivement une solution concrète.</p>

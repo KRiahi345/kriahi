@@ -6,13 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE D’ENTREPRISE · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Synthese_matrices_TOGAF_ADM.docx</p>
 <div class="source-document">
-<p>SYNTHÈSE DES MATRICES TOGAF</p>
-<p>Référentiel de révision par phase de l’ADM</p>
-<p>Exemples pédagogiques fil rouge : une banque modernisant son système d’information.</p>
-<p>Ce document présente les matrices et artefacts de relation utiles pour comprendre la traçabilité entre métier, données, applications et technologies. Les exemples sont simplifiés et doivent être adaptés au contexte de l’entreprise.</p>
 <h2>1. Repères essentiels</h2>
 <div class="table-scroll"><table><tr><td><p>Phase ADM</p></td><td><p>Domaine</p></td><td><p>Question directrice</p></td></tr><tr><td><p>A – Architecture Vision</p></td><td><p>Vision et parties prenantes</p></td><td><p>Qui est concerné et quelle transformation vise-t-on ?</p></td></tr><tr><td><p>B – Business Architecture</p></td><td><p>Organisation, acteurs, rôles, fonctions, capacités</p></td><td><p>Comment l’entreprise fonctionne-t-elle ?</p></td></tr><tr><td><p>C – Information Systems Architecture</p></td><td><p>Données et applications</p></td><td><p>Quelles données et applications supportent le métier ?</p></td></tr><tr><td><p>D – Technology Architecture</p></td><td><p>Technologies et plateformes</p></td><td><p>Sur quelles technologies les applications reposent-elles ?</p></td></tr></table></div>
 <p>Les matrices sont des artefacts de représentation. Leur emploi dépend du périmètre, des préoccupations des parties prenantes et du niveau de détail recherché. Elles ne sont pas toutes obligatoires dans chaque cycle ADM.</p>

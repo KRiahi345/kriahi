@@ -6,12 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE D’ENTREPRISE · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Synthese_catalogues_TOGAF_ADM.docx</p>
 <div class="source-document">
-<p>SYNTHÈSE DES CATALOGUES TOGAF</p>
-<p>Rôle • Contenu • Domaine ADM • Exemples • Pièges d’examen</p>
-<p>Support de révision — TOGAF 10 / Architecture Content Framework</p>
 <h2>1. Comprendre ce qu’est un catalogue</h2>
 <p>Un catalogue est un inventaire structuré d’éléments d’architecture. Il décrit les objets, leurs caractéristiques et leurs propriétaires. Il répond à la question : « Quels éléments existent dans l’architecture ? »</p>
 <div class="table-scroll"><table><tr><td><p>Artefact</p></td><td><p>Rôle</p></td><td><p>Question clé</p></td><td><p>Exemple</p></td></tr><tr><td><p>Catalogue</p></td><td><p>Inventorier des éléments et leurs attributs</p></td><td><p>Quels éléments avons-nous ?</p></td><td><p>Catalogue des applications</p></td></tr><tr><td><p>Matrice</p></td><td><p>Montrer les relations entre des ensembles</p></td><td><p>Quel élément est lié à quel autre ?</p></td><td><p>Matrice Application / Organisation</p></td></tr><tr><td><p>Diagramme</p></td><td><p>Représenter une structure, un flux ou un comportement</p></td><td><p>Comment cela fonctionne-t-il ?</p></td><td><p>Application Communication Diagram</p></td></tr></table></div>

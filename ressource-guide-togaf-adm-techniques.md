@@ -6,15 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE D’ENTREPRISE · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Guide_TOGAF_ADM_Guidelines_Techniques_17_images.docx</p>
 <div class="source-document">
-<p>TOGAF</p>
-<p>Comprendre le framework,<br>
-les domaines d’architecture,<br>
-et les ADM Guidelines &amp; Techniques</p>
-<div class="table-scroll"><table><tr><td><p>Fil conducteur — Transformation du système d’information d’une banque : modernisation d’un monolithe vers une architecture Cloud et microservices.</p></td></tr></table></div>
-<p>Document de révision – novembre 2026</p>
 <h2>Sommaire</h2>
 <p>1. Comprendre l’objectif de TOGAF</p>
 <p>2. Les six composants présentés dans le guide</p>
