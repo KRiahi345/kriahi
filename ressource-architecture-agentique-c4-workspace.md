@@ -6,16 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Guide_complet_IA_agentique_architecture_C4_workspace_pratique.docx</p>
 <div class="source-document">
-<p>L’INTELLIGENCE<br>
-ARTIFICIELLE AGENTIQUE</p>
-<p>De la compréhension des concepts à une architecture d’entreprise<br>
-et à un workspace de développement pratique</p>
-<p>Synthèse structurée de la session d’échange</p>
-<p>Cas fil rouge : instruction et analyse d’une demande de crédit immobilier</p>
-<p>Version pédagogique — 7 novembre 2026</p>
 <h2>Sommaire</h2>
 <p>1. Comprendre l’IA agentique</p>
 <p>2. Les composants fondamentaux d’un agent</p>

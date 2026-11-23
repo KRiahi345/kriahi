@@ -6,15 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : Synthese_IA_agentique_Architecture_C4_Agentic_Credit.docx</p>
 <div class="source-document">
-<p>IA AGENTIQUE<br>
-ET ARCHITECTURE C4</p>
-<p>Conception d’une plateforme de crédit assistée par des agents IA</p>
-<p>Synthèse structurée de l’échange : concepts, architecture, diagrammes C4,<br>
-choix technologiques, workspace et mise en œuvre</p>
-<p>Document de travail — 7 novembre 2026</p>
 <h2>Sommaire</h2>
 <p class="source-list-item">1. De l’IA générative à l’IA agentique</p>
 <p class="source-list-item">2. Les briques d’une architecture agentique</p>
