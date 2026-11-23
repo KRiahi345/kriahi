@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Framework d’architecture d’entreprise pour l’IA"
+title: "Cadre Togaf pour une architecture IA"
 permalink: /ressources/architecture-ia-framework/
 render_with_liquid: false
 ---
