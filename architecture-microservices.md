@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Architecture microservice
+title: Architecture Microservices
 permalink: /architecture-microservices/
 subtitle: Décomposer un système en services autonomes sans perdre cohérence métier, résilience et exploitabilité.
 level: Intermédiaire
