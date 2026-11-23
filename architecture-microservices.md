@@ -5,6 +5,7 @@ permalink: /architecture-microservices/
 subtitle: Décomposer un système en services autonomes sans perdre cohérence métier, résilience et exploitabilité.
 level: Intermédiaire
 duration: 18 min
+compact_content: true
 ---
 # 1. Définition d'une architecture microservices
 

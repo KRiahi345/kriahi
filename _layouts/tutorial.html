@@ -6,5 +6,5 @@ layout: page
 {% if page.level %}<span class="level-tag">Niveau : {{ page.level }}</span>{% endif %}
 {% if page.duration %}<span class="level-tag">Lecture : {{ page.duration }}</span>{% endif %}
 </div>
-<div class="article-content tutorial-content">{{ content }}</div>
+<div class="article-content tutorial-content{% if page.compact_content %} tutorial-content-compact{% endif %}">{{ content }}</div>
 <div class="tutorial-end"><p><strong>Pour aller plus loin :</strong> expérimente les concepts sur un cas concret, documente les décisions et compare les compromis fonctionnels, techniques, opérationnels et économiques.</p><a href="{{ '/' | relative_url }}">← Retour à l’accueil</a></div>
