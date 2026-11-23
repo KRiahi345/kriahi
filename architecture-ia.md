@@ -20,6 +20,8 @@ L’**IA agentique** organise l’exécution d’une tâche en plusieurs étapes
 
 Le choix d’un modèle vient après la définition du cas d’usage, de la sortie attendue, de l’erreur acceptable, de la latence, du coût et des risques.
 
+<figure class="resource-figure"><img src="/assets/images/resources/ai-architecture-layers.jpg" alt="Couches d’une plateforme IA, des données et modèles aux applications." loading="lazy"><figcaption>Couches d’une plateforme IA, des données et modèles aux applications.</figcaption></figure>
+
 # 2. Cycle de vie Machine Learning
 
 Une chaîne ML comprend collecte et qualification, préparation, feature engineering, séparation entraînement/validation/test, entraînement, évaluation, déploiement et surveillance.
