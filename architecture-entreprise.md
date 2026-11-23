@@ -21,6 +21,8 @@ L’idée centrale est que TOGAF ne se limite pas à une méthode de conception 
 
 <figure class="resource-figure"><img src="/assets/images/architecture/togaf-10-framework-big-picture.webp" alt="Vue d’ensemble des huit composantes du framework TOGAF 10 et de leurs interactions" loading="lazy"><figcaption>Les huit composantes du framework TOGAF 10 et leurs relations.</figcaption></figure>
 
+{% include togaf-composants.html %}
+
 Le TOGAF Standard 10 s’articule autour d’un contenu fondamental (*Fundamental Content*) et de guides pratiques (*Series Guides*). Son cœur méthodologique est l’ADM (*Architecture Development Method*). Le framework doit être adapté au contexte : il ne s’agit pas d’appliquer mécaniquement toutes les phases et tous les livrables.
 
 | Phase | Finalité | Question clé |
