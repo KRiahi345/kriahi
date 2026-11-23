@@ -11,10 +11,8 @@ no_wrap_intro: true
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
 <div class="source-document">
-<p>Guide méthodologique d&#x27;architecture d&#x27;entreprise IA<br>
-Fondé sur TOGAF ADM, ArchiMate et C4 Model</p>
-<div class="table-scroll"><table><tr><td><p>Positionnement<br>
-Référentiel proposé pour concevoir, documenter, gouverner et faire évoluer les systèmes d&#x27;information intégrant l&#x27;intelligence artificielle. Il s&#x27;agit d&#x27;une adaptation méthodologique proposée, et non d&#x27;une publication officielle ou d&#x27;une certification de The Open Group.</p></td></tr></table></div>
+<p>Guide méthodologique d&#x27;architecture d&#x27;entreprise IA — Fondé sur TOGAF ADM, ArchiMate et C4 Model</p>
+<p><strong>Positionnement :</strong> Référentiel proposé pour concevoir, documenter, gouverner et faire évoluer les systèmes d&#x27;information intégrant l&#x27;intelligence artificielle. Il s&#x27;agit d&#x27;une adaptation méthodologique proposée, et non d&#x27;une publication officielle ou d&#x27;une certification de The Open Group.</p>
 <h2>Sommaire</h2>
 <p>1. Objet, périmètre et principes directeurs</p>
 <p>2. Fondamentaux de l&#x27;architecture d&#x27;entreprise IA</p>
