@@ -14,11 +14,19 @@ Les bénéfices recherchés sont l’autonomie des équipes, le déploiement ind
 
 Un monolithe modulaire bien conçu peut être préférable lorsque le domaine est mal connu, l’équipe réduite ou le déploiement indépendant inutile.
 
-# 2. Les six principes fondamentaux du découpage en microservices
+# 2. Vue Logique/Technique
+
+<figure class="resource-figure"><img src="/assets/images/architecture/microservices-architecture-reference.png" alt="Architecture de référence microservices : canaux, API Gateway, services autonomes, Kafka, infrastructure, sécurité, observabilité et patterns clés" loading="lazy"></figure>
+
+L’API Gateway centralise certains besoins transverses : routage, authentification, quotas ou observabilité. Elle ne doit pas concentrer toute la logique métier.
+
+Le **BFF (Backend for Frontend)** adapte les APIs à un canal, par exemple TV ou mobile, lorsque les besoins d’agrégation diffèrent réellement.
+
+# 3. Les six principes fondamentaux du découpage en microservices
 
 Une architecture microservices cohérente repose sur des services bien délimités, autonomes, orientés métier, résilients, observables et déployés par des processus automatisés.
 
-## 2.1 Cohésion (High Cohesion)
+## 3.1 Cohésion (High Cohesion)
 
 Un microservice doit avoir une responsabilité métier unique et regrouper les fonctionnalités qui participent à cette responsabilité. Il doit faire une seule chose, avec un seul focus, et être découpé selon une raison de changer.
 
@@ -26,7 +34,7 @@ Dans un système bancaire, le **Payment Service** gère l’initiation des paiem
 
 Bonne pratique : appliquer le principe de responsabilité unique à l’échelle du domaine métier, sans créer des services excessivement petits.
 
-## 2.2 Autonomie (Autonomy)
+## 3.2 Autonomie (Autonomy)
 
 Chaque microservice doit pouvoir évoluer, être remplacé et être déployé indépendamment des autres. Cette autonomie s’appuie sur un faible couplage, des interfaces versionnées et une responsabilité clairement attribuée à une équipe.
 
@@ -34,7 +42,7 @@ Par exemple, le **Payment Service** peut évoluer de Spring Boot 3 vers Spring B
 
 Un service autonome maîtrise son cycle de vie, ses données et ses décisions d’implémentation.
 
-## 2.3 Orienté métier (Business-Oriented)
+## 3.3 Orienté métier (Business-Oriented)
 
 Les microservices se découpent selon les domaines et les capacités métier, et non selon les couches techniques. Le **Domain-Driven Design (DDD)** aide à identifier ces domaines et leurs frontières fonctionnelles, appelées *Bounded Contexts*.
 
@@ -50,7 +58,7 @@ Dans une banque, au lieu de créer un service par type de contrôleur technique,
 
 Le métier doit guider le découpage technique.
 
-## 2.4 Résilience (Resilience)
+## 3.4 Résilience (Resilience)
 
 La défaillance d’un microservice ne doit pas provoquer automatiquement l’indisponibilité de l’ensemble du système. Il faut prévoir le comportement par défaut et les fonctionnalités dégradées, puis surveiller notamment le **MTTR** (*Mean Time To Repair*) et le **MTBF** (*Mean Time Between Failures*).
 
@@ -67,7 +75,7 @@ Si le **Notification Service** devient indisponible pendant un paiement, le paie
 
 Le **MTTR** mesure le temps moyen de réparation ; le **MTBF** mesure le temps moyen entre deux pannes. L’objectif est de réduire le MTTR et d’augmenter le MTBF.
 
-## 2.5 Observabilité (Observability)
+## 3.5 Observabilité (Observability)
 
 L’observabilité permet de comprendre l’état interne d’un système à partir des données qu’il expose. Dans une architecture distribuée, elle aide à suivre le parcours d’une requête entre les microservices et à identifier les erreurs ou les latences.
 
@@ -75,7 +83,7 @@ Ses trois piliers sont les **logs**, qui historisent les événements et les err
 
 Par exemple, si un virement prend anormalement quatre secondes, le tracing permet de déterminer quel microservice est responsable de cette latence.
 
-## 2.6 Automatisation (Automation)
+## 3.6 Automatisation (Automation)
 
 L’automatisation des activités de développement, de test, de construction et de déploiement rend les livraisons plus fiables et rapides. Elle s’appuie notamment sur l’intégration continue (**CI**) et le déploiement continu (**CD**), ainsi que sur les tests, les conteneurs et les déploiements automatisés.
 
@@ -91,7 +99,7 @@ Un pipeline CI/CD peut suivre les étapes suivantes :
 
 Parmi les technologies possibles : GitLab CI ou GitHub Actions, Maven ou Gradle, Docker, Kubernetes, Argo CD et SonarQube.
 
-## 2.7 Synthèse des six principes
+## 3.7 Synthèse des six principes
 
 | Principe | Question fondamentale |
 |---|---|
@@ -101,12 +109,4 @@ Parmi les technologies possibles : GitLab CI ou GitHub Actions, Maven ou Gradle,
 | Résilience | Le système résiste-t-il aux défaillances ? |
 | Observabilité | Peut-on comprendre son comportement ? |
 | Automatisation | Peut-on tester et déployer sans intervention manuelle répétitive ? |
-
-# 3. Vue logique
-
-<figure class="resource-figure"><img src="/assets/images/architecture/microservices-architecture-reference.png" alt="Architecture de référence microservices : canaux, API Gateway, services autonomes, Kafka, infrastructure, sécurité, observabilité et patterns clés" loading="lazy"></figure>
-
-L’API Gateway centralise certains besoins transverses : routage, authentification, quotas ou observabilité. Elle ne doit pas concentrer toute la logique métier.
-
-Le **BFF (Backend for Frontend)** adapte les APIs à un canal, par exemple TV ou mobile, lorsque les besoins d’agrégation diffèrent réellement.
 
