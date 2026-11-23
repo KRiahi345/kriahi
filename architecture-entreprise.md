@@ -13,7 +13,7 @@ L’architecture d’entreprise (*Enterprise Architecture*, EA) donne une repré
 
 Elle répond à quatre questions : que doit savoir faire le métier ? Quelles informations sont nécessaires ? Quelles applications supportent les activités ? Quelles technologies rendent le tout possible ?
 
-# 2. TOGAF 10 et l’ADM
+# 2. TOGAF : The Open Group Architecture Framework
 
 Cette vue globale du framework **TOGAF 10** présente les huit composantes principales, leurs interactions et la manière dont elles contribuent à concevoir, gouverner et faire évoluer l’architecture d’entreprise.
 
