@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-<div class="tutorial-intro{% if page.reduce_intro_by_2px %} tutorial-intro-minus-2{% endif %}">
+<div class="tutorial-intro{% if page.reduce_intro_by_2px %} tutorial-intro-minus-2{% endif %}{% if page.no_wrap_intro %} tutorial-intro-nowrap{% endif %}">
 {% if page.subtitle %}<p class="article-lead">{{ page.subtitle }}</p>{% endif %}
 {% if page.level %}<span class="level-tag">Niveau : {{ page.level }}</span>{% endif %}
 {% if page.duration %}<span class="level-tag">Lecture : {{ page.duration }}</span>{% endif %}

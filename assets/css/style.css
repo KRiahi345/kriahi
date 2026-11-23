@@ -205,6 +205,10 @@ h3 {
   font-size: clamp(calc(2.25rem - 2px), calc(5vw - 2px), calc(3.65rem - 2px));
 }
 
+.article > h1.article-title-nowrap {
+  white-space: nowrap;
+}
+
 .article-lead {
   max-width: 68ch;
   margin: 0 0 1rem;
@@ -216,6 +220,11 @@ h3 {
 .tutorial-intro-minus-2 .article-lead {
   max-width: none;
   font-size: clamp(calc(1.08rem - 2px), calc(1.5vw - 2px), calc(1.24rem - 2px));
+  white-space: nowrap;
+}
+
+.tutorial-intro-nowrap .article-lead {
+  max-width: none;
   white-space: nowrap;
 }
 
@@ -982,6 +991,11 @@ h3 {
 }
 
 @media (max-width: 650px) {
+  .article > h1.article-title-nowrap,
+  .tutorial-intro-nowrap .article-lead {
+    white-space: normal;
+  }
+
   .tutorial-intro-minus-2 .article-lead {
     white-space: normal;
   }
