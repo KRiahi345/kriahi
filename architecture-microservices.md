@@ -14,7 +14,7 @@ Les bénéfices recherchés sont l’autonomie des équipes, le déploiement ind
 
 Un monolithe modulaire bien conçu peut être préférable lorsque le domaine est mal connu, l’équipe réduite ou le déploiement indépendant inutile.
 
-# 2. Vue Logique/Technique
+# 2. Vue Logique / Technique
 
 <figure class="resource-figure"><img src="/assets/images/architecture/microservices-architecture-reference.png" alt="Architecture de référence microservices : canaux, API Gateway, services autonomes, Kafka, infrastructure, sécurité, observabilité et patterns clés" loading="lazy"></figure>
 
