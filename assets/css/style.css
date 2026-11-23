@@ -201,12 +201,20 @@ h3 {
   font-size: clamp(2rem, 4.2vw, 3rem);
 }
 
+.article > h1.article-title-minus-2 {
+  font-size: clamp(calc(2.25rem - 2px), calc(5vw - 2px), calc(3.65rem - 2px));
+}
+
 .article-lead {
   max-width: 68ch;
   margin: 0 0 1rem;
   color: var(--muted);
   font-size: clamp(1.08rem, 1.5vw, 1.24rem);
   line-height: 1.65;
+}
+
+.tutorial-intro-minus-2 .article-lead {
+  font-size: clamp(calc(1.08rem - 2px), calc(1.5vw - 2px), calc(1.24rem - 2px));
 }
 
 .article-content {
