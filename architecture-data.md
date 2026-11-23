@@ -5,6 +5,8 @@ permalink: /architecture-data/
 subtitle: Concevoir une plateforme qui collecte, transforme, gouverne et met à disposition les informations.
 level: Débutant à intermédiaire
 duration: 18 min
+reduce_intro_by_2px: true
+no_wrap_intro: true
 ---
 # 1. Rôle de l’architecture Data
 
