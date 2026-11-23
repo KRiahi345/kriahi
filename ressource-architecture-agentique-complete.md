@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Architecture complète d’une plateforme d’IA agentique"
+title: "Architecture technique de référence d'un système IA agentique"
 permalink: /ressources/architecture-agentique-complete/
 render_with_liquid: false
 ---
