@@ -819,6 +819,11 @@ h3 {
   line-height: 1.45;
 }
 
+.article-content-tight-paragraphs p {
+  margin-block: 0.12em;
+  line-height: 1.4;
+}
+
 .article-content-compact h2 {
   margin: 1.65em 0 0.6em;
   font-size: clamp(calc(1.45rem - 2px), calc(2.5vw - 2px), calc(1.9rem - 2px));
@@ -829,6 +834,11 @@ h3 {
   margin: 1.2em 0 0.45em;
   font-size: clamp(calc(1.15rem - 2px), calc(1.9vw - 2px), calc(1.4rem - 2px));
   white-space: nowrap;
+}
+
+.article-content-tight-paragraphs h4 {
+  margin: 1em 0 0.35em;
+  font-size: calc(1.08rem - 2px);
 }
 
 .article-content-compact .table-scroll {
