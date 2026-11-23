@@ -47,7 +47,7 @@
 <li>G : Gouvernance de la mise en œuvre.</li>
 <li>H : Gestion des changements d&#x27;architecture.</li>
 </ul>
-<figure class="resource-figure"><img src="/assets/images/togaf/composants/togaf-components-03.jpeg" alt="Why TOGAF ADM is crucial for successful enterprise architecture | Christopher Williams posted on the topic | LinkedIn" loading="lazy"></figure>
+<figure class="resource-figure"><img src="/assets/images/togaf/composants/togaf-adm-overview.png" alt="Cycle TOGAF ADM avec ses phases Préliminaire et A à H, la gestion des exigences, ses principaux livrables et les bénéfices de la méthode" loading="lazy"></figure>
 <h3><strong>4. Architecture Content Framework</strong><strong> : </strong>Définit les contenus produits pendant l&#x27;ADM.</h3>
 <p>Trois catégories :</p>
 <ul>
@@ -115,7 +115,8 @@ Description automatically generated" loading="lazy"></figure>
 <li><strong>Réutiliser et assembler</strong></li>
 </ul>
 <p>L&#x27;Enterprise Continuum facilite la réutilisation des architectures et solutions. Les ABB sont concrétisés par des SBB.</p>
-<h2><strong>2.3. Structure d'un livrable de Architecture Content</strong></h2>
-<p>Il faut particulièrement bien maîtriser quatre distinctions.</p>
-<div class="table-scroll"><table><tr><td><p><strong>Notion</strong></p></td><td><p><strong>Signification</strong></p></td><td><p><strong>Exemple</strong></p></td></tr><tr><td><p>Deliverable</p></td><td><p>Livrable formel</p></td><td><p>Architecture Definition Document</p></td></tr><tr><td><p>Artifact</p></td><td><p>Représentation architecturale</p></td><td><p>Diagramme applicatif</p></td></tr><tr><td><p>ABB</p></td><td><p>Besoin ou capacité architecturale</p></td><td><p>Capacité de paiement</p></td></tr><tr><td><p>SBB</p></td><td><p>Implémentation concrète</p></td><td><p>Microservice Payment</p></td></tr></table></div>
+<h2><strong>2.3. Structure d’un livrable d’Architecture Content</strong></h2>
+<p>Le Content Framework distingue le document formel, les représentations d’architecture qu’il rassemble et les composants réutilisables qui décrivent ou réalisent la solution.</p>
+<div class="table-scroll"><table><thead><tr><th>Élément</th><th>Rôle</th><th>Exemple bancaire</th></tr></thead><tbody><tr><td><strong>Deliverable</strong><br>Livrable</td><td>Document formel remis et examiné pendant le projet. Il peut regrouper plusieurs artefacts.</td><td>Architecture Definition Document réunissant les vues, catalogues et matrices de l’architecture cible.</td></tr><tr><td><strong>Artifact</strong><br>Artefact</td><td>Représentation d’un aspect précis de l’architecture. Les catalogues, matrices et diagrammes sont des artefacts.</td><td>Diagramme des échanges entre le service de paiement, les comptes et le système antifraude.</td></tr><tr><td><strong>ABB</strong><br>Architecture Building Block</td><td>Description logique et réutilisable d’un besoin ou d’une capacité d’architecture, indépendante de son implémentation.</td><td>Service de paiement qui doit vérifier, autoriser et suivre les transactions.</td></tr><tr><td><strong>SBB</strong><br>Solution Building Block</td><td>Composant concret qui met en œuvre un ou plusieurs ABB et respecte leurs exigences.</td><td>Service de paiement déployé avec son API et ses composants de stockage et d’intégration.</td></tr></tbody></table></div>
+<p>En résumé, un livrable peut contenir plusieurs artefacts ; ceux-ci décrivent l’architecture et ses building blocks. Les SBB réalisent concrètement les besoins portés par les ABB.</p>
 </section>
