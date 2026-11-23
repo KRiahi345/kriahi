@@ -39,6 +39,8 @@ Ce panorama rassemble des patterns courants pour structurer une application LLM 
 
 # 3. Architecture hexagonale (Ports & Adapters)
 
+<figure class="resource-figure"><img src="/assets/images/resources/hexagonal-architecture-archimate.png" alt="Modèle ArchiMate de l’architecture hexagonale illustrant le domaine, les ports, les adaptateurs et les couches métier, applicative et technologique." loading="lazy"><figcaption>Architecture hexagonale modélisée avec ArchiMate : domaine, ports, adaptateurs et relations entre les couches.</figcaption></figure>
+
 Le domaine est au centre. Les interactions passent par des ports et des adaptateurs :
 
 - **Port entrant :** décrit comment une fonctionnalité est appelée.
