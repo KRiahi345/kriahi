@@ -903,22 +903,6 @@ h3 {
   max-height: none;
 }
 
-.resource-figure.ddd-figure {
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
-  border-left: 0;
-  border-right: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.resource-figure.ddd-figure img {
-  max-height: none;
-}
-
 .tutorial-content .ddd-context-table {
   margin-top: 0.8rem;
 }
