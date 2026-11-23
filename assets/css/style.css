@@ -240,6 +240,10 @@ h3 {
   font-size: clamp(1.15rem, 1.9vw, 1.4rem);
 }
 
+.tutorial-content h3.adm-overview {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
 .article-content h4,
 .tutorial-content h4 {
   margin: 1.5em 0 0.5em;
