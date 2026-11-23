@@ -6,11 +6,7 @@ render_with_liquid: false
 ---
 
 <p class="eyebrow">ARCHITECTURE IA · DOCUMENT DE RÉFÉRENCE</p>
-<p>Cette page reprend le contenu du document de référence, dans son ordre d’origine. Les exemples fournis dans le document sont conservés avec les explications correspondantes.</p>
-<p class="source-filename">Source : AI_Enterprise_Architecture_Framework_Guide_v1-1.docx</p>
 <div class="source-document">
-<p>AI ENTERPRISE<br>
-ARCHITECTURE FRAMEWORK</p>
 <p>Guide méthodologique d&#x27;architecture d&#x27;entreprise IA<br>
 Fondé sur TOGAF ADM, ArchiMate et C4 Model</p>
 <div class="table-scroll"><table><tr><td><p>Positionnement<br>
