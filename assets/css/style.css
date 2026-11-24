@@ -459,10 +459,21 @@ h3 {
 }
 
 .hero h1 {
-  max-width: 16ch;
+  max-width: 24ch;
   margin: 0.35rem 0 1rem;
   font-size: clamp(2.8rem, 6.5vw, 5rem);
   line-height: 1.03;
+}
+
+.hero-points {
+  margin: 0 0 1.2rem;
+  padding-left: 1.2em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hero-points li {
+  margin: 0.18em 0;
 }
 
 .hero h1 span {
