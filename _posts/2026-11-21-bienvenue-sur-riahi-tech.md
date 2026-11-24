@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bienvenue sur Riahi.tech"
+title: "Bienvenue sur kriahi.pro"
 date: 2026-11-21 09:00:00 +0100
 categories: [Architecture]
 tags: [blog, architecture, data, ia]
