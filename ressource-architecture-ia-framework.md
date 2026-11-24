@@ -58,20 +58,8 @@ TOGAF organise la démarche et la gouvernance de l&#x27;architecture d&#x27;entr
 <h2>2. Fondamentaux de l&#x27;architecture d&#x27;entreprise IA</h2>
 <h3>2.1 De l&#x27;architecture SI à l&#x27;architecture IA</h3>
 <p>Une architecture IA relie un besoin métier à un ensemble de capacités techniques et organisationnelles. Elle doit expliciter la chaîne de valeur complète : données sources, préparation, modèle, orchestration, service exposé, interaction utilisateur, supervision et mesure du résultat.</p>
-<p>OBJECTIF METIER</p>
-<p>|</p>
-<p>v</p>
-<p>BUSINESS CAPABILITY  --&gt;  AI USE CASE  --&gt;  OUTCOME / KPI</p>
-<p>|</p>
-<p>v</p>
-<p>DATA ASSETS --&gt; DATA PIPELINES --&gt; MODEL / LLM --&gt; AI SERVICE</p>
-<p>|          |</p>
-<p>v          v</p>
-<p>EVALUATION   APPLICATION</p>
-<p>|          |</p>
-<p>+----+-----+</p>
-<p>v</p>
-<p>GOVERNANCE / SECURITY / OPS</p>
+<h4>Carte Archimate d'une architecture type IA agentique</h4>
+<figure class="resource-figure"><img src="/assets/images/resources/archimate-ai-agentic-reference.png" alt="Carte ArchiMate d’une architecture d’IA agentique présentant les couches métier, applicative, données, technologie et gouvernance." loading="lazy"></figure>
 <h3>2.2 Les composants d&#x27;une solution IA</h3>
 <div class="table-scroll"><table><tr><td><p>Composant</p></td><td><p>Rôle</p></td><td><p>Exemples / points d&#x27;attention</p></td></tr><tr><td><p>Data source</p></td><td><p>Source d&#x27;information</p></td><td><p>ERP, CRM, GED, capteurs, bases relationnelles, événements</p></td></tr><tr><td><p>Data pipeline</p></td><td><p>Ingestion, transformation et contrôle</p></td><td><p>ETL/ELT, streaming, qualité, lineage</p></td></tr><tr><td><p>Dataset / corpus</p></td><td><p>Données exploitées par le modèle ou le RAG</p></td><td><p>Droits, classification, fraîcheur, version</p></td></tr><tr><td><p>Feature Store</p></td><td><p>Gestion des variables ML</p></td><td><p>Cohérence offline/online, réutilisation</p></td></tr><tr><td><p>Model / LLM</p></td><td><p>Moteur d&#x27;inférence</p></td><td><p>Modèle propriétaire, open weights, modèle spécialisé</p></td></tr><tr><td><p>Prompt / template</p></td><td><p>Instruction structurée pour un LLM</p></td><td><p>Version, tests, paramètres, sécurité</p></td></tr><tr><td><p>Embedding model</p></td><td><p>Projection sémantique des contenus</p></td><td><p>Dimension, version, compatibilité</p></td></tr><tr><td><p>Vector store</p></td><td><p>Index de recherche vectorielle</p></td><td><p>Filtrage, ACL, mise à jour, haute disponibilité</p></td></tr><tr><td><p>Orchestrator / Agent</p></td><td><p>Coordination des étapes et outils</p></td><td><p>LangGraph, workflows, règles d&#x27;arrêt</p></td></tr><tr><td><p>Tool / API</p></td><td><p>Action ou capacité appelée par l&#x27;agent</p></td><td><p>Contrat, authentification, autorisation, idempotence</p></td></tr><tr><td><p>AI Gateway</p></td><td><p>Point de contrôle d&#x27;accès aux modèles</p></td><td><p>Routage, quotas, logs, politiques, coût</p></td></tr><tr><td><p>Evaluation &amp; monitoring</p></td><td><p>Mesure de la qualité et du risque</p></td><td><p>Jeux de tests, métriques, alertes, revues humaines</p></td></tr></table></div>
 <h3>2.3 IA classique, générative et agentique</h3>
