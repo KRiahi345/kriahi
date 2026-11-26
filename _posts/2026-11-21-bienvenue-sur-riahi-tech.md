@@ -5,6 +5,7 @@ date: 2026-11-21 09:00:00 +0100
 categories: [Architecture]
 tags: [blog, architecture, data, ia]
 description: "Présentation du blog et de ses grandes thématiques."
+english_url: /en/blog/architecture/welcome-to-kriahi-pro/
 ---
 Ce blog est un espace de partage consacré à la conception et à l'évolution des systèmes d'information.
 

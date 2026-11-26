@@ -1,35 +1,35 @@
 <div class="library-directory">
   <section class="library-category">
-    <h3>{% if page.layout == 'home' %}Architecture IA{% else %}Architecture IA et Machine Learning{% endif %}</h3>
+    <h3>{% if page.lang == 'en' %}{% if page.layout == 'home' %}AI Architecture{% else %}AI Architecture and Machine Learning{% endif %}{% else %}{% if page.layout == 'home' %}Architecture IA{% else %}Architecture IA et Machine Learning{% endif %}{% endif %}</h3>
     <ul>
-      <li><a href="{{ '/ressources/architecture-ia-framework/' | relative_url }}">Cadre Togaf pour une architecture IA</a></li>
-      <li><a href="{{ '/ressources/architecture-agentique-complete/' | relative_url }}">Comprendre l’IA agentique</a></li>
-      <li><a href="{{ '/ressources/agents-ia-rag-graphrag/' | relative_url }}">Architecture technique de référence d'un système IA agentique</a></li>
-      <li><a href="{{ '/ressources/architecture-c4-agent-credit/' | relative_url }}">{% if page.layout == 'home' %}Cas pratique : Plateforme IA de gestion de crédit{% else %}Cas pratique : Architecture C4 d’un agent de crédit{% endif %}</a></li>
-      {% unless page.layout == 'home' %}<li><a href="{{ '/ressources/revision-machine-learning/' | relative_url }}">Machine Learning : algorithmes de base</a></li>
-      <li><a href="{{ '/ressources/tutoriel-ml-deep-learning-llm/' | relative_url }}">Deep Learning: Réseaux de neurones et LLM</a></li>{% endunless %}
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/architecture-ia-framework/' | relative_url }}{% else %}{{ '/ressources/architecture-ia-framework/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}AI Enterprise Architecture Framework{% else %}Cadre Togaf pour une architecture IA{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/architecture-agentique-complete/' | relative_url }}{% else %}{{ '/ressources/architecture-agentique-complete/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Understanding Agentic AI{% else %}Comprendre l’IA agentique{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/agents-ia-rag-graphrag/' | relative_url }}{% else %}{{ '/ressources/agents-ia-rag-graphrag/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Reference Architecture for Agentic AI Systems{% else %}Architecture technique de référence d'un système IA agentique{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/architecture-c4-agent-credit/' | relative_url }}{% else %}{{ '/ressources/architecture-c4-agent-credit/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Case Study: C4 Architecture for a Credit Agent{% else %}{% if page.layout == 'home' %}Cas pratique : Plateforme IA de gestion de crédit{% else %}Cas pratique : Architecture C4 d’un agent de crédit{% endif %}{% endif %}</a></li>
+      {% unless page.layout == 'home' %}<li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/revision-machine-learning/' | relative_url }}{% else %}{{ '/ressources/revision-machine-learning/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Machine Learning: Core Algorithms{% else %}Machine Learning : algorithmes de base{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/tutoriel-ml-deep-learning-llm/' | relative_url }}{% else %}{{ '/ressources/tutoriel-ml-deep-learning-llm/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Deep Learning: Neural Networks and LLMs{% else %}Deep Learning: Réseaux de neurones et LLM{% endif %}</a></li>{% endunless %}
     </ul>
   </section>
   <section class="library-category">
-    <h3>Architecture d’Entreprise</h3>
+    <h3>{% if page.lang == 'en' %}Enterprise Architecture{% else %}Architecture d’Entreprise{% endif %}</h3>
     <ul>
-      <li><a href="{{ '/ressources/architecture-entreprise/' | relative_url }}">Architecture d’Entreprise et stack data</a></li>
-      <li><a href="{{ '/ressources/guide-togaf-adm-techniques/' | relative_url }}">Guide TOGAF ADM et techniques d’architecture</a></li>
-      <li><a href="{{ '/ressources/togaf-building-blocks-banque/' | relative_url }}">Building blocks TOGAF pour une banque</a></li>
-      <li><a href="{{ '/ressources/synthese-catalogues-togaf/' | relative_url }}">Synthèse des catalogues TOGAF ADM</a></li>
-      <li><a href="{{ '/ressources/synthese-matrices-togaf/' | relative_url }}">Synthèse des matrices TOGAF ADM</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/architecture-entreprise/' | relative_url }}{% else %}{{ '/ressources/architecture-entreprise/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Enterprise Architecture and the Data Stack{% else %}Architecture d’Entreprise et stack data{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/guide-togaf-adm-techniques/' | relative_url }}{% else %}{{ '/ressources/guide-togaf-adm-techniques/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}TOGAF ADM and Architecture Techniques Guide{% else %}Guide TOGAF ADM et techniques d’architecture{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/togaf-building-blocks-banque/' | relative_url }}{% else %}{{ '/ressources/togaf-building-blocks-banque/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}TOGAF Building Blocks for a Bank{% else %}Building blocks TOGAF pour une banque{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/synthese-catalogues-togaf/' | relative_url }}{% else %}{{ '/ressources/synthese-catalogues-togaf/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}TOGAF ADM Catalogues: Summary{% else %}Synthèse des catalogues TOGAF ADM{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/synthese-matrices-togaf/' | relative_url }}{% else %}{{ '/ressources/synthese-matrices-togaf/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}TOGAF ADM Matrices: Summary{% else %}Synthèse des matrices TOGAF ADM{% endif %}</a></li>
     </ul>
   </section>
   {% if page.layout == 'home' %}<section class="library-category">
     <h3>Machine Learning</h3>
     <ul>
-      <li><a href="{{ '/ressources/revision-machine-learning/' | relative_url }}">Machine Learning : algorithmes de base</a></li>
-      <li><a href="{{ '/ressources/tutoriel-ml-deep-learning-llm/' | relative_url }}">Deep Learning: Réseaux de neurones et LLM</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/revision-machine-learning/' | relative_url }}{% else %}{{ '/ressources/revision-machine-learning/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Machine Learning: Core Algorithms{% else %}Machine Learning : algorithmes de base{% endif %}</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/ressources/tutoriel-ml-deep-learning-llm/' | relative_url }}{% else %}{{ '/ressources/tutoriel-ml-deep-learning-llm/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Deep Learning: Neural Networks and LLMs{% else %}Deep Learning: Réseaux de neurones et LLM{% endif %}</a></li>
     </ul>
   </section>{% else %}<section class="library-category">
-    <h3>Architecture Microservices</h3>
+    <h3>{% if page.lang == 'en' %}Microservices Architecture{% else %}Architecture Microservices{% endif %}</h3>
     <ul>
-      <li><a href="{{ '/architecture-microservices/' | relative_url }}">Architecture Microservices</a></li>
+      <li><a href="{% if page.lang == 'en' %}{{ '/en/architecture-microservices/' | relative_url }}{% else %}{{ '/architecture-microservices/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}Microservices Architecture{% else %}Architecture Microservices{% endif %}</a></li>
     </ul>
   </section>{% endif %}
 </div>

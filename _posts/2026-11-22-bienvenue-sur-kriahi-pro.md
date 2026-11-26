@@ -5,6 +5,7 @@ date: 2026-11-22 10:00:00 +0100
 categories: [Architecture]
 tags: [blog, architecture, data, ia]
 description: "Présentation du blog technique de Kheireddine Riahi."
+english_url: /en/blog/architecture/welcome-to-kriahi-pro-2/
 ---
 Bienvenue sur **kriahi.pro**, mon espace de partage consacré à l'architecture des systèmes d'information, aux architectures distribuées, à la data et à l'intelligence artificielle.
 

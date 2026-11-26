@@ -28,7 +28,7 @@ layout: default
 {% include library-directory.html %}
 </section>
 <section class="section-heading"><div><p class="eyebrow">LE JOURNAL</p><h2>Dernières publications</h2></div><a class="text-link" href="{{ '/archives/' | relative_url }}">Toutes les publications →</a></section>
-<div class="post-grid">{% for post in site.posts limit:4 %}
+<div class="post-grid">{% assign french_posts = site.posts | where_exp: "post", "post.lang != 'en'" %}{% for post in french_posts limit:4 %}
 <article class="post-card"><div class="post-meta">{{ post.date | date: "%d %B %Y" }}{% if post.categories.size > 0 %} · {{ post.categories | first }}{% endif %}</div>
 <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
 <a class="read-more" href="{{ post.url | relative_url }}">Lire l'article →</a></article>{% endfor %}</div>

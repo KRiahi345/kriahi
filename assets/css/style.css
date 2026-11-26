@@ -121,6 +121,15 @@ button:focus-visible {
   border-radius: 6px;
 }
 
+.header-tools {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -142,6 +151,35 @@ nav a {
 nav a:hover {
   border-color: rgb(103 223 255 / 24%);
   background: rgb(103 223 255 / 8%);
+  color: var(--text);
+}
+
+.language-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.language-switch a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.45rem 0.52rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.language-switch a.is-current {
+  background: rgb(103 223 255 / 14%);
   color: var(--text);
 }
 
@@ -1125,6 +1163,16 @@ h3 {
     flex: 0 0 auto;
   }
 
+  .header-tools {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+
+  .header-tools nav {
+    width: auto;
+    flex: 1 1 auto;
+  }
+
   .topic-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1180,6 +1228,15 @@ h3 {
   nav {
     margin-inline: -4px;
     font-size: 0.78rem;
+  }
+
+  .header-tools {
+    gap: 0.25rem;
+  }
+
+  .language-switch a {
+    gap: 0.15rem;
+    padding: 0.42rem;
   }
 
   nav a {

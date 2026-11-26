@@ -6,5 +6,5 @@ layout: default
   <h1>{{ page.title }}</h1>
   {% if page.description %}<p class="article-lead">{{ page.description }}</p>{% endif %}
   <div class="article-content">{{ content }}</div>
-  <div class="article-end"><a href="{{ '/archives/' | relative_url }}">← Tous les articles</a></div>
+  <div class="article-end"><a href="{% if page.lang == 'en' %}{{ '/en/archives/' | relative_url }}{% else %}{{ '/archives/' | relative_url }}{% endif %}">{% if page.lang == 'en' %}← All articles{% else %}← Tous les articles{% endif %}</a></div>
 </article>

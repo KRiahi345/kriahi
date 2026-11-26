@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'fr' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101827">{% seo %}
@@ -16,7 +16,17 @@
 <body>
 <header class="site-header"><div class="container header-inner">
 <a class="brand" href="{{ '/' | relative_url }}" aria-label="Kheireddine Riahi, accueil"><img class="brand-logo" src="{{ '/assets/images/kheireddine-riahi-tech-blog.png' | relative_url }}" alt="Kheireddine Riahi Tech Blog" width="2172" height="724"></a>
-<nav aria-label="Navigation principale">
+<div class="header-tools">
+<nav aria-label="{% if page.lang == 'en' %}Main navigation{% else %}Navigation principale{% endif %}">
+{% if page.lang == 'en' %}
+<a href="{{ '/en/' | relative_url }}">Home</a>
+<a href="{{ '/en/architecture-entreprise/' | relative_url }}">Enterprise Architecture</a>
+<a href="{{ '/en/architecture-microservices/' | relative_url }}">Microservices</a>
+<a href="{{ '/en/architecture-data/' | relative_url }}">Data Architecture</a>
+<a href="{{ '/en/architecture-ia/' | relative_url }}">AI Architecture</a>
+<a href="{{ '/en/autres-patterns/' | relative_url }}">Patterns</a>
+<a href="{{ '/en/bibliotheque-architecture/' | relative_url }}">Library</a>
+{% else %}
 <a href="{{ '/' | relative_url }}">Accueil</a>
 <a href="{{ '/architecture-entreprise/' | relative_url }}">Architecture d'Entreprise</a>
 <a href="{{ '/architecture-microservices/' | relative_url }}">Architecture Microservices</a>
@@ -24,9 +34,19 @@
 <a href="{{ '/architecture-ia/' | relative_url }}">Architecture IA</a>
 <a href="{{ '/autres-patterns/' | relative_url }}">Patterns architecturaux</a>
 <a href="{{ '/bibliotheque-architecture/' | relative_url }}">Bibliothèque</a>
-</nav></div></header>
+{% endif %}
+</nav>
+<div class="language-switch" aria-label="{% if page.lang == 'en' %}Choose language{% else %}Choisir la langue{% endif %}">
+{% if page.lang == 'en' %}
+<a href="{{ page.french_url | default: '/' | relative_url }}" lang="fr" hreflang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span> FR</a>
+<a class="is-current" href="{{ page.url | relative_url }}" lang="en" hreflang="en" aria-current="page" aria-label="English"><span aria-hidden="true">🇬🇧</span> EN</a>
+{% else %}
+<a class="is-current" href="{{ page.url | relative_url }}" lang="fr" hreflang="fr" aria-current="page" aria-label="Français"><span aria-hidden="true">🇫🇷</span> FR</a>
+<a href="{% assign en_default = page.url | prepend: '/en' %}{{ page.english_url | default: en_default | relative_url }}" lang="en" hreflang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span> EN</a>
+{% endif %}
+</div></div></div></header>
 <main class="container{% if page.wide_resource %} container-wide-resource{% endif %}{% if page.wide_content %} container-wide-content{% endif %}">{{ content }}</main>
 <footer class="site-footer"><div class="container footer-inner">
 <span>© {{ 'now' | date: "%Y" }} Kheireddine Riahi · kriahi.pro</span>
-<span>Architecture d’Entreprise · Software · Data · AI</span>
+<span>{% if page.lang == 'en' %}Enterprise Architecture · Software · Data · AI{% else %}Architecture d’Entreprise · Software · Data · AI{% endif %}</span>
 </div></footer></body></html>
