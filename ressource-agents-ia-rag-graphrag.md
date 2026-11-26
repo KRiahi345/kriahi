@@ -141,6 +141,5 @@ Une plateforme agentique d’entreprise n’est pas une simple application Pytho
 
 <section class="resource-illustrations"><h2>Schémas et illustrations</h2>
 <figure class="resource-figure"><img src="/assets/images/resources/rag-retrieval-generation.jpg" alt="Étapes du pipeline Retrieval-Augmented Generation." loading="lazy"><figcaption>Étapes du pipeline Retrieval-Augmented Generation.</figcaption></figure>
-<figure class="resource-figure"><img src="/assets/images/resources/embedding-vector-space.jpg" alt="Représentation de mots proches dans un espace vectoriel d’embeddings." loading="lazy"><figcaption>Représentation de mots proches dans un espace vectoriel d’embeddings.</figcaption></figure>
 </section>
 </div>
