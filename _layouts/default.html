@@ -38,11 +38,11 @@
 </nav>
 <div class="language-switch" aria-label="{% if page.lang == 'en' %}Choose language{% else %}Choisir la langue{% endif %}">
 {% if page.lang == 'en' %}
-<a href="{{ page.french_url | default: '/' | relative_url }}" lang="fr" hreflang="fr" aria-label="Français"><span aria-hidden="true">🇫🇷</span> FR</a>
-<a class="is-current" href="{{ page.url | relative_url }}" lang="en" hreflang="en" aria-current="page" aria-label="English"><span aria-hidden="true">🇬🇧</span> EN</a>
+<a href="{{ page.french_url | default: '/' | relative_url }}" lang="fr" hreflang="fr" aria-label="Français"><img src="{{ '/assets/flags/fr.svg' | relative_url }}" width="24" height="16" alt=""></a>
+<a class="is-current" href="{{ page.url | relative_url }}" lang="en" hreflang="en" aria-current="page" aria-label="English"><img src="{{ '/assets/flags/gb.svg' | relative_url }}" width="28" height="14" alt=""></a>
 {% else %}
-<a class="is-current" href="{{ page.url | relative_url }}" lang="fr" hreflang="fr" aria-current="page" aria-label="Français"><span aria-hidden="true">🇫🇷</span> FR</a>
-<a href="{% assign en_default = page.url | prepend: '/en' %}{{ page.english_url | default: en_default | relative_url }}" lang="en" hreflang="en" aria-label="English"><span aria-hidden="true">🇬🇧</span> EN</a>
+<a class="is-current" href="{{ page.url | relative_url }}" lang="fr" hreflang="fr" aria-current="page" aria-label="Français"><img src="{{ '/assets/flags/fr.svg' | relative_url }}" width="24" height="16" alt=""></a>
+<a href="{% assign en_default = page.url | prepend: '/en' %}{{ page.english_url | default: en_default | relative_url }}" lang="en" hreflang="en" aria-label="English"><img src="{{ '/assets/flags/gb.svg' | relative_url }}" width="28" height="14" alt=""></a>
 {% endif %}
 </div></div></div></header>
 <main class="container{% if page.wide_resource %} container-wide-resource{% endif %}{% if page.wide_content %} container-wide-content{% endif %}">{{ content }}</main>
