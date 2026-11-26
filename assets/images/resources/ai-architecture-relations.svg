@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1480" role="img" aria-labelledby="title desc">
+  <title id="title">Relations principales du métamodèle d’architecture IA</title>
+  <desc id="desc">Diagramme des relations entre stratégie, capacités métier, cas d’usage, produits IA, données, modèles, services, agents, outils, RAG, risques et contrôles.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#123b69"/><stop offset="1" stop-color="#071b35"/></linearGradient>
+    <linearGradient id="business" x1="0" x2="1"><stop stop-color="#fff8d9"/><stop offset="1" stop-color="#fffdf1"/></linearGradient>
+    <linearGradient id="technology" x1="0" x2="1"><stop stop-color="#e7f4ff"/><stop offset="1" stop-color="#f4faff"/></linearGradient>
+    <linearGradient id="agentic" x1="0" x2="1"><stop stop-color="#f1ebff"/><stop offset="1" stop-color="#faf7ff"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#16365a" flood-opacity=".14"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#385875"/></marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#1672b9"/></marker>
+    <style>
+      text{font-family:Inter,"Segoe UI",Arial,sans-serif;fill:#10233e}
+      .title{font-size:38px;font-weight:800;fill:#fff;letter-spacing:.2px}
+      .subtitle{font-size:18px;fill:#d5e9fb}
+      .band-title{font-size:23px;font-weight:800;letter-spacing:.8px}
+      .node{filter:url(#shadow);stroke-width:2}
+      .node-title{font-size:22px;font-weight:750;text-anchor:middle}
+      .node-sub{font-size:16px;fill:#425872;text-anchor:middle}
+      .rel{fill:none;stroke:#385875;stroke-width:3;marker-end:url(#arrow)}
+      .rel-blue{fill:none;stroke:#1672b9;stroke-width:3;marker-end:url(#arrowBlue)}
+      .rel-dash{fill:none;stroke:#607b95;stroke-width:2.5;stroke-dasharray:8 7;marker-end:url(#arrow)}
+      .label-bg{fill:#fff;stroke:#d8e2ee;stroke-width:1}
+      .label{font-size:16px;font-weight:700;text-anchor:middle;fill:#294762}
+      .foot{font-size:16px;fill:#3d5670}
+    </style>
+  </defs>
+  <rect width="1800" height="1480" rx="28" fill="#f5f8fc"/>
+  <rect x="35" y="28" width="1730" height="96" rx="22" fill="url(#header)"/>
+  <text class="title" x="900" y="73" text-anchor="middle">RELATIONS PRINCIPALES DU MÉTAMODÈLE D’ARCHITECTURE IA</text>
+  <text class="subtitle" x="900" y="103" text-anchor="middle">De la stratégie métier aux services, données, modèles et contrôles</text>
+
+  <rect x="35" y="145" width="1730" height="350" rx="24" fill="url(#business)" stroke="#dfbd57" stroke-width="2"/>
+  <rect x="55" y="160" width="330" height="42" rx="14" fill="#f4d56c"/>
+  <text class="band-title" x="220" y="189" text-anchor="middle">STRATÉGIE &amp; MÉTIER</text>
+
+  <!-- Business relationships -->
+  <path class="rel" d="M350 275 H445"/>
+  <path class="rel" d="M755 275 H1110"/>
+  <path class="rel-blue" d="M600 325 V366"/>
+  <path class="rel" d="M755 420 H1110"/>
+  <path class="rel-dash" d="M450 438 C360 470 220 480 205 644"/>
+  <path class="rel-dash" d="M1270 465 C1270 535 1350 565 1350 644"/>
+  <rect class="label-bg" x="358" y="239" width="78" height="30" rx="12"/><text class="label" x="397" y="260">guides</text>
+  <rect class="label-bg" x="878" y="239" width="112" height="30" rx="12"/><text class="label" x="934" y="260">supports</text>
+  <rect class="label-bg" x="614" y="334" width="86" height="28" rx="12"/><text class="label" x="657" y="354">enables</text>
+  <rect class="label-bg" x="849" y="384" width="152" height="30" rx="12"/><text class="label" x="925" y="405">realized by</text>
+  <rect class="label-bg" x="260" y="504" width="116" height="30" rx="12"/><text class="label" x="318" y="525">consumes</text>
+  <rect class="label-bg" x="1290" y="542" width="102" height="30" rx="12"/><text class="label" x="1341" y="563">exposes</text>
+
+  <g>
+    <rect class="node" x="80" y="225" width="270" height="100" rx="20" fill="#fff" stroke="#d3aa36"/>
+    <text class="node-title" x="215" y="267">AI Strategy</text><text class="node-sub" x="215" y="295">objectifs · principes · valeur</text>
+    <rect class="node" x="445" y="225" width="310" height="100" rx="20" fill="#fff" stroke="#d3aa36"/>
+    <text class="node-title" x="600" y="267">AI Capability</text><text class="node-sub" x="600" y="295">capacité organisationnelle IA</text>
+    <rect class="node" x="1110" y="225" width="330" height="100" rx="20" fill="#fff" stroke="#d3aa36"/>
+    <text class="node-title" x="1275" y="267">Business Capability</text><text class="node-sub" x="1275" y="295">capacité métier soutenue</text>
+    <rect class="node" x="445" y="370" width="310" height="100" rx="20" fill="#fff" stroke="#d3aa36"/>
+    <text class="node-title" x="600" y="412">AI Use Case</text><text class="node-sub" x="600" y="440">besoin métier · résultat attendu</text>
+    <rect class="node" x="1110" y="370" width="330" height="100" rx="20" fill="#fff" stroke="#d3aa36"/>
+    <text class="node-title" x="1275" y="412">AI Product</text><text class="node-sub" x="1275" y="440">solution maintenue dans la durée</text>
+  </g>
+
+  <rect x="35" y="530" width="1730" height="355" rx="24" fill="url(#technology)" stroke="#66a9de" stroke-width="2"/>
+  <rect x="55" y="545" width="420" height="42" rx="14" fill="#a9d8f6"/>
+  <text class="band-title" x="265" y="574" text-anchor="middle">DONNÉES, MODÈLES &amp; SERVICES</text>
+
+  <!-- Data and application relationships -->
+  <path class="rel" d="M330 705 H410"/>
+  <path class="rel" d="M680 705 H760"/>
+  <path class="rel-blue" d="M1030 705 H1110"/>
+  <path class="rel" d="M1380 705 H1460"/>
+  <path class="rel-dash" d="M895 760 C880 815 790 815 765 842"/>
+  <path class="rel-dash" d="M895 760 C930 815 1035 815 1065 842"/>
+  <rect class="label-bg" x="330" y="664" width="80" height="28" rx="11"/><text class="label" x="370" y="684">prepares</text>
+  <rect class="label-bg" x="677" y="664" width="84" height="28" rx="11"/><text class="label" x="719" y="684">provides</text>
+  <rect class="label-bg" x="1036" y="664" width="70" height="28" rx="11"/><text class="label" x="1071" y="684">serves</text>
+  <rect class="label-bg" x="1382" y="664" width="76" height="28" rx="11"/><text class="label" x="1420" y="684">exposes</text>
+  <rect class="label-bg" x="754" y="804" width="122" height="28" rx="11"/><text class="label" x="815" y="824">evaluated by</text>
+  <rect class="label-bg" x="1006" y="804" width="118" height="28" rx="11"/><text class="label" x="1065" y="824">versioned in</text>
+  <g>
+    <rect class="node" x="60" y="655" width="270" height="100" rx="18" fill="#fff" stroke="#5c9bcd"/>
+    <text class="node-title" x="195" y="697">Data Asset</text><text class="node-sub" x="195" y="725">source métier / corpus</text>
+    <rect class="node" x="410" y="655" width="270" height="100" rx="18" fill="#fff" stroke="#5c9bcd"/>
+    <text class="node-title" x="545" y="697">Dataset</text><text class="node-sub" x="545" y="725">préparé · qualifié · versionné</text>
+    <rect class="node" x="760" y="655" width="270" height="100" rx="18" fill="#fff" stroke="#5c9bcd"/>
+    <text class="node-title" x="895" y="697">AI Model</text><text class="node-sub" x="895" y="725">modèle ML ou modèle de fondation</text>
+    <rect class="node" x="1110" y="655" width="270" height="100" rx="18" fill="#fff" stroke="#5c9bcd"/>
+    <text class="node-title" x="1245" y="697">AI Service</text><text class="node-sub" x="1245" y="725">inférence exposée par API</text>
+    <rect class="node" x="1460" y="655" width="270" height="100" rx="18" fill="#fff" stroke="#5c9bcd"/>
+    <text class="node-title" x="1595" y="697">Application</text><text class="node-sub" x="1595" y="725">interface ou consommateur</text>
+    <rect class="node" x="610" y="840" width="310" height="45" rx="14" fill="#dceeff" stroke="#83b5de" stroke-width="2"/>
+    <text class="node-title" x="765" y="870" style="font-size:19px">Evaluation Suite</text>
+    <rect class="node" x="910" y="840" width="310" height="45" rx="14" fill="#dceeff" stroke="#83b5de" stroke-width="2"/>
+    <text class="node-title" x="1065" y="870" style="font-size:19px">Model Registry</text>
+  </g>
+
+  <rect x="35" y="920" width="1730" height="350" rx="24" fill="url(#agentic)" stroke="#9b82d9" stroke-width="2"/>
+  <rect x="55" y="935" width="420" height="42" rx="14" fill="#c9b8f1"/>
+  <text class="band-title" x="265" y="964" text-anchor="middle">AGENTS, OUTILS &amp; RAG</text>
+
+  <!-- Agentic and RAG relationships -->
+  <path class="rel-blue" d="M370 1045 H445"/>
+  <path class="rel" d="M745 1045 H820"/>
+  <path class="rel" d="M1120 1045 H1195"/>
+  <path class="rel" d="M465 1190 H535"/>
+  <path class="rel" d="M855 1190 H925"/>
+  <path class="rel-dash" d="M220 1100 C210 1130 220 1140 230 1155"/>
+  <rect class="label-bg" x="370" y="981" width="76" height="28" rx="11"/><text class="label" x="408" y="1001">invokes</text>
+  <rect class="label-bg" x="746" y="981" width="62" height="28" rx="11"/><text class="label" x="777" y="1001">uses</text>
+  <rect class="label-bg" x="1122" y="981" width="86" height="28" rx="11"/><text class="label" x="1165" y="1001">accesses</text>
+  <rect class="label-bg" x="462" y="1114" width="94" height="28" rx="11"/><text class="label" x="509" y="1134">retrieves from</text>
+  <rect class="label-bg" x="850" y="1114" width="96" height="28" rx="11"/><text class="label" x="898" y="1134">grounded by</text>
+  <rect class="label-bg" x="233" y="1114" width="104" height="28" rx="11"/><text class="label" x="285" y="1134">context for</text>
+  <g>
+    <rect class="node" x="70" y="1010" width="300" height="90" rx="18" fill="#fff" stroke="#9279ce"/>
+    <text class="node-title" x="220" y="1048">AI Agent</text><text class="node-sub" x="220" y="1075">objectif · état · orchestration</text>
+    <rect class="node" x="445" y="1010" width="300" height="90" rx="18" fill="#fff" stroke="#9279ce"/>
+    <text class="node-title" x="595" y="1048">LLM / AI Model</text><text class="node-sub" x="595" y="1075">raisonnement et génération</text>
+    <rect class="node" x="820" y="1010" width="300" height="90" rx="18" fill="#fff" stroke="#9279ce"/>
+    <text class="node-title" x="970" y="1048">Tool / API</text><text class="node-sub" x="970" y="1075">fonction appelée par l’agent</text>
+    <rect class="node" x="1195" y="1010" width="400" height="90" rx="18" fill="#fff" stroke="#9279ce"/>
+    <text class="node-title" x="1395" y="1048">Business System</text><text class="node-sub" x="1395" y="1075">système métier cible</text>
+    <rect class="node" x="100" y="1155" width="365" height="75" rx="16" fill="#fdfcff" stroke="#9279ce"/>
+    <text class="node-title" x="282" y="1187" style="font-size:20px">RAG Pipeline</text><text class="node-sub" x="282" y="1213">retrieval et contexte documentaire</text>
+    <rect class="node" x="535" y="1155" width="320" height="75" rx="16" fill="#fdfcff" stroke="#9279ce"/>
+    <text class="node-title" x="695" y="1187" style="font-size:20px">Vector Store</text><text class="node-sub" x="695" y="1213">index vectoriel</text>
+    <rect class="node" x="925" y="1155" width="560" height="75" rx="16" fill="#fdfcff" stroke="#9279ce"/>
+    <text class="node-title" x="1205" y="1187" style="font-size:20px">Data Asset / Document Corpus</text><text class="node-sub" x="1205" y="1213">données et documents de référence</text>
+  </g>
+
+  <rect x="35" y="1305" width="1730" height="135" rx="24" fill="#eaf2fa" stroke="#7894af" stroke-width="2"/>
+  <rect x="55" y="1318" width="455" height="38" rx="13" fill="#bed1e4"/>
+  <text class="band-title" x="282" y="1345" text-anchor="middle" style="font-size:21px">GOUVERNANCE &amp; CONTRÔLES</text>
+  <path class="rel-blue" d="M800 1390 H1000"/>
+  <rect class="label-bg" x="835" y="1354" width="132" height="28" rx="11"/><text class="label" x="901" y="1374">mitigated by</text>
+  <rect class="node" x="500" y="1365" width="300" height="65" rx="16" fill="#fff" stroke="#7894af"/>
+  <text class="node-title" x="650" y="1406" style="font-size:20px">AI Risk</text>
+  <rect class="node" x="1000" y="1365" width="340" height="65" rx="16" fill="#fff" stroke="#7894af"/>
+  <text class="node-title" x="1170" y="1406" style="font-size:20px">AI Control</text>
+  <text class="foot" x="900" y="1465" text-anchor="middle">Les relations structurent la traçabilité entre stratégie, métier, données, modèles, services et maîtrise des risques.</text>
+</svg>

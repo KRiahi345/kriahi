@@ -89,28 +89,7 @@ Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devi
 <h3>4.2 Entités proposées</h3>
 <div class="table-scroll"><table><tr><td><p>Entité</p></td><td><p>Définition</p></td><td><p>Attributs clés</p></td></tr><tr><td><p>AI Strategy</p></td><td><p>Orientation stratégique IA</p></td><td><p>objectifs, principes, horizon, sponsor</p></td></tr><tr><td><p>AI Capability</p></td><td><p>Capacité organisationnelle à concevoir ou exploiter l&#x27;IA</p></td><td><p>maturité, propriétaire, niveau cible</p></td></tr><tr><td><p>AI Use Case</p></td><td><p>Cas d&#x27;usage métier mobilisant l&#x27;IA</p></td><td><p>valeur, risque, statut, KPI</p></td></tr><tr><td><p>AI Product</p></td><td><p>Produit ou service IA maintenu dans la durée</p></td><td><p>owner, utilisateurs, SLA, version</p></td></tr><tr><td><p>Data Asset</p></td><td><p>Donnée ou corpus exploité</p></td><td><p>source, classification, qualité, lineage, droits</p></td></tr><tr><td><p>Dataset</p></td><td><p>Ensemble de données préparé et versionné</p></td><td><p>schéma, période, provenance, qualité</p></td></tr><tr><td><p>Feature</p></td><td><p>Variable utilisée par un modèle ML</p></td><td><p>définition, calcul, fraîcheur</p></td></tr><tr><td><p>AI Model</p></td><td><p>Modèle entraîné ou modèle de fondation</p></td><td><p>famille, version, fournisseur, licence, métriques</p></td></tr><tr><td><p>Prompt Template</p></td><td><p>Instruction versionnée adressée à un modèle</p></td><td><p>version, variables, tests, propriétaire</p></td></tr><tr><td><p>Embedding Model</p></td><td><p>Modèle produisant des vecteurs</p></td><td><p>version, dimension, langue, compatibilité</p></td></tr><tr><td><p>Vector Store</p></td><td><p>Stockage et index de vecteurs</p></td><td><p>moteur, index, ACL, rétention</p></td></tr><tr><td><p>RAG Pipeline</p></td><td><p>Chaîne d&#x27;indexation et de récupération augmentée</p></td><td><p>étapes, corpus, stratégies de retrieval</p></td></tr><tr><td><p>AI Agent</p></td><td><p>Composant poursuivant un objectif avec état et outils</p></td><td><p>rôle, permissions, limites, mémoire</p></td></tr><tr><td><p>Tool</p></td><td><p>Fonction ou API qu&#x27;un agent peut appeler</p></td><td><p>contrat, scopes, propriétaire, risque</p></td></tr><tr><td><p>AI Service</p></td><td><p>Capacité IA exposée par API ou interface</p></td><td><p>contrat, version, SLO, consommateur</p></td></tr><tr><td><p>Evaluation Suite</p></td><td><p>Tests et jeux de référence</p></td><td><p>dataset, critères, seuils, résultats</p></td></tr><tr><td><p>AI Risk</p></td><td><p>Risque associé à un usage, modèle ou système</p></td><td><p>impact, probabilité, contrôle, résiduel</p></td></tr><tr><td><p>AI Control</p></td><td><p>Mesure technique ou organisationnelle</p></td><td><p>objectif, responsable, preuve, fréquence</p></td></tr></table></div>
 <h3>4.3 Relations principales</h3>
-<p>AI STRATEGY</p>
-<p>| guides</p>
-<p>v</p>
-<p>AI CAPABILITY ---- supports ----&gt; BUSINESS CAPABILITY</p>
-<p>| enables</p>
-<p>v</p>
-<p>AI USE CASE ---- realized by ----&gt; AI PRODUCT</p>
-<p>| consumes                         | exposes</p>
-<p>v                                  v</p>
-<p>DATA ASSET --&gt; DATASET          AI SERVICE --&gt; APPLICATION</p>
-<p>|                  ^</p>
-<p>v                  |</p>
-<p>AI MODEL --------------+</p>
-<p>|</p>
-<p>+----------+-----------+</p>
-<p>|                      |</p>
-<p>EVALUATION SUITE        MODEL REGISTRY</p>
-<p>AI AGENT -- uses --&gt; TOOL/API -- accesses --&gt; BUSINESS SYSTEM</p>
-<p>AI AGENT -- invokes --&gt; LLM / AI MODEL</p>
-<p>RAG PIPELINE -- retrieves from --&gt; VECTOR STORE</p>
-<p>RAG PIPELINE -- grounded by --&gt; DATA ASSET / DOCUMENT CORPUS</p>
-<p>AI RISK -- mitigated by --&gt; AI CONTROL</p>
+<figure class="resource-figure ai-relations-figure"><div class="ai-relations-scroll"><img src="/assets/images/resources/ai-architecture-relations.svg" alt="Diagramme des relations principales du métamodèle IA : stratégie et capacités métier, cas d’usage et produit, données et modèles, services applicatifs, agents et outils, RAG et contrôles de risque." loading="lazy"><figcaption>Carte des relations principales du métamodèle d’architecture IA.</figcaption></div></figure>
 <h3>4.4 Règles de modélisation</h3>
 <p class="source-list-item">Chaque AI Use Case possède un propriétaire métier et un responsable de solution.</p>
 <p class="source-list-item">Chaque modèle en production possède un identifiant, une version, une provenance et un statut.</p>

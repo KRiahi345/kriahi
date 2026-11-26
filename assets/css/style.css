@@ -926,6 +926,25 @@ h3 {
   background: #fff;
 }
 
+.resource-figure.ai-relations-figure {
+  max-width: none;
+}
+
+.ai-relations-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.ai-relations-scroll img {
+  display: block;
+  width: 100%;
+  min-width: 900px;
+  max-width: none;
+  max-height: none;
+  height: auto;
+  background: transparent;
+}
+
 .resource-figure.ai-layers-figure img {
   max-height: none;
 }
