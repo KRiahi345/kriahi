@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 700" role="img" aria-labelledby="title desc">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#52718f"/></marker><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0b2d52" flood-opacity=".12"/></filter></defs>
+<title id="title">Exemple de graphe LangGraph</title><desc id="desc">Routage conditionnel, validation humaine et contrôle du résultat</desc>
+<rect width="100%" height="100%" rx="26" fill="#f8fbff"/>
+<text x="750.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0b2d52">Exemple de graphe LangGraph</text>
+<text x="750.0" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52657b">Routage conditionnel, validation humaine et contrôle du résultat</text>
+<rect x="20" y="115" width="1450" height="165" rx="18" fill="#2378bd" fill-opacity=".07" stroke="#2378bd" stroke-opacity=".35" stroke-width="2"/>
+<text x="38" y="141" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#2378bd">BRANCHE — QUESTION</text>
+<rect x="20" y="310" width="1450" height="345" rx="18" fill="#7155b5" fill-opacity=".07" stroke="#7155b5" stroke-opacity=".35" stroke-width="2"/>
+<text x="38" y="336" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#7155b5">BRANCHE — ACTION CONTRÔLÉE</text>
+<path d="M190.0,374.0 L235.0,374.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M425.0,374.0 L485.0,374.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M572.5,325.0 L832.5,232.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="702.5" y="270.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#52657b">question</text>
+<path d="M935.0,191.0 L1000.0,191.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1195.0,191.0 L1260.0,191.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M660.0,374.0 L730.0,486.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="695.0" y="422.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#52657b">action</text>
+<path d="M935.0,486.0 L1000.0,391.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="967.5" y="430.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#52657b">interdit</text>
+<path d="M935.0,486.0 L1000.0,561.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="967.5" y="515.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#52657b">autorisé</text>
+<path d="M1195.0,561.0 L1260.0,561.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1227.5" y="553.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#52657b">validé</text>
+<path d="M1355.0,520.0 L1355.0,432.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1355.0,350.0 L1355.0,232.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="335" width="150" height="78" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="40" y="335" width="150" height="9" rx="5" fill="#2378bd"/>
+<text x="115.0" y="369" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Démarrer</text>
+<rect x="235" y="335" width="190" height="78" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="235" y="335" width="190" height="9" rx="5" fill="#7155b5"/>
+<text x="330.0" y="369" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Classifier</text>
+<text x="330.0" y="395" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">la demande</text>
+<rect x="485" y="325" width="175" height="98" rx="15" fill="white" stroke="#d99a20" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="485" y="325" width="175" height="9" rx="5" fill="#d99a20"/>
+<text x="572.5" y="359" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Type de demande</text>
+<text x="572.5" y="385" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Question ou action ?</text>
+<rect x="730" y="150" width="205" height="82" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="730" y="150" width="205" height="9" rx="5" fill="#2378bd"/>
+<text x="832.5" y="184" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Récupérer</text>
+<text x="832.5" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">les connaissances</text>
+<rect x="1000" y="150" width="195" height="82" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1000" y="150" width="195" height="9" rx="5" fill="#139b91"/>
+<text x="1097.5" y="184" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Rédiger</text>
+<text x="1097.5" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">une réponse</text>
+<rect x="730" y="445" width="205" height="82" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="730" y="445" width="205" height="9" rx="5" fill="#7155b5"/>
+<text x="832.5" y="479" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Vérifier la politique</text>
+<text x="832.5" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Permissions et risque</text>
+<rect x="1000" y="350" width="190" height="82" rx="15" fill="white" stroke="#d99a20" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1000" y="350" width="190" height="9" rx="5" fill="#d99a20"/>
+<text x="1095.0" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Refuser</text>
+<text x="1095.0" y="410" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Action interdite</text>
+<rect x="1000" y="520" width="195" height="82" rx="15" fill="white" stroke="#d99a20" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1000" y="520" width="195" height="9" rx="5" fill="#d99a20"/>
+<text x="1097.5" y="554" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Approbation humaine</text>
+<text x="1097.5" y="580" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Si nécessaire</text>
+<rect x="1260" y="520" width="190" height="82" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1260" y="520" width="190" height="9" rx="5" fill="#2378bd"/>
+<text x="1355.0" y="554" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Exécuter l’outil</text>
+<text x="1355.0" y="580" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Action autorisée</text>
+<rect x="1260" y="350" width="190" height="82" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1260" y="350" width="190" height="9" rx="5" fill="#139b91"/>
+<text x="1355.0" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Vérifier le résultat</text>
+<rect x="1260" y="150" width="190" height="82" rx="15" fill="white" stroke="#3c9b67" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1260" y="150" width="190" height="9" rx="5" fill="#3c9b67"/>
+<text x="1355.0" y="184" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Terminer</text>
+<text x="1355.0" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Réponse tracée</text>
+</svg>

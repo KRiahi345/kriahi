@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1580 540" role="img" aria-labelledby="title desc">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#52718f"/></marker><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0b2d52" flood-opacity=".12"/></filter></defs>
+<title id="title">Cycle de gestion des risques IA</title><desc id="desc">Une démarche continue, proportionnée aux impacts et aux usages</desc>
+<rect width="100%" height="100%" rx="26" fill="#f8fbff"/>
+<text x="790.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0b2d52">Cycle de gestion des risques IA</text>
+<text x="790.0" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52657b">Une démarche continue, proportionnée aux impacts et aux usages</text>
+<rect x="20" y="190" width="1540" height="220" rx="18" fill="#7155b5" fill-opacity=".07" stroke="#7155b5" stroke-opacity=".35" stroke-width="2"/>
+<text x="38" y="216" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#7155b5">GOUVERNER • MESURER • AMÉLIORER</text>
+<path d="M220.0,317.5 L243.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M438.0,317.5 L461.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M656.0,317.5 L679.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M874.0,317.5 L897.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1092.0,317.5 L1115.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1310.0,317.5 L1333.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1333.0,317.5 L220.0,317.5" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="776.5" y="309.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#52657b">boucle continue</text>
+<rect x="25" y="255" width="195" height="125" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="25" y="255" width="195" height="9" rx="5" fill="#2378bd"/>
+<text x="122.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">1. Contextualiser</text>
+<text x="122.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Usage • personnes</text>
+<text x="122.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">finalité • périmètre</text>
+<rect x="243" y="255" width="195" height="125" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="243" y="255" width="195" height="9" rx="5" fill="#7155b5"/>
+<text x="340.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">2. Identifier</text>
+<text x="340.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Risques • menaces</text>
+<text x="340.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">incertitudes</text>
+<rect x="461" y="255" width="195" height="125" rx="15" fill="white" stroke="#d99a20" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="461" y="255" width="195" height="9" rx="5" fill="#d99a20"/>
+<text x="558.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">3. Analyser</text>
+<text x="558.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Impact • probabilité</text>
+<text x="558.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">exposition</text>
+<rect x="679" y="255" width="195" height="125" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="679" y="255" width="195" height="9" rx="5" fill="#139b91"/>
+<text x="776.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">4. Traiter</text>
+<text x="776.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Contrôles • supervision</text>
+<text x="776.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">mesures de réduction</text>
+<rect x="897" y="255" width="195" height="125" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="897" y="255" width="195" height="9" rx="5" fill="#2378bd"/>
+<text x="994.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">5. Évaluer</text>
+<text x="994.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Tests • preuves</text>
+<text x="994.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">risque résiduel</text>
+<rect x="1115" y="255" width="195" height="125" rx="15" fill="white" stroke="#3c9b67" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1115" y="255" width="195" height="9" rx="5" fill="#3c9b67"/>
+<text x="1212.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">6. Décider</text>
+<text x="1212.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Autoriser • restreindre</text>
+<text x="1212.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">ou refuser</text>
+<rect x="1333" y="255" width="195" height="125" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1333" y="255" width="195" height="9" rx="5" fill="#7155b5"/>
+<text x="1430.5" y="289" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">7. Surveiller</text>
+<text x="1430.5" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Dérives • incidents</text>
+<text x="1430.5" y="333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">réévaluation</text>
+</svg>

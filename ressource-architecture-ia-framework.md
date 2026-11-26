@@ -101,24 +101,7 @@ Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devi
 <div class="table-scroll"><table><tr><td><p>Concept du métamodèle IA</p></td><td><p>Éléments ArchiMate possibles</p></td><td><p>Remarque</p></td></tr><tr><td><p>AI Strategy</p></td><td><p>Goal, Outcome, Requirement, Principle, Course of Action</p></td><td><p>Utiliser Motivation pour le pourquoi.</p></td></tr><tr><td><p>AI Capability</p></td><td><p>Capability</p></td><td><p>Peut spécialiser le catalogue de capacités d&#x27;entreprise.</p></td></tr><tr><td><p>AI Use Case</p></td><td><p>Business Process, Business Service, Application Service selon le niveau</p></td><td><p>Un use case n&#x27;est pas un élément ArchiMate standard unique.</p></td></tr><tr><td><p>AI Product</p></td><td><p>Product, Business Service, Application Component</p></td><td><p>Choisir selon la nature et le point de vue.</p></td></tr><tr><td><p>Data Asset</p></td><td><p>Data Object, Business Object</p></td><td><p>Distinguer sens métier et représentation applicative.</p></td></tr><tr><td><p>AI Model</p></td><td><p>Application Component ou Technology Object selon l&#x27;abstraction</p></td><td><p>Documenter les métadonnées du modèle dans le référentiel.</p></td></tr><tr><td><p>AI Agent</p></td><td><p>Application Component / Application Function</p></td><td><p>Représenter ses comportements et interactions.</p></td></tr><tr><td><p>Tool/API</p></td><td><p>Application Service, Application Interface</p></td><td><p>Montrer le contrat et les consommateurs.</p></td></tr><tr><td><p>AI Platform</p></td><td><p>Node, System Software, Technology Service</p></td><td><p>Décrire l&#x27;environnement d&#x27;exécution.</p></td></tr><tr><td><p>AI Risk / Control</p></td><td><p>Assessment, Constraint, Requirement, Principle</p></td><td><p>Compléter par un registre de risques dédié.</p></td></tr></table></div>
 <h2>5. Architecture Data &amp; AI</h2>
 <h3>5.1 Chaîne de valeur des données IA</h3>
-<p>Sources -&gt; Ingestion -&gt; Landing / Raw -&gt; Quality &amp; Governance</p>
-<p>|</p>
-<p>v</p>
-<p>Curated / Semantic Layer</p>
-<p>|             |</p>
-<p>v             v</p>
-<p>ML Features    Document Corpus</p>
-<p>|             |</p>
-<p>v             v</p>
-<p>Feature Store  Chunking + Metadata</p>
-<p>|             |</p>
-<p>v             v</p>
-<p>ML Training    Embeddings</p>
-<p>|             |</p>
-<p>v             v</p>
-<p>Model Registry Vector Index</p>
-<p>|             |</p>
-<p>+------&gt; Inference / Retrieval</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/ai-data-value-chain.svg" alt="Chaîne de valeur des données IA, des sources aux usages Machine Learning et RAG." loading="lazy"></div><figcaption>Chaîne de valeur des données IA, des sources aux usages ML et RAG.</figcaption></figure>
 <h3>5.2 Architecture des données pour le ML</h3>
 <p class="source-list-item">Définir les sources, les contrats de données et les règles de qualité.</p>
 <p class="source-list-item">Assurer la reproductibilité des datasets d&#x27;entraînement et de validation.</p>
@@ -127,25 +110,7 @@ Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devi
 <p class="source-list-item">Assurer la cohérence entre features offline et online lorsque les prédictions sont temps réel.</p>
 <p class="source-list-item">Tracer les versions des données, du code, des paramètres et du modèle.</p>
 <h3>5.3 Architecture RAG</h3>
-<p>PHASE D&#x27;INGESTION</p>
-<p>Documents -&gt; Extract -&gt; Clean -&gt; Chunk -&gt; Metadata / ACL</p>
-<p>|</p>
-<p>v</p>
-<p>Embedding Model</p>
-<p>|</p>
-<p>v</p>
-<p>Vector Store</p>
-<p>PHASE DE REQUETE</p>
-<p>User Query -&gt; Identity / ACL -&gt; Query Embedding -&gt; Retrieval</p>
-<p>|</p>
-<p>v</p>
-<p>Reranking / Context Assembly</p>
-<p>|</p>
-<p>v</p>
-<p>LLM + Prompt</p>
-<p>|</p>
-<p>v</p>
-<p>Answer + Citations + Guardrails</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/ai-rag-architecture.svg" alt="Architecture RAG présentant les flux d’ingestion documentaire, de recherche et de génération." loading="lazy"></div><figcaption>Architecture RAG : ingestion, indexation, recherche et génération contrôlée.</figcaption></figure>
 <p>Décisions d&#x27;architecture à documenter : stratégie de chunking, modèle d&#x27;embedding, dimension vectorielle, recherche hybride, filtres de métadonnées, reranking, seuil de pertinence, gestion des documents supprimés, synchronisation des droits et stratégie de citation.</p>
 <h3>5.4 Gouvernance des données pour RAG</h3>
 <p class="source-list-item">Appliquer les droits d&#x27;accès au moment de la récupération, pas uniquement lors de l&#x27;indexation.</p>
@@ -160,54 +125,13 @@ Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devi
 <h3>6.1 Patterns applicatifs</h3>
 <div class="table-scroll"><table><tr><td><p>Pattern</p></td><td><p>Description</p></td><td><p>À privilégier lorsque</p></td></tr><tr><td><p>LLM direct</p></td><td><p>Application appelle un LLM via API</p></td><td><p>Tâche simple, faible orchestration, contexte limité</p></td></tr><tr><td><p>Prompt chain</p></td><td><p>Plusieurs prompts / transformations séquentiels</p></td><td><p>Pipeline déterministe et testable</p></td></tr><tr><td><p>RAG</p></td><td><p>Récupération de connaissances avant génération</p></td><td><p>Réponses fondées sur corpus métier évolutif</p></td></tr><tr><td><p>Tool calling</p></td><td><p>Le modèle choisit parmi des fonctions définies</p></td><td><p>Accès contrôlé à des données ou actions externes</p></td></tr><tr><td><p>Workflow agentique</p></td><td><p>Orchestration d&#x27;étapes, état et conditions</p></td><td><p>Processus complexe mais encadré</p></td></tr><tr><td><p>Multi-agent</p></td><td><p>Agents spécialisés coopèrent</p></td><td><p>Besoin réel de séparation de rôles ; complexité justifiée</p></td></tr><tr><td><p>Human-in-the-loop</p></td><td><p>Validation humaine avant action ou décision</p></td><td><p>Impact élevé, ambiguïté ou action irréversible</p></td></tr></table></div>
 <h3>6.2 Architecture de référence d&#x27;un agent</h3>
-<p>User / Business Application</p>
-<p>|</p>
-<p>v</p>
-<p>API Gateway / Identity / Policy Enforcement</p>
-<p>|</p>
-<p>v</p>
-<p>Agent Orchestrator (state, planning, routing, stop rules)</p>
-<p>|             |               |</p>
-<p>v             v               v</p>
-<p>LLM Gateway    Memory         Tool Registry</p>
-<p>|             |               |</p>
-<p>v             v               v</p>
-<p>Model         Session Store   Approved APIs / Systems</p>
-<p>|</p>
-<p>v</p>
-<p>Authorization / Audit</p>
-<p>Cross-cutting: evaluation, tracing, guardrails, cost limits, human approval</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/agent-reference-architecture.svg" alt="Architecture de référence d’un agent avec orchestrateur, modèles, mémoire, outils et contrôles." loading="lazy"></div><figcaption>Architecture agentique avec orchestration, services spécialisés et contrôles transverses.</figcaption></figure>
 <h3>6.3 Agent, workflow et orchestrateur</h3>
 <p>Un workflow classique suit un enchaînement prédéfini. Un agent peut sélectionner une action ou un outil en fonction du contexte et de l&#x27;état courant. Une architecture robuste utilise souvent une orchestration hybride : étapes déterministes pour les opérations critiques, raisonnement du modèle pour les tâches ouvertes, et points de contrôle explicites.</p>
 <div class="table-scroll"><table><tr><td><p>Question</p></td><td><p>Décision d&#x27;architecture</p></td></tr><tr><td><p>L&#x27;agent peut-il agir ?</p></td><td><p>Définir une liste blanche d&#x27;outils et des permissions minimales.</p></td></tr><tr><td><p>L&#x27;action est-elle réversible ?</p></td><td><p>Exiger confirmation humaine pour les actions irréversibles ou sensibles.</p></td></tr><tr><td><p>Comment éviter les boucles ?</p></td><td><p>Définir nombre maximal d&#x27;étapes, timeout, budget tokens et conditions d&#x27;arrêt.</p></td></tr><tr><td><p>Comment gérer l&#x27;état ?</p></td><td><p>Séparer état de session, mémoire métier et historique auditable.</p></td></tr><tr><td><p>Comment gérer les erreurs ?</p></td><td><p>Retries bornés, idempotence, circuit breaker, fallback et escalade.</p></td></tr><tr><td><p>Comment vérifier la qualité ?</p></td><td><p>Tests de scénarios, trajectoires, outils appelés, résultats et refus.</p></td></tr></table></div>
 <h3>6.4 Exemple LangGraph</h3>
 <p>Exemple conceptuel d&#x27;un assistant de traitement de demande. Le graphe orchestre des étapes contrôlées ; l&#x27;utilisation de LangGraph est un choix d&#x27;implémentation possible, pas une obligation du framework.</p>
-<p>START</p>
-<p>|</p>
-<p>v</p>
-<p>Classify request</p>
-<p>|</p>
-<p>+---- simple question ----&gt; Retrieve knowledge</p>
-<p>|                              |</p>
-<p>|                              v</p>
-<p>|                         Draft answer</p>
-<p>|                              |</p>
-<p>+---- action request ----&gt; Check policy</p>
-<p>|</p>
-<p>+------+------</p>
-<p>|             |</p>
-<p>not allowed    approval needed</p>
-<p>|             |</p>
-<p>Refuse      Human approval</p>
-<p>|</p>
-<p>v</p>
-<p>Execute tool</p>
-<p>|</p>
-<p>v</p>
-<p>Verify outcome</p>
-<p>|</p>
-<p>v</p>
-<p>END</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/langgraph-request-flow.svg" alt="Graphe LangGraph avec routage de demandes, contrôle de politique et validation humaine." loading="lazy"></div><figcaption>Exemple de graphe LangGraph pour traiter une demande.</figcaption></figure>
 <h3>6.5 Contrats d&#x27;API IA</h3>
 <p class="source-list-item">Définir schéma d&#x27;entrée et de sortie, erreurs, version et limites de taille.</p>
 <p class="source-list-item">Indiquer si la réponse est probabiliste et quelles garanties ne sont pas fournies.</p>
@@ -216,23 +140,7 @@ Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devi
 <p class="source-list-item">Ne jamais exposer les secrets ou détails internes du fournisseur dans les réponses.</p>
 <h2>7. Architecture technologique et plateformes</h2>
 <h3>7.1 Vue logique de plateforme</h3>
-<p>Consumers / Channels</p>
-<p>|</p>
-<p>API Management / AI Gateway</p>
-<p>|</p>
-<p>AI Application Runtime</p>
-<p>|        |         |</p>
-<p>RAG     Agent      ML Inference</p>
-<p>|        |         |</p>
-<p>Vector  Tool APIs  Model Serving</p>
-<p>Store     |          |</p>
-<p>|       +----------+</p>
-<p>v                  v</p>
-<p>Data Platform     Model Registry</p>
-<p>|                |</p>
-<p>+------ MLOps / LLMOps ------+</p>
-<p>|</p>
-<p>Identity / Secrets / Network / Observability / FinOps</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/ai-platform-logical-view.svg" alt="Vue logique d’une plateforme IA avec services, données et fondations communes." loading="lazy"></div><figcaption>Vue logique des capacités d’une plateforme IA.</figcaption></figure>
 <h3>7.2 Capacités de plateforme</h3>
 <div class="table-scroll"><table><tr><td><p>Domaine</p></td><td><p>Capacités attendues</p></td></tr><tr><td><p>Model access</p></td><td><p>Catalogue de modèles, routage, versionnement, quotas, fallback</p></td></tr><tr><td><p>Model development</p></td><td><p>Environnements, notebooks, entraînement, expérimentation, registry</p></td></tr><tr><td><p>Data platform</p></td><td><p>Ingestion, lakehouse, gouvernance, catalogage, qualité, lineage</p></td></tr><tr><td><p>RAG services</p></td><td><p>Parsing, chunking, embedding, indexation, retrieval, reranking</p></td></tr><tr><td><p>Agent runtime</p></td><td><p>Orchestration, state store, tool registry, sandbox, policy enforcement</p></td></tr><tr><td><p>Security</p></td><td><p>IAM, secrets, chiffrement, réseau privé, DLP, audit</p></td></tr><tr><td><p>Observability</p></td><td><p>Logs, traces, métriques, qualité, latence, coût, dérive</p></td></tr><tr><td><p>Delivery</p></td><td><p>CI/CD, tests, scans, validation, promotion et rollback</p></td></tr><tr><td><p>FinOps</p></td><td><p>Budgets, coûts par produit, quotas, optimisation modèles et tokens</p></td></tr></table></div>
 <h3>7.3 Choix technologiques : critères plutôt que catalogue</h3>
@@ -251,25 +159,7 @@ Un système qui utilise un LLM n&#x27;est pas automatiquement agentique. Il devi
 <h3>8.1 Gouvernance à plusieurs niveaux</h3>
 <div class="table-scroll"><table><tr><td><p>Instance</p></td><td><p>Responsabilités</p></td></tr><tr><td><p>AI Steering Committee</p></td><td><p>Priorités, appétence au risque, arbitrages, financement</p></td></tr><tr><td><p>Architecture Board</p></td><td><p>Principes, standards, dérogations, cohérence SI</p></td></tr><tr><td><p>AI Risk / Compliance Committee</p></td><td><p>Qualification des risques, exigences réglementaires, contrôles</p></td></tr><tr><td><p>Data Governance</p></td><td><p>Propriété, qualité, accès, conservation et provenance des données</p></td></tr><tr><td><p>AI Product Owner</p></td><td><p>Valeur, périmètre, utilisateurs, qualité métier et cycle de vie</p></td></tr><tr><td><p>Model Owner</p></td><td><p>Version, performances, documentation, validation et surveillance</p></td></tr><tr><td><p>Platform Owner</p></td><td><p>Disponibilité, sécurité, capacité, coûts et exploitation</p></td></tr></table></div>
 <h3>8.2 Cycle de gestion des risques</h3>
-<p>Contextualiser l&#x27;usage</p>
-<p>|</p>
-<p>v</p>
-<p>Identifier les risques (données, modèle, usage, sécurité, tiers)</p>
-<p>|</p>
-<p>v</p>
-<p>Analyser impact / vraisemblance / personnes concernées</p>
-<p>|</p>
-<p>v</p>
-<p>Choisir les contrôles et le niveau de supervision</p>
-<p>|</p>
-<p>v</p>
-<p>Tester et documenter le risque résiduel</p>
-<p>|</p>
-<p>v</p>
-<p>Autoriser / restreindre / refuser</p>
-<p>|</p>
-<p>v</p>
-<p>Surveiller, réévaluer et gérer les incidents</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/ai-risk-management-cycle.svg" alt="Cycle continu de gestion des risques liés aux systèmes d’intelligence artificielle." loading="lazy"></div><figcaption>Cycle de gestion des risques IA.</figcaption></figure>
 <h3>8.3 Catalogue de risques IA</h3>
 <div class="table-scroll"><table><tr><td><p>Risque</p></td><td><p>Exemple</p></td><td><p>Contrôles possibles</p></td></tr><tr><td><p>Données non autorisées</p></td><td><p>Données personnelles envoyées à un service externe</p></td><td><p>Classification, minimisation, DLP, contrats, filtrage</p></td></tr><tr><td><p>Biais</p></td><td><p>Résultat défavorable à un groupe</p></td><td><p>Tests de biais, analyse d&#x27;impact, revue humaine</p></td></tr><tr><td><p>Hallucination</p></td><td><p>Réponse inventée présentée comme factuelle</p></td><td><p>RAG, citations, seuils, abstention, validation</p></td></tr><tr><td><p>Prompt injection</p></td><td><p>Document ou utilisateur tente de détourner le modèle</p></td><td><p>Séparation instructions/données, filtrage, sandbox, tests</p></td></tr><tr><td><p>Exfiltration</p></td><td><p>L&#x27;agent extrait des données via un outil</p></td><td><p>Least privilege, scopes, DLP, contrôle de sortie</p></td></tr><tr><td><p>Action non autorisée</p></td><td><p>L&#x27;agent modifie un dossier sans approbation</p></td><td><p>Allowlist, validation humaine, idempotence, audit</p></td></tr><tr><td><p>Dérive</p></td><td><p>Dégradation de performance dans le temps</p></td><td><p>Monitoring, réévaluation, réentraînement ou changement de modèle</p></td></tr><tr><td><p>Dépendance fournisseur</p></td><td><p>Arrêt ou changement d&#x27;API / modèle</p></td><td><p>Abstraction, stratégie de sortie, tests de portabilité</p></td></tr><tr><td><p>Coût incontrôlé</p></td><td><p>Boucles agentiques ou prompts trop longs</p></td><td><p>Budgets, quotas, limites d&#x27;étapes, alertes</p></td></tr><tr><td><p>Indisponibilité</p></td><td><p>Service LLM ou plateforme indisponible</p></td><td><p>Fallback, cache, circuit breaker, mode dégradé</p></td></tr></table></div>
 <h3>8.4 Sécurité spécifique aux agents</h3>
@@ -315,51 +205,13 @@ La qualification réglementaire d&#x27;un système dépend du cas d&#x27;usage, 
 <h3>10.2 Vues ArchiMate recommandées</h3>
 <div class="table-scroll"><table><tr><td><p>Vue</p></td><td><p>Question traitée</p></td><td><p>Éléments principaux</p></td></tr><tr><td><p>Motivation</p></td><td><p>Pourquoi investir dans l&#x27;IA ?</p></td><td><p>Stakeholder, Driver, Goal, Outcome, Requirement, Constraint</p></td></tr><tr><td><p>Capability</p></td><td><p>Quelles capacités métier sont augmentées ?</p></td><td><p>Capability, Value Stream, Resource</p></td></tr><tr><td><p>Business Process</p></td><td><p>Comment le processus change-t-il ?</p></td><td><p>Business Actor, Role, Process, Service, Event</p></td></tr><tr><td><p>Information Structure</p></td><td><p>Quelles informations sont consommées ?</p></td><td><p>Business Object, Data Object, Representation</p></td></tr><tr><td><p>Application Cooperation</p></td><td><p>Comment les applications collaborent-elles ?</p></td><td><p>Application Component, Interface, Service, Data Object</p></td></tr><tr><td><p>Technology</p></td><td><p>Où et comment s&#x27;exécute la solution ?</p></td><td><p>Node, System Software, Technology Service, Artifact</p></td></tr><tr><td><p>Implementation &amp; Migration</p></td><td><p>Comment atteindre la cible ?</p></td><td><p>Work Package, Deliverable, Plateau, Gap</p></td></tr><tr><td><p>Risk &amp; Compliance</p></td><td><p>Quels contrôles répondent aux risques ?</p></td><td><p>Assessment, Requirement, Constraint, Principle</p></td></tr></table></div>
 <h3>10.3 Exemple de vue ArchiMate – assistant RAG</h3>
-<p>[Driver] Réduire le temps de recherche documentaire</p>
-<p>| influences</p>
-<p>[Goal] Réponse fiable et traçable</p>
-<p>| realized by</p>
-<p>[Capability] Knowledge Management augmenté</p>
-<p>| served by</p>
-<p>[Business Service] Assistance documentaire</p>
-<p>| realized by</p>
-<p>[Application Service] RAG Query Service</p>
-<p>| served by</p>
-<p>[Application Component] Assistant UI / RAG Orchestrator</p>
-<p>| accesses</p>
-<p>[Data Object] Corpus documentaire + métadonnées ACL</p>
-<p>| stored in</p>
-<p>[Technology Service] Vector Search Platform</p>
-<p>| deployed on</p>
-<p>[Node] Cloud AI Platform / Kubernetes</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/archimate-rag-view.svg" alt="Vue ArchiMate reliant le besoin métier, les services applicatifs, les données et la technologie d’un assistant RAG." loading="lazy"></div><figcaption>Exemple de chaîne de relations ArchiMate pour un assistant RAG.</figcaption></figure>
 <p>Ce schéma est une vue logique simplifiée. Dans un modèle ArchiMate formel, les relations exactes (realization, serving, access, assignment, deployment, influence) doivent être choisies selon la sémantique des éléments et la version du langage utilisée.</p>
 <h3>10.4 Quand utiliser C4 ?</h3>
 <p>C4 complète ArchiMate en décrivant la structure logicielle d&#x27;une solution. Il est particulièrement utile pour aligner architectes, développeurs, équipes plateforme et sécurité.</p>
 <div class="table-scroll"><table><tr><td><p>Niveau C4</p></td><td><p>Usage pour l&#x27;IA</p></td><td><p>Exemple</p></td></tr><tr><td><p>L1 – System Context</p></td><td><p>Acteurs, système IA, systèmes externes</p></td><td><p>Collaborateur, Assistant IA, GED, IAM</p></td></tr><tr><td><p>L2 – Container</p></td><td><p>Applications et services déployables</p></td><td><p>Frontend, API, orchestrateur, vector DB, LLM Gateway</p></td></tr><tr><td><p>L3 – Component</p></td><td><p>Composants internes d&#x27;un conteneur</p></td><td><p>Retriever, reranker, prompt builder, policy checker</p></td></tr><tr><td><p>L4 – Code</p></td><td><p>Détails d&#x27;implémentation utiles</p></td><td><p>Classes, modules, interfaces ; optionnel</p></td></tr></table></div>
 <h3>10.5 Exemple C4 – L2 conteneurs RAG</h3>
-<p>+-------------------+          +------------------+</p>
-<p>| Collaborateur     |---------&gt;| Web / Teams UI    |</p>
-<p>+-------------------+          +--------+---------+</p>
-<p>| HTTPS</p>
-<p>v</p>
-<p>+---------+----------+</p>
-<p>| RAG API / Backend  |</p>
-<p>+---+------------+---+</p>
-<p>|            |</p>
-<p>v            v</p>
-<p>+--------+--+   +-----+----------+</p>
-<p>| Retriever |   | LLM Gateway    |</p>
-<p>+-----+-----+   +-----+----------+</p>
-<p>|               |</p>
-<p>v               v</p>
-<p>+-----+------+   +----+---------+</p>
-<p>| Vector DB  |   | Foundation   |</p>
-<p>+------------+   | Model        |</p>
-<p>+--------------+</p>
-<p>+------------------+</p>
-<p>| Document Ingest  |----&gt; Object Storage / Index</p>
-<p>+------------------+</p>
-<p>Identity, ACL, Audit, Tracing, Evaluation (cross-cutting)</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/c4-rag-container-view.svg" alt="Vue C4 de niveau L2 présentant les conteneurs et systèmes externes d’une solution RAG." loading="lazy"></div><figcaption>Exemple C4 niveau L2 pour un assistant RAG.</figcaption></figure>
 <h3>10.6 Règles de cohérence ArchiMate / C4</h3>
 <p class="source-list-item">ArchiMate décrit l&#x27;entreprise et les relations entre domaines ; C4 détaille une solution logicielle.</p>
 <p class="source-list-item">Les noms des systèmes, services et conteneurs doivent être cohérents entre les vues.</p>
@@ -372,25 +224,7 @@ La qualification réglementaire d&#x27;un système dépend du cas d&#x27;usage, 
 <div class="table-scroll"><table><tr><td><p>Zone</p></td><td><p>Composants</p></td><td><p>Décisions / contrôles</p></td></tr><tr><td><p>Canal</p></td><td><p>Portail ou Teams</p></td><td><p>SSO, contexte utilisateur, expérience et feedback</p></td></tr><tr><td><p>API</p></td><td><p>Backend RAG</p></td><td><p>Validation entrée, rate limit, correlation ID</p></td></tr><tr><td><p>Retrieval</p></td><td><p>Hybrid search, reranker, vector store</p></td><td><p>ACL, seuil, top-k, fraîcheur, suppression</p></td></tr><tr><td><p>Generation</p></td><td><p>LLM Gateway, prompt template</p></td><td><p>Modèle autorisé, prompt versionné, filtrage</p></td></tr><tr><td><p>Knowledge</p></td><td><p>Ingestion, parsing, chunking</p></td><td><p>Provenance, métadonnées, déduplication</p></td></tr><tr><td><p>Governance</p></td><td><p>Evaluation, tracing, audit</p></td><td><p>Groundedness, citation, sécurité, coût</p></td></tr></table></div>
 <h3>11.2 Référence B – Agent métier</h3>
 <p>Cas : agent qui qualifie une demande, consulte des systèmes et prépare une proposition de réponse. L&#x27;agent ne réalise pas d&#x27;action sensible sans validation.</p>
-<p>User -&gt; Agent API -&gt; Policy / Identity</p>
-<p>|</p>
-<p>v</p>
-<p>Orchestrator</p>
-<p>/       \</p>
-<p>v         v</p>
-<p>Knowledge   CRM Read Tool</p>
-<p>\         /</p>
-<p>v       v</p>
-<p>Draft recommendation</p>
-<p>|</p>
-<p>v</p>
-<p>Human approval</p>
-<p>|</p>
-<p>v</p>
-<p>CRM Write Tool</p>
-<p>|</p>
-<p>v</p>
-<p>Audit / Verify</p>
+<figure class="resource-figure ai-framework-diagram"><div class="ai-diagram-scroll"><img src="/assets/images/resources/business-agent-reference.svg" alt="Architecture de référence d’un agent métier avec outils CRM, validation humaine et audit." loading="lazy"></div><figcaption>Référence d’architecture pour un agent métier contrôlé.</figcaption></figure>
 <h3>11.3 Référence C – ML prédictif</h3>
 <p>Cas : prédire un risque de retard ou une demande future à partir de données historiques. Le modèle alimente une aide à la décision ; les utilisateurs conservent la responsabilité de l&#x27;action.</p>
 <p class="source-list-item">Pipeline d&#x27;ingestion et de préparation versionné.</p>

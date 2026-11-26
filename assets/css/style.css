@@ -945,6 +945,25 @@ h3 {
   background: transparent;
 }
 
+.resource-figure.ai-framework-diagram {
+  max-width: none;
+}
+
+.ai-diagram-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.ai-diagram-scroll img {
+  display: block;
+  width: 100%;
+  min-width: 900px;
+  max-width: none;
+  max-height: none;
+  height: auto;
+  background: transparent;
+}
+
 .resource-figure.ai-layers-figure img {
   max-height: none;
 }

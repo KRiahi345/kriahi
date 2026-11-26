@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#52718f"/></marker><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0b2d52" flood-opacity=".12"/></filter></defs>
+<title id="title">Vue logique d’une plateforme IA</title><desc id="desc">Des canaux utilisateurs aux services IA, soutenus par une plateforme gouvernée</desc>
+<rect width="100%" height="100%" rx="26" fill="#f8fbff"/>
+<text x="750.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0b2d52">Vue logique d’une plateforme IA</text>
+<text x="750.0" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52657b">Des canaux utilisateurs aux services IA, soutenus par une plateforme gouvernée</text>
+<rect x="20" y="120" width="1450" height="300" rx="18" fill="#2378bd" fill-opacity=".07" stroke="#2378bd" stroke-opacity=".35" stroke-width="2"/>
+<text x="38" y="146" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#2378bd">SERVICES IA ET CAPACITÉS DE PLATEFORME</text>
+<rect x="20" y="420" width="1450" height="155" rx="18" fill="#3c9b67" fill-opacity=".07" stroke="#3c9b67" stroke-opacity=".35" stroke-width="2"/>
+<text x="38" y="446" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#3c9b67">FONDATIONS ET CYCLE DE VIE</text>
+<path d="M240.0,196.0 L305.0,196.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M545.0,196.0 L610.0,196.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M855.0,196.0 L970.0,146.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M855.0,196.0 L970.0,246.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M732.5,237.0 L1065.0,305.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1160.0,146.0 L1240.0,146.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1160.0,246.0 L1240.0,246.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1160.0,346.0 L1240.0,346.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M555.0,496.0 L640.0,496.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M770.0,455.0 L732.5,237.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1215.0,455.0 L732.5,237.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="35" y="155" width="205" height="82" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="35" y="155" width="205" height="9" rx="5" fill="#2378bd"/>
+<text x="137.5" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Consommateurs</text>
+<text x="137.5" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Web • mobile • API</text>
+<rect x="305" y="155" width="240" height="82" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="305" y="155" width="240" height="9" rx="5" fill="#7155b5"/>
+<text x="425.0" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Gestion des API</text>
+<text x="425.0" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">AI Gateway • IAM</text>
+<rect x="610" y="155" width="245" height="82" rx="15" fill="white" stroke="#0b2d52" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="610" y="155" width="245" height="9" rx="5" fill="#0b2d52"/>
+<text x="732.5" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Runtime IA</text>
+<text x="732.5" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Applications • orchestration</text>
+<rect x="970" y="105" width="190" height="82" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="970" y="105" width="190" height="9" rx="5" fill="#139b91"/>
+<text x="1065.0" y="139" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">RAG</text>
+<text x="1065.0" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Retrieval</text>
+<rect x="970" y="205" width="190" height="82" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="970" y="205" width="190" height="9" rx="5" fill="#7155b5"/>
+<text x="1065.0" y="239" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Agents</text>
+<text x="1065.0" y="265" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Tools • workflows</text>
+<rect x="970" y="305" width="190" height="82" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="970" y="305" width="190" height="9" rx="5" fill="#2378bd"/>
+<text x="1065.0" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Inférence ML</text>
+<text x="1065.0" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Serving</text>
+<rect x="1240" y="105" width="220" height="82" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1240" y="105" width="220" height="9" rx="5" fill="#139b91"/>
+<text x="1350.0" y="139" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Vector store</text>
+<text x="1350.0" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Recherche</text>
+<rect x="1240" y="205" width="220" height="82" rx="15" fill="white" stroke="#d99a20" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1240" y="205" width="220" height="9" rx="5" fill="#d99a20"/>
+<text x="1350.0" y="239" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">API métier</text>
+<text x="1350.0" y="265" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Outils autorisés</text>
+<rect x="1240" y="305" width="220" height="82" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1240" y="305" width="220" height="9" rx="5" fill="#2378bd"/>
+<text x="1350.0" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Modèles</text>
+<text x="1350.0" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Registre • endpoints</text>
+<rect x="310" y="455" width="245" height="82" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="310" y="455" width="245" height="9" rx="5" fill="#139b91"/>
+<text x="432.5" y="489" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Plateforme data</text>
+<text x="432.5" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Lakehouse • catalogues</text>
+<rect x="640" y="455" width="260" height="82" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="640" y="455" width="260" height="9" rx="5" fill="#7155b5"/>
+<text x="770.0" y="489" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">MLOps / LLMOps</text>
+<text x="770.0" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Build • évaluation • release</text>
+<rect x="970" y="455" width="490" height="82" rx="15" fill="white" stroke="#3c9b67" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="970" y="455" width="490" height="9" rx="5" fill="#3c9b67"/>
+<text x="1215.0" y="489" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Fondations communes</text>
+<text x="1215.0" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Identité • secrets • réseau • observabilité • FinOps</text>
+</svg>

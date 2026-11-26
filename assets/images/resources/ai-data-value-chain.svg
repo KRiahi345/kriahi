@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1550 650" role="img" aria-labelledby="title desc">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#52718f"/></marker><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0b2d52" flood-opacity=".12"/></filter></defs>
+<title id="title">Chaîne de valeur des données IA</title><desc id="desc">De la collecte gouvernée aux usages ML et RAG</desc>
+<rect width="100%" height="100%" rx="26" fill="#f8fbff"/>
+<text x="775.0" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0b2d52">Chaîne de valeur des données IA</text>
+<text x="775.0" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52657b">De la collecte gouvernée aux usages ML et RAG</text>
+<rect x="25" y="130" width="1500" height="180" rx="18" fill="#2378bd" fill-opacity=".07" stroke="#2378bd" stroke-opacity=".35" stroke-width="2"/>
+<text x="43" y="156" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#2378bd">USAGES MACHINE LEARNING</text>
+<rect x="25" y="390" width="1500" height="180" rx="18" fill="#139b91" fill-opacity=".07" stroke="#139b91" stroke-opacity=".35" stroke-width="2"/>
+<text x="43" y="416" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#139b91">USAGES DOCUMENTAIRES ET RAG</text>
+<path d="M230.0,345.0 L285.0,345.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M470.0,345.0 L525.0,345.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M710.0,345.0 L765.0,345.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M980.0,345.0 L1035.0,345.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1137.5,300.0 L1400.0,275.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M1137.5,390.0 L1400.0,425.0" fill="none" stroke="#52718f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="45" y="300" width="185" height="90" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="45" y="300" width="185" height="9" rx="5" fill="#2378bd"/>
+<text x="137.5" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Sources</text>
+<text x="137.5" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Business • IoT • files</text>
+<rect x="285" y="300" width="185" height="90" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="285" y="300" width="185" height="9" rx="5" fill="#2378bd"/>
+<text x="377.5" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Ingestion</text>
+<text x="377.5" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Batch / streaming</text>
+<rect x="525" y="300" width="185" height="90" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="525" y="300" width="185" height="9" rx="5" fill="#2378bd"/>
+<text x="617.5" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Landing / Raw</text>
+<text x="617.5" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Versioned data</text>
+<rect x="765" y="300" width="215" height="90" rx="15" fill="white" stroke="#7155b5" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="765" y="300" width="215" height="9" rx="5" fill="#7155b5"/>
+<text x="872.5" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Quality &amp; governance</text>
+<text x="872.5" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Catalog • access • lineage</text>
+<rect x="1035" y="300" width="205" height="90" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1035" y="300" width="205" height="9" rx="5" fill="#139b91"/>
+<text x="1137.5" y="334" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Curated layer</text>
+<text x="1137.5" y="360" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Trusted semantic data</text>
+<rect x="1290" y="175" width="220" height="100" rx="15" fill="white" stroke="#2378bd" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1290" y="175" width="220" height="9" rx="5" fill="#2378bd"/>
+<text x="1400.0" y="209" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">ML pathway</text>
+<text x="1400.0" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Features → training</text>
+<text x="1400.0" y="253" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">registry → inference</text>
+<rect x="1290" y="425" width="220" height="100" rx="15" fill="white" stroke="#139b91" stroke-width="2.5" filter="url(#shadow)"/>
+<rect x="1290" y="425" width="220" height="9" rx="5" fill="#139b91"/>
+<text x="1400.0" y="459" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#14263d">Knowledge pathway</text>
+<text x="1400.0" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">Corpus → chunks → vectors</text>
+<text x="1400.0" y="503" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.5" fill="#52657b">retrieval for AI</text>
+</svg>
